@@ -1,0 +1,4310 @@
+
+<html>
+<head>
+  <title>TAX_營業稅申報系統</title>
+  <link rel="stylesheet" href="../df_style.css" />
+</head>
+<body>
+  <header>
+    <h3><span style="color:red">TAX</span> 營業稅申報系統</h3>
+  </header>
+  <div class="TableAccordion">
+
+   <details>
+   <summary><samp>TAXMA</samp> : 申報公司資料檔    <small>(Dữ liệu công ty khai báo)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_TAXMA</samp></td>
+      <td>MA001</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MA001</td>
+      <td>申報公司</td>
+      <td>Cty khai báo</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA002</td>
+      <td>簡稱</td>
+      <td>Tên tắt</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA003</td>
+      <td>統一編號</td>
+      <td>MST</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA004</td>
+      <td>營利事業稅籍編號</td>
+      <td>Mã thuế doanh nghiệp</td>
+      <td>V</td>
+      <td>9.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA005</td>
+      <td>營業人名稱</td>
+      <td>Tên NV kinh doanh</td>
+      <td>V</td>
+      <td>80.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA006</td>
+      <td>負責人</td>
+      <td>Người phụ trách</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA007</td>
+      <td>營業地址(一)</td>
+      <td>ĐC kinh doanh(1)</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td>營業地址<small>(一)</small></td>
+    </tr>
+    <tr>
+      <td>MA008</td>
+      <td>營業地址(二)</td>
+      <td>ĐC kinh doanh(2)</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td>營業地址<small>(二)</small></td>
+    </tr>
+    <tr>
+      <td>MA009</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA010</td>
+      <td>TEL_NO(一)</td>
+      <td>TEL_NO(1)</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td>TEL_NO<small>(一)</small></td>
+    </tr>
+    <tr>
+      <td>MA011</td>
+      <td>所屬國稅局</td>
+      <td>Cục thuế</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA012</td>
+      <td>所屬國稅局分局</td>
+      <td>Chi nhánh cục thuế</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA013</td>
+      <td>房屋稅籍編號</td>
+      <td>Mã thuế nhà cửa</td>
+      <td>V</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA014</td>
+      <td>已上市上櫃</td>
+      <td>Đã lên sàn GD</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>MA015</td>
+      <td>自行或委託辦理申報註記</td>
+      <td>Ghi chú tự báo thuế hoặc ủy thác</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.自行申報 <samp>2</samp>.記帳士申報 <samp>3</samp>.記帳及報稅代理業務人申報 <samp>4</samp>.會計師申報</td>
+    </tr>
+    <tr>
+      <td>MA016</td>
+      <td>申報人身分證統一編號</td>
+      <td>Mã chứng minh nhân dân người báo thuế</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA017</td>
+      <td>E-AMIL</td>
+      <td></td>
+      <td>V</td>
+      <td>60.0</td>
+      <td>申報公司E-MAIL</td>
+    </tr>
+    <tr>
+      <td>MA018</td>
+      <td>所屬縣市別代號</td>
+      <td>Mã huyện/thành phố</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA019</td>
+      <td>勞工保險證號</td>
+      <td>Số giấy BHLĐ</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA020</td>
+      <td>勞工保險證號檢查碼</td>
+      <td>Mã kiểm tra số giấy bảo hiểm người LĐ</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA021</td>
+      <td>健保投保單位代號</td>
+      <td>Mã ĐV tham gia BHYT</td>
+      <td>V</td>
+      <td>9.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA022</td>
+      <td>勞工保險業別代號</td>
+      <td>Mã loại BHLĐ</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA023</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td>預留欄位給PAL雇主負擔退休金提撥率</td>
+    </tr>
+    <tr>
+      <td>MA024</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA025</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA026</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA027</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA028</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA029</td>
+      <td>申報人姓名</td>
+      <td>Họ tên người báo thuế</td>
+      <td>V</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA030</td>
+      <td>申報人電話</td>
+      <td>Điện thoại người báo thuế</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA031</td>
+      <td>代理申報人證書(登錄)字號</td>
+      <td>Mã giấy chứng nhận (đăng nhập) người đại diện báo thuế</td>
+      <td>V</td>
+      <td>50.0</td>
+      <td>代理申報人證書<small>(登錄)</small>字號</td>
+    </tr>
+    <tr>
+      <td>MA032</td>
+      <td>稅捐稽徵處名稱</td>
+      <td>Nơi đăng ký báo cáo thuế</td>
+      <td>C</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA033</td>
+      <td>核准日</td>
+      <td>Ngày ký duyệt</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA034</td>
+      <td>核准文</td>
+      <td>Văn bản ký duyệt</td>
+      <td>C</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA035</td>
+      <td>核准號</td>
+      <td>Mã ký duyệt</td>
+      <td>C</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>TAXMB</samp> : 每月發票資料檔    <small>(DL hóa đơn mỗi tháng)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_TAXMB</samp></td>
+      <td>MB001+MB002+MB004+MB005</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MB001</td>
+      <td>申報公司</td>
+      <td>Cty khai báo</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB002</td>
+      <td>起始年月</td>
+      <td>Thời gian bắt đầu</td>
+      <td>C</td>
+      <td>6.0</td>
+      <td><samp>[Formate:YM]</samp></td>
+    </tr>
+    <tr>
+      <td>MB003</td>
+      <td>截止年月</td>
+      <td>Thời gian hết hạn</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td><samp>[Formate:YM]</samp></td>
+    </tr>
+    <tr>
+      <td>MB004</td>
+      <td>發票聯數</td>
+      <td>Số liên hóa đơn</td>
+      <td>C</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.二聯 <samp>2</samp>.三聯 <samp>3</samp>.二聯式收銀機發票 <samp>4</samp>.三聯式收銀機發票 <samp>5</samp>.電子計算機發票</td>
+    </tr>
+    <tr>
+      <td>MB005</td>
+      <td>使用順序碼</td>
+      <td>Mã thứ tự sử dụng</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB006</td>
+      <td>起始編號</td>
+      <td>Mã số bắt đầu</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB007</td>
+      <td>截止編號</td>
+      <td>Mã số kết thúc</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB008</td>
+      <td>已用編號</td>
+      <td>Mã số đã sử dụng</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB009</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB015</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB021</td>
+      <td>電子發票</td>
+      <td>Hóa đơn điện tử</td>
+      <td>C</td>
+      <td>1.0</td>
+      <td>核准號</td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>TAXMC</samp> : 進銷項憑證單頭檔    <small>(Hồ sơ tiêu đề bằng chứng mục mua/bán)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_TAXMC</samp></td>
+      <td>MC001+MC002+MC006</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>TAXMC_K01</td>
+      <td>MC001+MC007+MC004</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>TAXMC_K02</td>
+      <td>MC001+MC004+MC002+MC007+MC010</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MC001</td>
+      <td>申報公司</td>
+      <td>Cty khai báo</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC002</td>
+      <td>申報年月</td>
+      <td>Tháng khai báo</td>
+      <td>C</td>
+      <td>6.0</td>
+      <td><samp>[Formate:YM]</samp></td>
+    </tr>
+    <tr>
+      <td>MC003</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>7.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC004</td>
+      <td>格式代號</td>
+      <td>Mã định dạng</td>
+      <td>V</td>
+      <td>2.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC005</td>
+      <td>稅籍編號</td>
+      <td>MST(TW)</td>
+      <td>V</td>
+      <td>9.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC006</td>
+      <td>流水號</td>
+      <td>STT</td>
+      <td>C</td>
+      <td>7.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC007</td>
+      <td>開立日期</td>
+      <td>Ngày lập</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>MC008</td>
+      <td>買方統一編號</td>
+      <td>MS TN bên mua</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC009</td>
+      <td>賣方統一編號</td>
+      <td>MS TN bên bán</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC010</td>
+      <td>發票號碼</td>
+      <td>Mã hóa đơn</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC011</td>
+      <td>銷售金額</td>
+      <td>Số tiền tiêu thụ</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC012</td>
+      <td>課稅別</td>
+      <td>Loại thuế</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.應稅內含、<samp>1</samp>.應稅外加 <samp>2</samp>.零稅率 <samp>3</samp>.免稅 <samp>D</samp>.作廢</td>
+    </tr>
+    <tr>
+      <td>MC013</td>
+      <td>營業稅額</td>
+      <td>Mức thuế</td>
+      <td>N</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC014</td>
+      <td>扣抵代號</td>
+      <td>MS triệt tiêu</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.可扣抵之進貨及費用<samp>2</samp>.可扣抵之固定資產 <samp>3</samp>.不可扣抵之進貨及費用<samp>4</samp>.不可扣抵之固定資產</td>
+    </tr>
+    <tr>
+      <td>MC015</td>
+      <td>空白欄位</td>
+      <td>Cột trống</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td>稅捐處預留的空白欄位</td>
+    </tr>
+    <tr>
+      <td>MC016</td>
+      <td>彙加註記</td>
+      <td>Ghi chứ thêm</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>A</samp>.彙加資料 空白表非彙加資料</td>
+    </tr>
+    <tr>
+      <td>MC017</td>
+      <td>洋菸酒註記</td>
+      <td>Ghi thuốc lá/rược nước ngoài</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC018</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC019</td>
+      <td>來源方式</td>
+      <td>Ppháp nguồn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.拋轉 <samp>2</samp>.人工</td>
+    </tr>
+    <tr>
+      <td>MC020</td>
+      <td>來源單別</td>
+      <td>Loại CT nguồn</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC021</td>
+      <td>來源單號</td>
+      <td>Mã CT nguồn</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC022</td>
+      <td>買受人代號</td>
+      <td>MS bên mua</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC023</td>
+      <td>買受人簡稱</td>
+      <td>Tên tắt bên mua</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC024</td>
+      <td>貨物名稱</td>
+      <td>Tên hàng</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC025</td>
+      <td>數量</td>
+      <td>SL</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC026</td>
+      <td>外銷方式</td>
+      <td>PT bán hàng</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC027</td>
+      <td>通關方式</td>
+      <td>PT thông quan</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.非經海關 <samp>2</samp>.經海關</td>
+    </tr>
+    <tr>
+      <td>MC028</td>
+      <td>證明文件名稱</td>
+      <td>Tên giấy chứng nhận</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC029</td>
+      <td>出口報單類別</td>
+      <td>Loại tờ khai XK</td>
+      <td>V</td>
+      <td>2.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC030</td>
+      <td>證明文件號碼</td>
+      <td>Mã số hồ sơ chứng nhận</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td>證明文件/出口報單號碼</td>
+    </tr>
+    <tr>
+      <td>MC031</td>
+      <td>輸出或結匯日期</td>
+      <td>Ngày CX hoặc kết gửi</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>MC032</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC033</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC034</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC035</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC036</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC037</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC038</td>
+      <td>用途</td>
+      <td>Nội dung sử dụng</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC039</td>
+      <td>註記號</td>
+      <td></td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC040</td>
+      <td>發票起始碼</td>
+      <td>Initial Invoice No.</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC041</td>
+      <td>發票訖號</td>
+      <td>Mã kết thúc hóa đơn</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC042</td>
+      <td>賣方名稱</td>
+      <td>Tên nhà cung cấp</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC043</td>
+      <td>賣方地址</td>
+      <td></td>
+      <td>V</td>
+      <td>100.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC044</td>
+      <td>賣方負責人姓名</td>
+      <td></td>
+      <td>V</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC045</td>
+      <td>賣方電話</td>
+      <td></td>
+      <td>V</td>
+      <td>15.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC046</td>
+      <td>賣方傳真</td>
+      <td></td>
+      <td>V</td>
+      <td>15.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC047</td>
+      <td>電子郵件地址</td>
+      <td></td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC048</td>
+      <td>買方名稱</td>
+      <td>Tên bên mua</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC049</td>
+      <td>買方地址</td>
+      <td></td>
+      <td>V</td>
+      <td>100.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC050</td>
+      <td>買方負責人姓名</td>
+      <td></td>
+      <td>V</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC051</td>
+      <td>買方電話號碼</td>
+      <td></td>
+      <td>V</td>
+      <td>15.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC052</td>
+      <td>買方傳真號碼</td>
+      <td></td>
+      <td>V</td>
+      <td>15.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC053</td>
+      <td>買方電子郵件</td>
+      <td></td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC054</td>
+      <td>發票檢查碼</td>
+      <td></td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC055</td>
+      <td>稅捐稽徵處名稱</td>
+      <td>Nơi đăng ký báo cáo thuế</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC056</td>
+      <td>核准日</td>
+      <td>Ngày ký duyệt</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC057</td>
+      <td>核准文</td>
+      <td>Văn bản ký duyệt</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC058</td>
+      <td>核准號</td>
+      <td>Mã ký duyệt</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC059</td>
+      <td>發票類別</td>
+      <td>Loại hóa đơn</td>
+      <td>V</td>
+      <td>2.0</td>
+      <td>0<samp>1</samp>.三聯式 0<samp>2</samp>.二聯式 0<samp>3</samp>.二聯式收銀機 0<samp>4</samp>.特種稅額 0<samp>5</samp>.電子計算機 0<samp>6</samp>.三聯式收銀機</td>
+    </tr>
+    <tr>
+      <td>MC060</td>
+      <td>捐贈註記</td>
+      <td></td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.非捐贈 <samp>1</samp>.捐贈</td>
+    </tr>
+    <tr>
+      <td>MC061</td>
+      <td>稅率</td>
+      <td>Thuế suất</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC062</td>
+      <td>總計</td>
+      <td>Tổng cộng</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC063</td>
+      <td>扣抵金額</td>
+      <td></td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC064</td>
+      <td>原幣金額</td>
+      <td>Số tiền nguyên tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC065</td>
+      <td>匯率</td>
+      <td>Tỷ giá</td>
+      <td>N</td>
+      <td>20.9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC066</td>
+      <td>幣別</td>
+      <td>Loại tiền tệ</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC067</td>
+      <td>作廢日期</td>
+      <td>Ngày hủy</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC068</td>
+      <td>作廢時間</td>
+      <td>Thời gian hủy</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>MC069</td>
+      <td>專案作廢核准文號</td>
+      <td>DL cho phép hủy CT</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC070</td>
+      <td>作廢原因</td>
+      <td>Nguyên nhân hủy</td>
+      <td>V</td>
+      <td>200.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC071</td>
+      <td>接收日期</td>
+      <td></td>
+      <td>V</td>
+      <td>8.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC072</td>
+      <td>接收時間</td>
+      <td></td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>MC073</td>
+      <td>狀態碼</td>
+      <td>Mã trạng thái</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.電子發票 <samp>2</samp>.媒體轉出 <samp>3</samp>.接收確認</td>
+    </tr>
+    <tr>
+      <td>MC074</td>
+      <td>賣方營業人角色註記</td>
+      <td></td>
+      <td>V</td>
+      <td>26.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC075</td>
+      <td>買方營業人角色註記</td>
+      <td></td>
+      <td>V</td>
+      <td>26.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC076</td>
+      <td>沖帳別</td>
+      <td></td>
+      <td>V</td>
+      <td>2.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC077</td>
+      <td>相關號碼</td>
+      <td></td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC078</td>
+      <td>總備註</td>
+      <td></td>
+      <td>V</td>
+      <td>200.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC079</td>
+      <td>開立日期</td>
+      <td>Ngày lập</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>MC080</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC081</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>TAXMD</samp> : 進銷項憑證單身檔    <small>(Hồ sơ nội dung bằng chứng mục mua/bán)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_TAXMD</samp></td>
+      <td>MD001+MD002+MD004+MD006</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MD001</td>
+      <td>申報公司</td>
+      <td>Cty khai báo</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD002</td>
+      <td>申報年月</td>
+      <td>Tháng khai báo</td>
+      <td>C</td>
+      <td>6.0</td>
+      <td><samp>[Formate:YM]</samp></td>
+    </tr>
+    <tr>
+      <td>MD003</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>2.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD004</td>
+      <td>流水號</td>
+      <td>STT</td>
+      <td>C</td>
+      <td>7.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD005</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD006</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD007</td>
+      <td>品名</td>
+      <td>Tên SP</td>
+      <td>V</td>
+      <td>120.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD008</td>
+      <td>數量</td>
+      <td>SL</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD009</td>
+      <td>單價</td>
+      <td>ĐG</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD010</td>
+      <td>金額</td>
+      <td>Số tiền</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD011</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD015</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD016</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD017</td>
+      <td>單位</td>
+      <td>ĐV</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD018</td>
+      <td>相關號碼</td>
+      <td></td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD019</td>
+      <td>營業稅額</td>
+      <td>Mức thuế</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>TAXME</samp> : 營業稅申報資料檔    <small>(DL kê khai thuế doanh thu)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_TAXME</samp></td>
+      <td>ME001+ME002</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ME001</td>
+      <td>申報公司</td>
+      <td>Cty khai báo</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME002</td>
+      <td>起始年月</td>
+      <td>Thời gian bắt đầu</td>
+      <td>C</td>
+      <td>6.0</td>
+      <td><samp>[Formate:YM]</samp></td>
+    </tr>
+    <tr>
+      <td>ME003</td>
+      <td>截止年月</td>
+      <td>Thời gian hết hạn</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td><samp>[Formate:YM]</samp></td>
+    </tr>
+    <tr>
+      <td>ME004</td>
+      <td>發票份數</td>
+      <td>Số bản hóa đơn</td>
+      <td>N</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME005</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME006</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME007</td>
+      <td>退稅方式</td>
+      <td>Ppháp hoàn thuế</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.利用存款帳戶劃撥 <samp>2</samp>.領取退稅支票</td>
+    </tr>
+    <tr>
+      <td>ME008</td>
+      <td>發票明細表(分)</td>
+      <td>Chi tiết HĐ</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td>發票明細表<small>(分)</small></td>
+    </tr>
+    <tr>
+      <td>ME009</td>
+      <td>進項憑證(冊)</td>
+      <td>Bằng chứng mục mua</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td>進項憑證<small>(冊)</small></td>
+    </tr>
+    <tr>
+      <td>ME010</td>
+      <td>進項憑證(分)</td>
+      <td>BC mục mua</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td>進項憑證<small>(分)</small></td>
+    </tr>
+    <tr>
+      <td>ME011</td>
+      <td>證明單(分)</td>
+      <td>Phiếu chứng nhận</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td>證明單<small>(分)</small></td>
+    </tr>
+    <tr>
+      <td>ME012</td>
+      <td>申報聯(分)</td>
+      <td>Liên khao báo</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td>申報聯<small>(分)</small></td>
+    </tr>
+    <tr>
+      <td>ME013</td>
+      <td>銷售固定資產金額</td>
+      <td>Số tiền bán TSCĐ</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME014</td>
+      <td>不得扣抵憑證費用</td>
+      <td>Không khấu trừ chi phí BC</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME015</td>
+      <td>不得扣抵憑證資產</td>
+      <td>Không thể triệt tiêu TS BC</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME016</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME017</td>
+      <td>進口免稅貨物</td>
+      <td>NK hàng hóa miễn thuế</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME018</td>
+      <td>購買國外勞務</td>
+      <td>Mua LĐ nước ngoài</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME019</td>
+      <td>本期累積留底稅額</td>
+      <td>Mức thuế lưu nền tích lũy kỳ này</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME020</td>
+      <td>銷售土地金額</td>
+      <td>Số tiền bán đất</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME021</td>
+      <td>進口貨物免稅貨物</td>
+      <td>Hàng NK/miễn thuế</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME022</td>
+      <td>中途歇業補徵應繳稅額</td>
+      <td>Mức thuế phải nộp ngừng lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME023</td>
+      <td>中途歇業應退稅額</td>
+      <td>Mức thuế phải trả lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME024</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME025</td>
+      <td>特種飲食業金額25</td>
+      <td>Số dư nghề ăn uống đặc biệt 25</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>特種稅額特種飲食業金額25%</td>
+    </tr>
+    <tr>
+      <td>ME026</td>
+      <td>特種飲食業稅額25</td>
+      <td>Thuế nghề ăn uống ĐB 25</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>特種稅額特種飲食業稅額25%</td>
+    </tr>
+    <tr>
+      <td>ME027</td>
+      <td>特種飲食業金額15</td>
+      <td>Số dư nghệ ăn uống đặc biệt 15</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>特種稅額特種飲食業金額15%</td>
+    </tr>
+    <tr>
+      <td>ME028</td>
+      <td>特種飲食業稅額15</td>
+      <td>Thuế nghề ăn uống ĐB 15</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>特種稅額特種飲食業稅額15%</td>
+    </tr>
+    <tr>
+      <td>ME029</td>
+      <td>金融業使用發票金額</td>
+      <td>Tiền HĐ dụng cho nghề tài chính</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>特種稅額金融業使用發票金額</td>
+    </tr>
+    <tr>
+      <td>ME030</td>
+      <td>金融業使用發票稅額</td>
+      <td>Thuế HĐ dụng cho nghề tài chính</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>特種稅額金融業使用發票稅額</td>
+    </tr>
+    <tr>
+      <td>ME031</td>
+      <td>金融業免用自繳金額</td>
+      <td>Số tiền miễn trừ nghề tài chính</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>特種稅額金融業免用自繳金額</td>
+    </tr>
+    <tr>
+      <td>ME032</td>
+      <td>金融業免用自繳稅額</td>
+      <td>Mức thuế miễn trừ nghề tài chính</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>特種稅額金融業免用自繳稅額</td>
+    </tr>
+    <tr>
+      <td>ME033</td>
+      <td>再保收入金額</td>
+      <td>BH lại thu nhập</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>特種稅額再保收入金額</td>
+    </tr>
+    <tr>
+      <td>ME034</td>
+      <td>再保收入稅額</td>
+      <td>Thuế doanh thu BH lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>特種稅額再保收入稅額</td>
+    </tr>
+    <tr>
+      <td>ME035</td>
+      <td>免稅收入金額</td>
+      <td>Thu nhập miễn thuế</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>特種稅額免稅收入金額</td>
+    </tr>
+    <tr>
+      <td>ME036</td>
+      <td>退回及折讓金額</td>
+      <td>Tiền trả lại và chiết khấu</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>特種稅額退回及折讓金額</td>
+    </tr>
+    <tr>
+      <td>ME037</td>
+      <td>退回及折讓稅額</td>
+      <td>Thuế trả lại và chiết khấu</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>特種稅額退回及折讓稅額</td>
+    </tr>
+    <tr>
+      <td>ME038</td>
+      <td>海關代徵營業稅繳納證(分)</td>
+      <td></td>
+      <td>N</td>
+      <td>4.0</td>
+      <td>海關代徵營業稅繳納證<small>(分)</small></td>
+    </tr>
+    <tr>
+      <td>ME039</td>
+      <td>零稅率銷貨額清單(分)</td>
+      <td>Bảng kê SL tịnh hàng bán thuế suất 0</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td>零稅率銷貨額清單<small>(分)</small></td>
+    </tr>
+    <tr>
+      <td>ME040</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME041</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME042</td>
+      <td>申報完成</td>
+      <td>Hoàn tất kê khai</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>申報完成Y/N<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>ME043</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME044</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME045</td>
+      <td>進項稅額合計(代號29)</td>
+      <td>Inbound Tax in Total (No.29)</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>統一發票<small>(進貨及費用)</small>-進項稅額合計<small>(代號29)</small></td>
+    </tr>
+    <tr>
+      <td>ME046</td>
+      <td>專供課稅得扣抵</td>
+      <td>For Tax Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>統一發票<small>(進貨及費用)</small>-專供課稅得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME047</td>
+      <td>共同使用-小計</td>
+      <td>Shared - Subtotal</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>統一發票<small>(進貨及費用)</small>-共同使用-小計</td>
+    </tr>
+    <tr>
+      <td>ME048</td>
+      <td>共同使用-比例得扣抵</td>
+      <td>Shared – Rate Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>統一發票<small>(進貨及費用)</small>-共同使用-比例得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME049</td>
+      <td>共同使用-比例不得扣抵</td>
+      <td>Shared – Rate Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>統一發票<small>(進貨及費用)</small>-共同使用-比例不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME050</td>
+      <td>專供免稅不得扣抵</td>
+      <td>For Tax Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>統一發票<small>(進貨及費用)</small>-專供免稅不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME051</td>
+      <td>進項稅額合計(代號31)</td>
+      <td>Inbound Tax in Total (No.31)</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>統一發票<small>(固定資產)</small>-進項稅額合計<small>(代號31)</small></td>
+    </tr>
+    <tr>
+      <td>ME052</td>
+      <td>專供課稅得扣抵</td>
+      <td>For Tax Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>統一發票<small>(固定資產)</small>-專供課稅得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME053</td>
+      <td>共同使用-小計</td>
+      <td>Shared - Subtotal</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>統一發票<small>(固定資產)</small>-共同使用-小計</td>
+    </tr>
+    <tr>
+      <td>ME054</td>
+      <td>共同使用-比例得扣抵</td>
+      <td>Shared – Rate Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>統一發票<small>(固定資產)</small>-共同使用-比例得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME055</td>
+      <td>共同使用-比例不得扣抵</td>
+      <td>Shared – Rate Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>統一發票<small>(固定資產)</small>-共同使用-比例不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME056</td>
+      <td>專供免稅不得扣抵</td>
+      <td>For Tax Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>統一發票<small>(固定資產)</small>-專供免稅不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME057</td>
+      <td>進項稅額合計(代號33)</td>
+      <td>Inbound Tax in Total (No.33)</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>三聯式<small>(進貨及費用)</small>-進項稅額合計<small>(代號33)</small></td>
+    </tr>
+    <tr>
+      <td>ME058</td>
+      <td>專供課稅得扣抵</td>
+      <td>For Tax Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>三聯式<small>(進貨及費用)</small>-專供課稅得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME059</td>
+      <td>共同使用-小計</td>
+      <td>Shared - Subtotal</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>三聯式<small>(進貨及費用)</small>-共同使用-小計</td>
+    </tr>
+    <tr>
+      <td>ME060</td>
+      <td>共同使用-比例得扣抵</td>
+      <td>Shared – Rate Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>三聯式<small>(進貨及費用)</small>-共同使用-比例得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME061</td>
+      <td>共同使用-比例不得扣抵</td>
+      <td>Shared – Rate Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>三聯式<small>(進貨及費用)</small>-共同使用-比例不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME062</td>
+      <td>專供免稅不得扣抵</td>
+      <td>For Tax Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>三聯式<small>(進貨及費用)</small>-專供免稅不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME063</td>
+      <td>進項稅額合計(代號35)</td>
+      <td>Inbound Tax in Total (No.35)</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>三聯式<small>(固定資產)</small>-進項稅額合計<small>(代號35)</small></td>
+    </tr>
+    <tr>
+      <td>ME064</td>
+      <td>專供課稅得扣抵</td>
+      <td>For Tax Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>三聯式<small>(固定資產)</small>-專供課稅得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME065</td>
+      <td>共同使用-小計</td>
+      <td>Shared - Subtotal</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>三聯式<small>(固定資產)</small>-共同使用-小計</td>
+    </tr>
+    <tr>
+      <td>ME066</td>
+      <td>共同使用-比例得扣抵</td>
+      <td>Shared – Rate Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>三聯式<small>(固定資產)</small>-共同使用-比例得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME067</td>
+      <td>共同使用-比例不得扣抵</td>
+      <td>Shared – Rate Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>三聯式<small>(固定資產)</small>-共同使用-比例不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME068</td>
+      <td>專供免稅不得扣抵</td>
+      <td>For Tax Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>三聯式<small>(固定資產)</small>-專供免稅不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME069</td>
+      <td>進項稅額合計(代號37)</td>
+      <td>Inbound Tax in Total (No.37)</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>載有稅額<small>(進貨及費用)</small>-進項稅額合計<small>(代號37)</small></td>
+    </tr>
+    <tr>
+      <td>ME070</td>
+      <td>專供課稅得扣抵</td>
+      <td>For Tax Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>載有稅額<small>(進貨及費用)</small>-專供課稅得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME071</td>
+      <td>共同使用-小計</td>
+      <td>Shared - Subtotal</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>載有稅額<small>(進貨及費用)</small>-共同使用-小計</td>
+    </tr>
+    <tr>
+      <td>ME072</td>
+      <td>共同使用-比例得扣抵</td>
+      <td>Shared – Rate Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>載有稅額<small>(進貨及費用)</small>-共同使用-比例得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME073</td>
+      <td>共同使用-比例不得扣抵</td>
+      <td>Shared – Rate Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>載有稅額<small>(進貨及費用)</small>-共同使用-比例不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME074</td>
+      <td>專供免稅不得扣抵</td>
+      <td>For Tax Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>載有稅額<small>(進貨及費用)</small>-專供免稅不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME075</td>
+      <td>進項稅額合計(代號39)</td>
+      <td>Inbound Tax in Total (No.39)</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>載有稅額<small>(固定資產)</small>-進項稅額合計<small>(代號39)</small></td>
+    </tr>
+    <tr>
+      <td>ME076</td>
+      <td>專供課稅得扣抵</td>
+      <td>For Tax Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>載有稅額<small>(固定資產)</small>-專供課稅得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME077</td>
+      <td>共同使用-小計</td>
+      <td>Shared - Subtotal</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>載有稅額<small>(固定資產)</small>-共同使用-小計</td>
+    </tr>
+    <tr>
+      <td>ME078</td>
+      <td>共同使用-比例得扣抵</td>
+      <td>Shared – Rate Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>載有稅額<small>(固定資產)</small>-共同使用-比例得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME079</td>
+      <td>共同使用-比例不得扣抵</td>
+      <td>Shared – Rate Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>載有稅額<small>(固定資產)</small>-共同使用-比例不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME080</td>
+      <td>專供免稅不得扣抵</td>
+      <td>For Tax Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>載有稅額<small>(固定資產)</small>-專供免稅不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME081</td>
+      <td>進項稅額合計(代號79)</td>
+      <td>Inbound Tax in Total (No.79)</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>海關代徵<small>(進貨及費用)</small>-進項稅額合計<small>(代號79)</small></td>
+    </tr>
+    <tr>
+      <td>ME082</td>
+      <td>專供課稅得扣抵</td>
+      <td>For Tax Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>海關代徵<small>(進貨及費用)</small>-專供課稅得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME083</td>
+      <td>共同使用-小計</td>
+      <td>Shared - Subtotal</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>海關代徵<small>(進貨及費用)</small>-共同使用-小計</td>
+    </tr>
+    <tr>
+      <td>ME084</td>
+      <td>共同使用-比例得扣抵</td>
+      <td>Shared – Rate Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>海關代徵<small>(進貨及費用)</small>-共同使用-比例得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME085</td>
+      <td>共同使用-比例不得扣抵</td>
+      <td>Shared – Rate Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>海關代徵<small>(進貨及費用)</small>-共同使用-比例不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME086</td>
+      <td>專供免稅不得扣抵</td>
+      <td>For Tax Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>海關代徵<small>(進貨及費用)</small>-專供免稅不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME087</td>
+      <td>進項稅額合計(代號81)</td>
+      <td>Inbound Tax in Total (No.81)</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>海關代徵<small>(固定資產)</small>-進項稅額合計<small>(代號81)</small></td>
+    </tr>
+    <tr>
+      <td>ME088</td>
+      <td>專供課稅得扣抵</td>
+      <td>For Tax Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>海關代徵<small>(固定資產)</small>-專供課稅得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME089</td>
+      <td>共同使用-小計</td>
+      <td>Shared - Subtotal</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>海關代徵<small>(固定資產)</small>-共同使用-小計</td>
+    </tr>
+    <tr>
+      <td>ME090</td>
+      <td>共同使用-比例得扣抵</td>
+      <td>Shared – Rate Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>海關代徵<small>(固定資產)</small>-共同使用-比例得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME091</td>
+      <td>共同使用-比例不得扣抵</td>
+      <td>Shared – Rate Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>海關代徵<small>(固定資產)</small>-共同使用-比例不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME092</td>
+      <td>專供免稅不得扣抵</td>
+      <td>For Tax Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>海關代徵<small>(固定資產)</small>-專供免稅不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME093</td>
+      <td>進項稅額合計(代號41)</td>
+      <td>Inbound Tax in Total (No.41)</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>退出及折讓<small>(進貨及費用)</small>-進項稅額合計<small>(代號41)</small></td>
+    </tr>
+    <tr>
+      <td>ME094</td>
+      <td>專供課稅得扣抵</td>
+      <td>For Tax Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>退出及折讓<small>(進貨及費用)</small>-專供課稅得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME095</td>
+      <td>共同使用-小計</td>
+      <td>Shared - Subtotal</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>退出及折讓<small>(進貨及費用)</small>-共同使用-小計</td>
+    </tr>
+    <tr>
+      <td>ME096</td>
+      <td>共同使用-比例得扣抵</td>
+      <td>Shared – Rate Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>退出及折讓<small>(進貨及費用)</small>-共同使用-比例得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME097</td>
+      <td>共同使用-比例不得扣抵</td>
+      <td>Shared – Rate Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>退出及折讓<small>(進貨及費用)</small>-共同使用-比例不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME098</td>
+      <td>專供免稅不得扣抵</td>
+      <td>For Tax Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>退出及折讓<small>(進貨及費用)</small>-專供免稅不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME099</td>
+      <td>進項稅額合計(代號43)</td>
+      <td>Inbound Tax in Total (No.43)</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>退出及折讓<small>(固定資產)</small>-進項稅額合計<small>(代號43)</small></td>
+    </tr>
+    <tr>
+      <td>ME100</td>
+      <td>專供課稅得扣抵</td>
+      <td>For Tax Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>退出及折讓<small>(固定資產)</small>-專供課稅得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME101</td>
+      <td>共同使用-小計</td>
+      <td>Shared - Subtotal</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>退出及折讓<small>(固定資產)</small>-共同使用-小計</td>
+    </tr>
+    <tr>
+      <td>ME102</td>
+      <td>共同使用-比例得扣抵</td>
+      <td>Shared – Rate Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>退出及折讓<small>(固定資產)</small>-共同使用-比例得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME103</td>
+      <td>共同使用-比例不得扣抵</td>
+      <td>Shared – Rate Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>退出及折讓<small>(固定資產)</small>-共同使用-比例不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME104</td>
+      <td>專供免稅不得扣抵</td>
+      <td>For Tax Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>退出及折讓<small>(固定資產)</small>-專供免稅不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME105</td>
+      <td>進項稅額合計(代號45)</td>
+      <td>Inbound Tax in Total (No.45)</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>合計<small>(進貨及費用)</small>-進項稅額合計<small>(代號45)</small></td>
+    </tr>
+    <tr>
+      <td>ME106</td>
+      <td>專供課稅得扣抵</td>
+      <td>For Tax Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>合計<small>(進貨及費用)</small>-專供課稅得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME107</td>
+      <td>共同使用-小計</td>
+      <td>Shared - Subtotal</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>合計<small>(進貨及費用)</small>-共同使用-小計</td>
+    </tr>
+    <tr>
+      <td>ME108</td>
+      <td>共同使用-比例得扣抵</td>
+      <td>Shared – Rate Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>合計<small>(進貨及費用)</small>-共同使用-比例得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME109</td>
+      <td>共同使用-比例不得扣抵</td>
+      <td>Shared – Rate Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>合計<small>(進貨及費用)</small>-共同使用-比例不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME110</td>
+      <td>專供免稅不得扣抵</td>
+      <td>For Tax Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>合計<small>(進貨及費用)</small>-專供免稅不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME111</td>
+      <td>進項稅額合計(代號47)</td>
+      <td>Inbound Tax in Total (No.47)</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>合計<small>(固定資產)</small>-進項稅額合計<small>(代號47)</small></td>
+    </tr>
+    <tr>
+      <td>ME112</td>
+      <td>專供課稅得扣抵</td>
+      <td>For Tax Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>合計<small>(固定資產)</small>-專供課稅得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME113</td>
+      <td>共同使用-小計</td>
+      <td>Shared - Subtotal</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>合計<small>(固定資產)</small>-共同使用-小計</td>
+    </tr>
+    <tr>
+      <td>ME114</td>
+      <td>共同使用-比例得扣抵</td>
+      <td>Shared – Rate Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>合計<small>(固定資產)</small>-共同使用-比例得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME115</td>
+      <td>共同使用-比例不得扣抵</td>
+      <td>Shared – Rate Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>合計<small>(固定資產)</small>-共同使用-比例不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME116</td>
+      <td>專供免稅不得扣抵</td>
+      <td>For Tax Non-Deductible</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>合計<small>(固定資產)</small>-專供免稅不得扣抵</td>
+    </tr>
+    <tr>
+      <td>ME117</td>
+      <td>得扣抵之進項稅額合計</td>
+      <td>Inbound Tax Deductible in Total</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME118</td>
+      <td>不得扣抵比例</td>
+      <td>Rate Non-Deductible</td>
+      <td>N</td>
+      <td>5.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME119</td>
+      <td>合計(代號74)</td>
+      <td>Total (No.74)</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>國外勞務-合計<small>(代號74)</small></td>
+    </tr>
+    <tr>
+      <td>ME120</td>
+      <td>免稅</td>
+      <td>Miễn thuế</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>國外勞務-免稅</td>
+    </tr>
+    <tr>
+      <td>ME121</td>
+      <td>共同使用</td>
+      <td>Shared</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>國外勞務-共同使用</td>
+    </tr>
+    <tr>
+      <td>ME122</td>
+      <td>課稅</td>
+      <td>Taxable</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>國外勞務-課稅</td>
+    </tr>
+    <tr>
+      <td>ME123</td>
+      <td>合計(代號76)</td>
+      <td></td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>應納稅額-合計<small>(代號76)</small></td>
+    </tr>
+    <tr>
+      <td>ME124</td>
+      <td>免稅</td>
+      <td>Miễn thuế</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>應納稅額-免稅</td>
+    </tr>
+    <tr>
+      <td>ME125</td>
+      <td>共同使用</td>
+      <td>Shared</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>應納稅額-共同使用</td>
+    </tr>
+    <tr>
+      <td>ME126</td>
+      <td>自行或委託辦理申報註記</td>
+      <td>Ghi chú tự báo thuế hoặc ủy thác</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.自行申報 <samp>2</samp>.記帳士申報 <samp>3</samp>.記帳及報稅代理業務人申報 <samp>4</samp>.會計師申報</td>
+    </tr>
+    <tr>
+      <td>ME127</td>
+      <td>申報人身分證統一編號</td>
+      <td>Mã chứng minh nhân dân người báo thuế</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME128</td>
+      <td>申報人姓名</td>
+      <td>Họ tên người báo thuế</td>
+      <td>V</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME129</td>
+      <td>申報人電話</td>
+      <td>Điện thoại người báo thuế</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME130</td>
+      <td>代理申報人證書(登錄)字號</td>
+      <td>Mã giấy chứng nhận (đăng nhập) người đại diện báo thuế</td>
+      <td>V</td>
+      <td>50.0</td>
+      <td>代理申報人證書<small>(登錄)</small>字號</td>
+    </tr>
+    <tr>
+      <td>ME131</td>
+      <td>應退稅額鎖定</td>
+      <td>Khóa số thuế phải trả lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>應退稅額鎖定Y/N<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>ME132</td>
+      <td>本期應退稅額</td>
+      <td>Số thuế phải trả lại trong kỳ</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>TAXMF</samp> : 彙總申報資料檔    <small>(Hợp DL khai báo)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_TAXMF</samp></td>
+      <td>MF001+MF002+MF005</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>TAXMF_K01</td>
+      <td>MF001+MF006+MF003</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>TAXMF_K02</td>
+      <td>MF001+MF003+MF002+MF006+MF009</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MF001</td>
+      <td>申報公司</td>
+      <td>Cty khai báo</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF002</td>
+      <td>申報年月</td>
+      <td>Tháng khai báo</td>
+      <td>C</td>
+      <td>6.0</td>
+      <td><samp>[Formate:YM]</samp></td>
+    </tr>
+    <tr>
+      <td>MF003</td>
+      <td>格式代號</td>
+      <td>Mã định dạng</td>
+      <td>V</td>
+      <td>2.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF004</td>
+      <td>稅籍編號</td>
+      <td>MST(TW)</td>
+      <td>V</td>
+      <td>9.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF005</td>
+      <td>流水號</td>
+      <td>STT</td>
+      <td>C</td>
+      <td>7.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF006</td>
+      <td>開立日期</td>
+      <td>Ngày lập</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>MF007</td>
+      <td>買方統一編號</td>
+      <td>MS TN bên mua</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF008</td>
+      <td>賣方統一編號</td>
+      <td>MS TN bên bán</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF009</td>
+      <td>發票號碼</td>
+      <td>Mã hóa đơn</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF010</td>
+      <td>銷售金額</td>
+      <td>Số tiền tiêu thụ</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF011</td>
+      <td>課稅別</td>
+      <td>Loại thuế</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.應稅內含、<samp>1</samp>.應稅外加 <samp>2</samp>.零稅率 <samp>3</samp>.免稅 <samp>D</samp>.作廢</td>
+    </tr>
+    <tr>
+      <td>MF012</td>
+      <td>營業稅額</td>
+      <td>Mức thuế</td>
+      <td>N</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF013</td>
+      <td>扣抵代號</td>
+      <td>MS triệt tiêu</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.可扣抵之進貨及費用<samp>2</samp>.可扣抵之固定資產</td>
+    </tr>
+    <tr>
+      <td>MF014</td>
+      <td>空白欄位</td>
+      <td>Cột trống</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td>稅捐處預留的空白欄位</td>
+    </tr>
+    <tr>
+      <td>MF015</td>
+      <td>彙加註記</td>
+      <td>Ghi chứ thêm</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>A</samp>.彙加資料 空白表非彙加資料</td>
+    </tr>
+    <tr>
+      <td>MF016</td>
+      <td>通關方式</td>
+      <td>PT thông quan</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.非經海關、<samp>2</samp>.經海關</td>
+    </tr>
+    <tr>
+      <td>MF017</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF018</td>
+      <td>來源方式</td>
+      <td>Ppháp nguồn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.拋轉 <samp>2</samp>.人工</td>
+    </tr>
+    <tr>
+      <td>MF019</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF020</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF021</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF022</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF023</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF024</td>
+      <td>註記號</td>
+      <td></td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>TAXMG</samp> : 申報書媒體資料檔    <small>(Dữ liệu Media tờ khai)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_TAXMG</samp></td>
+      <td>MG001+MG002+MG091</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MG001</td>
+      <td>申報公司</td>
+      <td>Cty khai báo</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG002</td>
+      <td>所屬起始年月</td>
+      <td>Tháng năm bắt đầu</td>
+      <td>C</td>
+      <td>6.0</td>
+      <td><samp>[Formate:YM]</samp></td>
+    </tr>
+    <tr>
+      <td>MG003</td>
+      <td>所屬截止年月</td>
+      <td>Tháng/năm hết</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td><samp>[Formate:YM]</samp></td>
+    </tr>
+    <tr>
+      <td>MG004</td>
+      <td>代號1</td>
+      <td>MS 1</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG005</td>
+      <td>代號5</td>
+      <td>MS 5</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG006</td>
+      <td>代號9</td>
+      <td>Mã số</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG007</td>
+      <td>代號13</td>
+      <td>MS 13</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG008</td>
+      <td>代號17</td>
+      <td>MS 17</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG009</td>
+      <td>代號21</td>
+      <td>MS 21</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG010</td>
+      <td>代號2</td>
+      <td>MS 2</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG011</td>
+      <td>代號6</td>
+      <td>MS 6</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG012</td>
+      <td>代號10</td>
+      <td>MS 10</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG013</td>
+      <td>代號14</td>
+      <td>MS 14</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG014</td>
+      <td>代號18</td>
+      <td>MS 18</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG015</td>
+      <td>代號22</td>
+      <td>MS 22</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG016</td>
+      <td>代號82</td>
+      <td>MS 82</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG017</td>
+      <td>代號7</td>
+      <td>MS 7</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG018</td>
+      <td>代號15</td>
+      <td>MS 15</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG019</td>
+      <td>代號19</td>
+      <td>MS 19</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG020</td>
+      <td>代號23</td>
+      <td>MS 23</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG021</td>
+      <td>代號4</td>
+      <td>MS 4</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG022</td>
+      <td>代號8</td>
+      <td>MS 8</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG023</td>
+      <td>代號12</td>
+      <td>MS 12</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG024</td>
+      <td>代號16</td>
+      <td>MS 16</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG025</td>
+      <td>代號20</td>
+      <td>MS 20</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG026</td>
+      <td>代號24</td>
+      <td>MS 24</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG027</td>
+      <td>代號52</td>
+      <td>MS 52</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG028</td>
+      <td>代號53</td>
+      <td>MS 53</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG029</td>
+      <td>代號54</td>
+      <td>MS 54</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG030</td>
+      <td>代號55</td>
+      <td>MS 55</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG031</td>
+      <td>代號56</td>
+      <td>MS 56</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG032</td>
+      <td>代號57</td>
+      <td>MS 57</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG033</td>
+      <td>代號58</td>
+      <td>MS 58</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG034</td>
+      <td>代號59</td>
+      <td>MS 59</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG035</td>
+      <td>代號60</td>
+      <td>MS 60</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG036</td>
+      <td>代號61</td>
+      <td>MS 61</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG037</td>
+      <td>代號62</td>
+      <td>MS 62</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG038</td>
+      <td>代號63</td>
+      <td>MS 63</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG039</td>
+      <td>代號64</td>
+      <td>MS 64</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG040</td>
+      <td>代號65</td>
+      <td>MS 65</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG041</td>
+      <td>代號66</td>
+      <td>MS 66</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG042</td>
+      <td>代號25</td>
+      <td>MS 25</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG043</td>
+      <td>代號26</td>
+      <td>MS 26</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG044</td>
+      <td>代號27</td>
+      <td>MS 27</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG045</td>
+      <td>代號28</td>
+      <td>MS 28</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG046</td>
+      <td>代號30</td>
+      <td>MS 30</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG047</td>
+      <td>代號32</td>
+      <td>MS 32</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG048</td>
+      <td>代號34</td>
+      <td>MS 34</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG049</td>
+      <td>代號36</td>
+      <td>MS 36</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG050</td>
+      <td>代號38</td>
+      <td>MS 38</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG051</td>
+      <td>代號40</td>
+      <td>MS 40</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG052</td>
+      <td>代號42</td>
+      <td>MS 42</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG053</td>
+      <td>代號44</td>
+      <td>MS 44</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG054</td>
+      <td>代號46</td>
+      <td>MS 46</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG055</td>
+      <td>代號29</td>
+      <td>MS 29</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG056</td>
+      <td>代號31</td>
+      <td>MS 31</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG057</td>
+      <td>代號33</td>
+      <td>MS 33</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG058</td>
+      <td>代號35</td>
+      <td>MS  35</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG059</td>
+      <td>代號37</td>
+      <td>MS 37</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG060</td>
+      <td>代號39</td>
+      <td>MS 39</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG061</td>
+      <td>代號41</td>
+      <td>MS 41</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG062</td>
+      <td>代號43</td>
+      <td>MS 43</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG063</td>
+      <td>代號45</td>
+      <td>MS 45</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG064</td>
+      <td>代號47</td>
+      <td>MS 47</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG065</td>
+      <td>代號48</td>
+      <td>MS 48</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG066</td>
+      <td>代號49</td>
+      <td>MS 49</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG067</td>
+      <td>代號50</td>
+      <td>MS 50</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG068</td>
+      <td>代號51</td>
+      <td>MS 51</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG069</td>
+      <td>代號78</td>
+      <td>MS 78</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG070</td>
+      <td>代號80</td>
+      <td>MS 80</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG071</td>
+      <td>代號73</td>
+      <td>MS 73</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG072</td>
+      <td>代號74</td>
+      <td>MS 74</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG073</td>
+      <td>代號79</td>
+      <td>MS 79</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG074</td>
+      <td>代號81</td>
+      <td>MS 81</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG075</td>
+      <td>代號75</td>
+      <td>MS 75</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG076</td>
+      <td>代號76</td>
+      <td>MS 76</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG077</td>
+      <td>代號101</td>
+      <td>MS 101</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG078</td>
+      <td>代號103</td>
+      <td>MS 103</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG079</td>
+      <td>代號104</td>
+      <td>MS 104</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG080</td>
+      <td>代號105</td>
+      <td>MS 105</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG081</td>
+      <td>代號106</td>
+      <td>MS 106</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG082</td>
+      <td>代號107</td>
+      <td>MS 107</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG083</td>
+      <td>代號108</td>
+      <td>MS 108</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG084</td>
+      <td>代號109</td>
+      <td>MS 109</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG085</td>
+      <td>代號110</td>
+      <td>MS 110</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG086</td>
+      <td>代號111</td>
+      <td>MS 111</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG087</td>
+      <td>代號112</td>
+      <td>MS 112</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG088</td>
+      <td>代號113</td>
+      <td>MS 113</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG089</td>
+      <td>代號114</td>
+      <td>MS 114</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG090</td>
+      <td>代號115</td>
+      <td>MS 115</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG091</td>
+      <td>總繳代號</td>
+      <td>Mã số tổng hợp nộp</td>
+      <td>C</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.獨立申報<samp>1</samp>.總公司彙總申報<samp>2</samp>.各單位分別申報</td>
+    </tr>
+    <tr>
+      <td>MG092</td>
+      <td>統一發票明細表</td>
+      <td>Bảng chi tiết HĐ TN</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td>預留欄位</td>
+    </tr>
+    <tr>
+      <td>MG093</td>
+      <td>進項憑證(冊)</td>
+      <td>Bằng chứng mục mua</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td>預留欄位</td>
+    </tr>
+    <tr>
+      <td>MG094</td>
+      <td>進項憑證(份)</td>
+      <td>Bằng chứng mục mua</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td>預留欄位</td>
+    </tr>
+    <tr>
+      <td>MG095</td>
+      <td>海關代徵營業稅繳納證</td>
+      <td>Đơn nộp thuế doanh thu do hải quan thu hộ</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td>預留欄位</td>
+    </tr>
+    <tr>
+      <td>MG096</td>
+      <td>退回出及折讓證明單</td>
+      <td>Chứng nhận xuất hàng trả và chiết khấu</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td>預留欄位</td>
+    </tr>
+    <tr>
+      <td>MG097</td>
+      <td>營業稅繳款書申報聯</td>
+      <td>Liên khai báo giấy nộp thuế doanh thu</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td>預留欄位</td>
+    </tr>
+    <tr>
+      <td>MG098</td>
+      <td>零稅率銷貨額清單</td>
+      <td>Bảng kê SL tịnh bán thuế suất 0</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td>預留欄位</td>
+    </tr>
+    <tr>
+      <td>MG099</td>
+      <td>發票使用份數</td>
+      <td>Số bản HĐ đã dùng</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td>預留欄位</td>
+    </tr>
+    <tr>
+      <td>MG100</td>
+      <td>預留代號1</td>
+      <td>Mã số bảo lưu 1</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>預留欄位</td>
+    </tr>
+    <tr>
+      <td>MG101</td>
+      <td>預留代號2</td>
+      <td>Mã số bảo lưu 2</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td>預留欄位</td>
+    </tr>
+    <tr>
+      <td>MG102</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG103</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG104</td>
+      <td>本期(月)應退稅額原值</td>
+      <td>Old Tax Refund of the Period (Month)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>本期<small>(月)</small>應退稅額原值</td>
+    </tr>
+    <tr>
+      <td>MG105</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG106</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG107</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG108</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>TAXMH</samp> : 營業人直接扣抵檔</summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_TAXMH</samp></td>
+      <td>MH001+MH002</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MH001</td>
+      <td>申報公司</td>
+      <td>Cty khai báo</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH002</td>
+      <td>所屬年月</td>
+      <td>Tháng năm</td>
+      <td>C</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH003</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH004</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH005</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH006</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH015</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH016</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH017</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH018</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH019</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH020</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH021</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH022</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH023</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH024</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH025</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH026</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH027</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH028</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH029</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH030</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH031</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH032</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH033</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH034</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH035</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH036</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH037</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH038</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH039</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH040</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH041</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH042</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH043</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH044</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH045</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH046</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH047</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH048</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH049</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH050</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH051</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH052</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH053</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH054</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH055</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH056</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH057</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH058</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH059</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH060</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH061</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH062</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH063</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH064</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH065</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH066</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH067</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH068</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH069</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH070</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH071</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH072</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH073</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH074</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH075</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>12.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH076</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH077</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH078</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH079</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH080</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH081</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+  </div>
+  <!--- Footer
+  <footer><div class="uk-margin-left uk-text-small">Copyright &copy;2022 VPIC1. All Rights Reserved.  <i>(Japlin Chen)</i></div></footer>
+  --->
+</body>
+</html>

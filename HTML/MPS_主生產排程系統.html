@@ -1,0 +1,2330 @@
+
+<html>
+<head>
+  <title>MPS_主生產排程系統</title>
+  <link rel="stylesheet" href="../df_style.css" />
+</head>
+<body>
+  <header>
+    <h3><span style="color:red">MPS</span> 主生產排程系統</h3>
+  </header>
+  <div class="TableAccordion">
+
+   <details>
+   <summary><samp>MPSMA</samp> : MPS參數設定檔    <small>(Hồ sơ đặt thông số MPS)</small></summary>
+   <content>
+
+      
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MA001</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>展算屬性<small>(<samp>1</samp>.銷售件、<samp>2</samp>.MPS件)</small></td>
+    </tr>
+    <tr>
+      <td>MA002</td>
+      <td>需求計算方式</td>
+      <td>Ppháp tính yêu cầu</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.淨需求、<samp>2</samp>.毛需求</td>
+    </tr>
+    <tr>
+      <td>MA003</td>
+      <td>計算庫存可用量</td>
+      <td>Tính lượng có thể tồn kho</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N。需求計算方式:淨需求DEFAULT=Y</td>
+    </tr>
+    <tr>
+      <td>MA004</td>
+      <td>排程優先順序</td>
+      <td>TT ƯT xếp trình</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.預交日、<samp>2</samp>.生產天數、<samp>3</samp>.最晚開工日</td>
+    </tr>
+    <tr>
+      <td>MA005</td>
+      <td>急料條件-生產</td>
+      <td>ĐK NVL khẩn cấp- mua</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td>開單日延遲999天<small>(含)</small>以上者<small>(發放日-開單日>=X)</small>視為急單處理</td>
+    </tr>
+    <tr>
+      <td>MA006</td>
+      <td>產能推算方式</td>
+      <td>Phương thức tính ra sức SX</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.有限產能、<samp>2</samp>.無限產能<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>MA007</td>
+      <td>無限產能產能落點方式</td>
+      <td>Phương thức lạc điểm sức SX vô hạn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.最後一天、<samp>2</samp>.批量分攤<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>MA008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>MPSMB</samp> : 瓶頸資源單頭檔    <small>(TĐ CT tư nguyên then chốt)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_MPSMB</samp></td>
+      <td>MB001</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MB001</td>
+      <td>資源代號</td>
+      <td>Mã số tài cũ</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB002</td>
+      <td>資源名稱</td>
+      <td>Tên tài cũ</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB003</td>
+      <td>廠別</td>
+      <td>Xưởng</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB004</td>
+      <td>每日最大產能</td>
+      <td>Sức SX tối đa ngày</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB005</td>
+      <td>每日產能</td>
+      <td>Sức SX 1 ngày</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB006</td>
+      <td>產能單位</td>
+      <td>Đơn vị sức SX</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td><small>(人時OR機時)</small></td>
+    </tr>
+    <tr>
+      <td>MB007</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>MPSMC</samp> : 品號資源檔    <small>(Hồ sơ tư nguyên MSVP)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_MPSMC</samp></td>
+      <td>MC001+MC002</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MPSMC_K01</td>
+      <td>MC001</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MC001</td>
+      <td>資源代號</td>
+      <td>Mã số tài cũ</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC002</td>
+      <td>品號</td>
+      <td>Mã SP</td>
+      <td>C</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC003</td>
+      <td>固定耗用</td>
+      <td>Tiêu hao CĐ</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td>固定耗用產能</td>
+    </tr>
+    <tr>
+      <td>MC004</td>
+      <td>變動耗用</td>
+      <td>BĐ tiêu hao</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td>變動耗用產能</td>
+    </tr>
+    <tr>
+      <td>MC005</td>
+      <td>耗用批量</td>
+      <td>Đợt tiêu hao</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC006</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td>前推日</td>
+    </tr>
+    <tr>
+      <td>MC008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td>後推日</td>
+    </tr>
+    <tr>
+      <td>MC009</td>
+      <td>瓶頸資源</td>
+      <td>Tài nguyên thiếu hụt ban đầu</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N<samp>[DE<samp>F</samp>:Y]</samp></td>
+    </tr>
+    <tr>
+      <td>MC010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>MPSMD</samp> : 每日資源產能檔    <small>(HS sức SX tư nguyên hàng ngày)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_MPSMD</samp></td>
+      <td>MD001+MD002</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MD001</td>
+      <td>資源代號</td>
+      <td>Mã số tài cũ</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD002</td>
+      <td>日期</td>
+      <td>Ngày</td>
+      <td>C</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>MD003</td>
+      <td>當日產能</td>
+      <td>Sức SX ngày</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD004</td>
+      <td>瓶頸耗用</td>
+      <td>Hao VL then chốt</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD005</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD006</td>
+      <td>非瓶頸耗用</td>
+      <td>Hao không then chốt</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>MPSME</samp> : 替代資源單頭檔    <small>(Hồ sơ tiêu đề đơn tư cũ thay thế)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_MPSME</samp></td>
+      <td>ME001+ME002</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ME001</td>
+      <td>資源代號</td>
+      <td>Mã số tài cũ</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME002</td>
+      <td>品號</td>
+      <td>Mã SP</td>
+      <td>C</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME003</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME004</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME005</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME006</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>MPSMF</samp> : 替代資源單身檔    <small>(Hồ sơ nội dung tư cũ thay thế)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_MPSMF</samp></td>
+      <td>MF001+MF002+MF003</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MF001</td>
+      <td>資源代號</td>
+      <td>Mã số tài cũ</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF002</td>
+      <td>品號</td>
+      <td>Mã SP</td>
+      <td>C</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF003</td>
+      <td>替代資源代號</td>
+      <td>Mã số tư cũ thay thế</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF004</td>
+      <td>替代順序</td>
+      <td>Thứ tự thay thế</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF005</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF006</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>MPSTA</samp> : 排程紀錄檔    <small>(HS kỷ lục xếp trình tự)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_MPSTA</samp></td>
+      <td>TA001</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TA001</td>
+      <td>計劃批號</td>
+      <td>Số lô kế hoạch</td>
+      <td>C</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA002</td>
+      <td>廠別</td>
+      <td>Xưởng</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA003</td>
+      <td>來源</td>
+      <td>Nguồn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.訂單、<samp>2</samp>.ForeCase<small>(銷售預測)</small>、<samp>9</samp>.全部</td>
+    </tr>
+    <tr>
+      <td>TA004</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA005</td>
+      <td>排程日期</td>
+      <td>Ngày sắp xếp chương trình</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TA006</td>
+      <td>排程時間</td>
+      <td>Thì giờ xếp</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><small>(時:分:秒)</small></td>
+    </tr>
+    <tr>
+      <td>TA007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>MPSTB</samp> : 排程資料單身檔    <small>(Tiêu đề DL xếp)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_MPSTB</samp></td>
+      <td>TB001+TB007+TB008+TB037+TB048+TB049</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MPSTB_K01</td>
+      <td>TB001+TB029</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>MPSTB_K02</td>
+      <td>TB030+TB029+TB001</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TB001</td>
+      <td>計劃批號</td>
+      <td>Số lô kế hoạch</td>
+      <td>C</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB002</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB003</td>
+      <td>品號</td>
+      <td>Mã SP</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB004</td>
+      <td>生產數量</td>
+      <td>SL phát sinh</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>預計生產數量<small>(DEFAULT 需求數量)</small></td>
+    </tr>
+    <tr>
+      <td>TB005</td>
+      <td>需求數量</td>
+      <td>SL yêu cầu</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>訂單未交量<small>(含贈品未交量)</small>/預測數量<small>(扣除已受訂量)</small></td>
+    </tr>
+    <tr>
+      <td>TB006</td>
+      <td>預交日期</td>
+      <td>Ngày dự kiến giao hàng</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td>訂單預交日/預測日期<samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TB007</td>
+      <td>來源單號</td>
+      <td>Mã CT nguồn</td>
+      <td>C</td>
+      <td>19.0</td>
+      <td>訂單單別+單號+序號/預測代號</td>
+    </tr>
+    <tr>
+      <td>TB008</td>
+      <td>需求來源</td>
+      <td>Nguồn yêu cầu</td>
+      <td>C</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.訂單、<samp>2</samp>.ForeCase<small>(銷售預測)</small>、<samp>3</samp>.獨立需求</td>
+    </tr>
+    <tr>
+      <td>TB009</td>
+      <td>預計開工</td>
+      <td>Dự tính BĐ SX</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TB010</td>
+      <td>預計完工</td>
+      <td>Dự tính hoàn thành</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TB011</td>
+      <td>庫存量</td>
+      <td>SL tồn kho</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>現有庫存量</td>
+    </tr>
+    <tr>
+      <td>TB012</td>
+      <td>預計生產</td>
+      <td>Dự tính SX</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB013</td>
+      <td>預計進貨</td>
+      <td>Dự tính mua hàng</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB014</td>
+      <td>預計請購</td>
+      <td>Dự tính yêu cầu mua hàng</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB015</td>
+      <td>計劃生產</td>
+      <td>Lập kế hoạch SX</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB016</td>
+      <td>計劃採購</td>
+      <td>Kế hoạch mua hàng</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB017</td>
+      <td>預計銷售</td>
+      <td>Tiêu thụ dự tính</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB018</td>
+      <td>預計領用</td>
+      <td>Dự tính lãnh dùng</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB019</td>
+      <td>計劃銷售</td>
+      <td>Kế hoạch bán hàng</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB020</td>
+      <td>計劃領用</td>
+      <td>Kế hoạch lãnh dùng</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB021</td>
+      <td>排程狀況</td>
+      <td>Tình trạng xếp</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><small>(<samp>1</samp>:交期符合 <samp>2</samp>.交期延遲 <samp>3</samp>.排產數量短缺 <samp>9</samp>:未作排程)</small></td>
+    </tr>
+    <tr>
+      <td>TB022</td>
+      <td>品號屬性</td>
+      <td>TTính SP</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><small>(<samp>P</samp>:採購件、<samp>M</samp>:自製件、<samp>S</samp>:託外加工件、<samp>Y</samp>:虛設品號、<samp>F</samp>:Feature件、<samp>O</samp>:Option件)</small></td>
+    </tr>
+    <tr>
+      <td>TB023</td>
+      <td>固定前置天數</td>
+      <td>Số ngày chờ hàng-cố định</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB024</td>
+      <td>變動前置天數</td>
+      <td>Số ngày chờ hàng-biến động</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB025</td>
+      <td>檢驗天數</td>
+      <td>S.ngày kiểm tra</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB026</td>
+      <td>批量</td>
+      <td>Lượng của lô</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB027</td>
+      <td>最晚開工日</td>
+      <td>Ngày khởi công chậm nhất</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TB028</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB029</td>
+      <td>優先順序</td>
+      <td>Thứ tự ưu tiên</td>
+      <td>V</td>
+      <td>5.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB030</td>
+      <td>狀態碼</td>
+      <td>Mã trạng thái</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><small>(<samp>Y</samp>:已鎖定 <samp>N</samp>:未鎖定 <samp>Z</samp>:已發放)</small></td>
+    </tr>
+    <tr>
+      <td>TB031</td>
+      <td>客戶簡稱</td>
+      <td>Tên tắt KH</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB032</td>
+      <td>請拋採未確認</td>
+      <td>Yêu cầu mua hàng chưa xác nhận</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB033</td>
+      <td>低階碼</td>
+      <td>Mã cấp dưới</td>
+      <td>V</td>
+      <td>2.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB034</td>
+      <td>單位</td>
+      <td>ĐV</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB035</td>
+      <td>庫存單位需求數量</td>
+      <td>SL yêu cầu đơn vị tồn kho</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB036</td>
+      <td>瓶頸資源</td>
+      <td>Tài nguyên thiếu hụt ban đầu</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB037</td>
+      <td>BOM節點</td>
+      <td>Điểm BOM</td>
+      <td>C</td>
+      <td>40.0</td>
+      <td><samp>[DE<samp>F</samp>:00]</samp></td>
+    </tr>
+    <tr>
+      <td>TB038</td>
+      <td>排程日期</td>
+      <td>Ngày sắp xếp chương trình</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TB039</td>
+      <td>生產天數</td>
+      <td>Số ngày SX</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB040</td>
+      <td>排程時間</td>
+      <td>Thì giờ xếp</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><small>(時:分:秒)</small></td>
+    </tr>
+    <tr>
+      <td>TB041</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB042</td>
+      <td>製令單別</td>
+      <td>Lệnh SX</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB043</td>
+      <td>階次</td>
+      <td>Cấp</td>
+      <td>N</td>
+      <td>2.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB044</td>
+      <td>生產線別</td>
+      <td>DCSX</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB045</td>
+      <td>供應廠商</td>
+      <td>NCC</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB046</td>
+      <td>產品品號</td>
+      <td>Mã SP</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB047</td>
+      <td>投料間距</td>
+      <td>Koảng đưa vật liệu</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB048</td>
+      <td>來源單別</td>
+      <td>Loại CT nguồn</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB049</td>
+      <td>來源序號</td>
+      <td>STT nguồn</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB050</td>
+      <td>排程開工日</td>
+      <td>Ngày khai công xếp trình</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TB051</td>
+      <td>排程完工日</td>
+      <td>Ngày hoàn thành xếp trình</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TB052</td>
+      <td>需求日期</td>
+      <td>Ngày yêu cầu</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TB053</td>
+      <td>安全存量</td>
+      <td>SL lưu kho an toàn</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB054</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB055</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB056</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB057</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB058</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB059</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB060</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>MPSTC</samp> : 每日排程資料檔    <small>(DL xếp trình ngày)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_MPSTC</samp></td>
+      <td>TC001+TC002+TC003+TC008+TC009+TC010+TC011</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MPSTC_K01</td>
+      <td>TC001+TC005+TC003</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TC001</td>
+      <td>計劃批號</td>
+      <td>Số lô kế hoạch</td>
+      <td>C</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC002</td>
+      <td>來源序號</td>
+      <td>STT nguồn</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC003</td>
+      <td>日期</td>
+      <td>Ngày</td>
+      <td>C</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TC004</td>
+      <td>數量</td>
+      <td>SL</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC005</td>
+      <td>資源代號</td>
+      <td>Mã số tài cũ</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC006</td>
+      <td>計劃耗用產能</td>
+      <td>Sức SX tiêu hao kế hoạch</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC007</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC008</td>
+      <td>需求來源</td>
+      <td>Nguồn yêu cầu</td>
+      <td>C</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.訂單、<samp>2</samp>.銷售預測、<samp>3</samp>.獨立需求</td>
+    </tr>
+    <tr>
+      <td>TC009</td>
+      <td>來源單別</td>
+      <td>Loại CT nguồn</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC010</td>
+      <td>來源單號</td>
+      <td>Mã CT nguồn</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC011</td>
+      <td>BOM節點</td>
+      <td>Điểm BOM</td>
+      <td>C</td>
+      <td>40.0</td>
+      <td><samp>[DE<samp>F</samp>:00]</samp></td>
+    </tr>
+    <tr>
+      <td>TC012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC015</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC016</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>MPSTD</samp> : 排程每日資源產能檔    <small>(Hồ sơ sức sản xuất tư cũ công tác hàng ngày)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_MPSTD</samp></td>
+      <td>TD001+TD002+TD003</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TD001</td>
+      <td>計劃批號</td>
+      <td>Số lô kế hoạch</td>
+      <td>C</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD002</td>
+      <td>資源代號</td>
+      <td>Mã số tài cũ</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD003</td>
+      <td>日期</td>
+      <td>Ngày</td>
+      <td>C</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TD004</td>
+      <td>每日產能</td>
+      <td>Sức SX 1 ngày</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD005</td>
+      <td>瓶頸耗用</td>
+      <td>Hao VL then chốt</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD006</td>
+      <td>計劃瓶頸耗用</td>
+      <td>Tiêu hao then chốt kế hoạch</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD007</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD008</td>
+      <td>非瓶頸耗用</td>
+      <td>Hao không then chốt</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD009</td>
+      <td>計劃非瓶頸耗用</td>
+      <td>Tiêu hao phi then chốt kế hoạch</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>MPSTE</samp> : 製令排程資料檔    <small>(DL xếp trình tự lệnh tạo)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_MPSTE</samp></td>
+      <td>TE001+TE002+TE003</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MPSTE_K01</td>
+      <td>TE004+TE003</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TE001</td>
+      <td>製令單別</td>
+      <td>Lệnh SX</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE002</td>
+      <td>製令單號</td>
+      <td>Mã lệnh SX</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE003</td>
+      <td>日期</td>
+      <td>Ngày</td>
+      <td>C</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TE004</td>
+      <td>資源代號</td>
+      <td>Mã số tài cũ</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE005</td>
+      <td>數量</td>
+      <td>SL</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE006</td>
+      <td>耗用產能</td>
+      <td>Sức SX hao</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE007</td>
+      <td>計劃批號</td>
+      <td>Số lô kế hoạch</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE008</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE009</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>MPSTF</samp> : 資源耗用明細檔    <small>(Chi tiết hao tư nguyên)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_MPSTF</samp></td>
+      <td>TF001+TF002+TF003+TF006+TF007+TF008+TF009+TF010+TF011</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TF001</td>
+      <td>計劃批號</td>
+      <td>Số lô kế hoạch</td>
+      <td>C</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF002</td>
+      <td>資源代號</td>
+      <td>Mã số tài cũ</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF003</td>
+      <td>日期</td>
+      <td>Ngày</td>
+      <td>C</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TF004</td>
+      <td>瓶頸耗用</td>
+      <td>Hao VL then chốt</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF005</td>
+      <td>非瓶頸耗用</td>
+      <td>Hao không then chốt</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF006</td>
+      <td>耗用來源</td>
+      <td>Nguồn hao</td>
+      <td>C</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.製令,<samp>2</samp>.計劃</td>
+    </tr>
+    <tr>
+      <td>TF007</td>
+      <td>需求來源</td>
+      <td>Nguồn yêu cầu</td>
+      <td>C</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.製令、<samp>1</samp>.訂單、<samp>2</samp>.銷售預測、<samp>3</samp>.獨立需求</td>
+    </tr>
+    <tr>
+      <td>TF008</td>
+      <td>來源單別</td>
+      <td>Loại CT nguồn</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF009</td>
+      <td>來源單號</td>
+      <td>Mã CT nguồn</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF010</td>
+      <td>來源序號</td>
+      <td>STT nguồn</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF011</td>
+      <td>BOM節點</td>
+      <td>Điểm BOM</td>
+      <td>C</td>
+      <td>40.0</td>
+      <td><samp>[DE<samp>F</samp>:00]</samp></td>
+    </tr>
+    <tr>
+      <td>TF012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF015</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF016</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>MPSTG</samp> : 排程來源檔    <small>(Hồ sơ nguồn công tác)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_MPSTG</samp></td>
+      <td>TG001+TG003+TG004+TG005+TG006</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TG001</td>
+      <td>計劃批號</td>
+      <td>Số lô kế hoạch</td>
+      <td>C</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG002</td>
+      <td>優先順序</td>
+      <td>Thứ tự ưu tiên</td>
+      <td>V</td>
+      <td>5.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG003</td>
+      <td>需求來源</td>
+      <td>Nguồn yêu cầu</td>
+      <td>C</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.訂單、<samp>2</samp>.銷售預測、<samp>3</samp>.獨立需求</td>
+    </tr>
+    <tr>
+      <td>TG004</td>
+      <td>來源單別</td>
+      <td>Loại CT nguồn</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG005</td>
+      <td>來源單號</td>
+      <td>Mã CT nguồn</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG006</td>
+      <td>來源序號</td>
+      <td>STT nguồn</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG007</td>
+      <td>品號</td>
+      <td>Mã SP</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG008</td>
+      <td>需求數量</td>
+      <td>SL yêu cầu</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>訂單未交量<small>(含贈品未交量)</small>/預測數量<small>(扣除已受訂量)</small></td>
+    </tr>
+    <tr>
+      <td>TG009</td>
+      <td>單位</td>
+      <td>ĐV</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG010</td>
+      <td>預交日期</td>
+      <td>Ngày dự kiến giao hàng</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td>訂單預交日/預測日期<samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TG011</td>
+      <td>庫存單位需求數量</td>
+      <td>SL yêu cầu đơn vị tồn kho</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG012</td>
+      <td>最晚開工日</td>
+      <td>Ngày khởi công chậm nhất</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TG013</td>
+      <td>預計開工日</td>
+      <td>Ngày dự tính BĐ SX</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TG014</td>
+      <td>預計完工日</td>
+      <td>Ngày dự tính hoàn thành</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TG015</td>
+      <td>生產天數</td>
+      <td>Số ngày SX</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG016</td>
+      <td>客戶簡稱</td>
+      <td>Tên tắt KH</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG017</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG018</td>
+      <td>狀態碼</td>
+      <td>Mã trạng thái</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><small>(<samp>Y</samp>:已鎖定 <samp>N</samp>:未鎖定 <samp>Z</samp>:已發放)</small></td>
+    </tr>
+    <tr>
+      <td>TG019</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG020</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG021</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG022</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG023</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG024</td>
+      <td>訂單需求量</td>
+      <td></td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG025</td>
+      <td>預估片數</td>
+      <td></td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG026</td>
+      <td>生產片數</td>
+      <td></td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+  </div>
+  <!--- Footer
+  <footer><div class="uk-margin-left uk-text-small">Copyright &copy;2022 VPIC1. All Rights Reserved.  <i>(Japlin Chen)</i></div></footer>
+  --->
+</body>
+</html>

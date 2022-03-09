@@ -1,0 +1,2804 @@
+
+<html>
+<head>
+  <title>SFC_製程管理系統</title>
+  <link rel="stylesheet" href="../df_style.css" />
+</head>
+<body>
+  <header>
+    <h3><span style="color:red">SFC</span> 製程管理系統</h3>
+  </header>
+  <div class="TableAccordion">
+
+   <details>
+   <summary><samp>SFCMA</samp> : 製程參數設定檔    <small>(HS tham số công đoạn sản xuất)</small></summary>
+   <content>
+
+      
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MA001</td>
+      <td>生產工時蒐集依據</td>
+      <td>Thu thập theo giờ SX</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.報工單、<samp>2</samp>.移轉單</td>
+    </tr>
+    <tr>
+      <td>MA002</td>
+      <td>實際工時回饋包含重工完成</td>
+      <td></td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N</td>
+    </tr>
+    <tr>
+      <td>MA003</td>
+      <td>實際工時回饋包含報廢</td>
+      <td>Đáp ứng giờ công thực tế bao gồm bỏ ra</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N</td>
+    </tr>
+    <tr>
+      <td>MA004</td>
+      <td>實際工時回饋包含正常完成</td>
+      <td></td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N</td>
+    </tr>
+    <tr>
+      <td>MA005</td>
+      <td>報廢數量回饋製令報廢數量</td>
+      <td>Phản hồi SL lệnh SX báo phế</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N <samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>MA006</td>
+      <td>移出數量可超出投入數量</td>
+      <td>SL xuất ra có thể vượt hơn SL nhập vào</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N <samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>MA007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA012</td>
+      <td>人時/機時輸入方式</td>
+      <td>PT nhập giờ công/giờ máy</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.時:分:秒 <samp>2</samp>.分:秒<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>SFCTA</samp> : 製令製程資料檔    <small>(HS DL công đoạn lệnh SX)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_SFCTA</samp></td>
+      <td>TA001+TA002+TA003+TA006</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>SFCTA_K01</td>
+      <td>TA008+TA006+TA001+TA002</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TA001</td>
+      <td>製令單別</td>
+      <td>Lệnh SX</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA002</td>
+      <td>製令單號</td>
+      <td>Mã lệnh SX</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA003</td>
+      <td>加工順序</td>
+      <td>Thứ tự GC</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA004</td>
+      <td>製程代號</td>
+      <td>Mã CĐSX</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA005</td>
+      <td>製程性質</td>
+      <td>Tính chất CĐSX</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.廠內製程、<samp>2</samp>.託外製程</td>
+    </tr>
+    <tr>
+      <td>TA006</td>
+      <td>線別/廠商代號</td>
+      <td>Mã DCSX / NCC</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td>此製程生產之主要生產線/主要加工廠商代號</td>
+    </tr>
+    <tr>
+      <td>TA007</td>
+      <td>線別/廠商名稱</td>
+      <td>Tên DCSX/NCC</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td>此製程生產之主要生產線/主要加工廠商名稱</td>
+    </tr>
+    <tr>
+      <td>TA008</td>
+      <td>預計開工日</td>
+      <td>Ngày dự tính BĐ SX</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TA009</td>
+      <td>預計完工日</td>
+      <td>Ngày dự tính hoàn thành</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TA010</td>
+      <td>投入數量</td>
+      <td>SL đầu vào</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之投入數量</td>
+    </tr>
+    <tr>
+      <td>TA011</td>
+      <td>完成數量</td>
+      <td>SL hoàn tất</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之完成數量</td>
+    </tr>
+    <tr>
+      <td>TA012</td>
+      <td>報廢數量</td>
+      <td>SL báo phế</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之報廢數量</td>
+    </tr>
+    <tr>
+      <td>TA013</td>
+      <td>重工投入</td>
+      <td>Đầu vào làm lại</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之重工投入數量</td>
+    </tr>
+    <tr>
+      <td>TA014</td>
+      <td>重工完成</td>
+      <td>Hoàn thành làm lại</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之重工完成數量</td>
+    </tr>
+    <tr>
+      <td>TA015</td>
+      <td>撥轉數量</td>
+      <td>SL chuyển</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之撥轉數量</td>
+    </tr>
+    <tr>
+      <td>TA016</td>
+      <td>盤盈虧量</td>
+      <td>SL lỗ lãi kiểm kê</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之盤盈虧數量</td>
+    </tr>
+    <tr>
+      <td>TA017</td>
+      <td>待轉數量</td>
+      <td>SL chờ chuyển</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之待轉數量</td>
+    </tr>
+    <tr>
+      <td>TA018</td>
+      <td>幣別</td>
+      <td>Loại tiền tệ</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA019</td>
+      <td>匯率</td>
+      <td>Tỷ giá</td>
+      <td>N</td>
+      <td>20.9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA020</td>
+      <td>計價單位</td>
+      <td>ĐV tính giá</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA021</td>
+      <td>加工單價</td>
+      <td>ĐG GC</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA022</td>
+      <td>標準人時(秒)</td>
+      <td>Số giờ nhân công TC(giây)</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td>對此製程之標準人時<small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TA023</td>
+      <td>實際人時(秒)</td>
+      <td>Giờ nhân công thực(giây)</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td>對此製程之實際人時<small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TA024</td>
+      <td>製程敘述</td>
+      <td>Mô tả CĐSX</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td>製程之詳細說明</td>
+    </tr>
+    <tr>
+      <td>TA025</td>
+      <td>移轉批量</td>
+      <td>Lượng đợt di chuyển</td>
+      <td>N</td>
+      <td>7.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA026</td>
+      <td>固定製造天數</td>
+      <td>Số ngày chế tạo cố định</td>
+      <td>N</td>
+      <td>7.3</td>
+      <td>固定批量之製造天數</td>
+    </tr>
+    <tr>
+      <td>TA027</td>
+      <td>變動製造天數</td>
+      <td>Số ngày chế tạo biến động</td>
+      <td>N</td>
+      <td>7.3</td>
+      <td>隨批量變動製造天數</td>
+    </tr>
+    <tr>
+      <td>TA028</td>
+      <td>工時批量</td>
+      <td>Giờ công theo đợt</td>
+      <td>N</td>
+      <td>7.0</td>
+      <td><samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TA029</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td><small>(損壞扣款)</small></td>
+    </tr>
+    <tr>
+      <td>TA030</td>
+      <td>實際開工日</td>
+      <td>Ngày BĐ SX thực tế</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td>對此製程之實際開工日<samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TA031</td>
+      <td>實際完工日</td>
+      <td>Ngày hoàn thành thực tế</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td>對此製程之實際完工日<samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TA032</td>
+      <td>完工碼</td>
+      <td>Mã hoàn thành</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>對此製程之完工碼</td>
+    </tr>
+    <tr>
+      <td>TA033</td>
+      <td>檢驗方式</td>
+      <td>PT kiểm nghiệm</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>:免檢、<samp>1</samp>:抽檢<small>(減量)</small>、<samp>2</samp>:抽檢<small>(正常)</small>、<samp>3</samp>:抽檢<small>(加嚴)</small>、<samp>4</samp>:全檢</td>
+    </tr>
+    <tr>
+      <td>TA034</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA035</td>
+      <td>標準機時(秒)</td>
+      <td>Số giờ máy TC(giây)</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td>對此製程之標準機時<small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TA036</td>
+      <td>實際機時(秒)</td>
+      <td>Thời gian máy thực(giây)</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td>對此製程之實際機時<small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TA037</td>
+      <td>檢驗天數</td>
+      <td>S.ngày kiểm tra</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TA038</td>
+      <td>投入包裝數量</td>
+      <td>SL đóng gói đầu vào</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之投入包裝數量</td>
+    </tr>
+    <tr>
+      <td>TA039</td>
+      <td>完成包裝數量</td>
+      <td>SL đóng gói hoàn thành</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之完成包裝數量</td>
+    </tr>
+    <tr>
+      <td>TA040</td>
+      <td>報廢包裝數量</td>
+      <td>SL đóng gói báo phế</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之報廢包裝數量</td>
+    </tr>
+    <tr>
+      <td>TA041</td>
+      <td>重工投入包裝</td>
+      <td>Đưa vào đóng gói lại</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之重工投入包裝數量</td>
+    </tr>
+    <tr>
+      <td>TA042</td>
+      <td>重工完成包裝</td>
+      <td>Hoàn thành đóng gói lại</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之重工完成包裝數量</td>
+    </tr>
+    <tr>
+      <td>TA043</td>
+      <td>撥轉包裝數量</td>
+      <td>SL đóng gói chuyển phát</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之撥轉包裝數量</td>
+    </tr>
+    <tr>
+      <td>TA044</td>
+      <td>盤盈虧包裝量</td>
+      <td>SL đóng gói tăng giảm sau kiểm kê</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之盤盈虧包裝數量</td>
+    </tr>
+    <tr>
+      <td>TA045</td>
+      <td>待轉包裝數量</td>
+      <td>SL đóng gói chờ chuyển</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之待轉包裝數量</td>
+    </tr>
+    <tr>
+      <td>TA046</td>
+      <td>完工判斷依據</td>
+      <td>Căn cứ phán đoán hoàn thành</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.數量 <samp>2</samp>.包裝數量<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TA047</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA048</td>
+      <td>單位產出分母</td>
+      <td>Mẫu số đơn vị phát sinh</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA049</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA050</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA051</td>
+      <td>資源代號</td>
+      <td>Mã số tài cũ</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA052</td>
+      <td>資源群組</td>
+      <td>Tên nhóm tài nguyên</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td>資源群組編號</td>
+    </tr>
+    <tr>
+      <td>TA053</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA054</td>
+      <td>APS固定工時</td>
+      <td>Giờ công cố định APS</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td>APS固定機時<small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TA055</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA056</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA057</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA058</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA059</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA060</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA061</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA062</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA063</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA064</td>
+      <td>單位產出分子</td>
+      <td>Tử số đơn vị phát sinh</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA065</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA066</td>
+      <td>基準數量</td>
+      <td>Số lượng tiêu chuẩn</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA067</td>
+      <td>指定資源</td>
+      <td>Tài nguyên chỉ định</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>指定資源<samp>1</samp>.資源、<samp>2</samp>.資源群組<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TA068</td>
+      <td>設備規格一</td>
+      <td>Thiết bị quy cách 1</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA069</td>
+      <td>設備規格二</td>
+      <td>Thiết bị quy cách 2</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA070</td>
+      <td>設備規格三</td>
+      <td>Thiết bị quy cách 3</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA071</td>
+      <td>設備規格四</td>
+      <td>Thiết bị quy cách 4</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA072</td>
+      <td>設備規格五</td>
+      <td>Thiết bị quy cách 5</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA073</td>
+      <td>設備規格六</td>
+      <td>Thiết bị quy cách 6</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA074</td>
+      <td>設備規格七</td>
+      <td>Thiết bị quy cách 7</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA075</td>
+      <td>設備規格八</td>
+      <td>Thiết bị quy cách 8</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA076</td>
+      <td>設備規格九</td>
+      <td>Thiết bị quy cách 9</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA077</td>
+      <td>設備規格十</td>
+      <td>Thiết bị quy cách 10</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA078</td>
+      <td>設備規格十一</td>
+      <td>Thiết bị quy cách 11</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA079</td>
+      <td>設備規格十二</td>
+      <td>Thiết bị quy cách 12</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA080</td>
+      <td>設備規格十三</td>
+      <td>Thiết bị quy cách 13</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA081</td>
+      <td>設備規格十四</td>
+      <td>Thiết bị quy cách 14</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA082</td>
+      <td>設備規格十五</td>
+      <td>Thiết bị quy cách 15</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA083</td>
+      <td>後製工時</td>
+      <td>Thời gian làm việc nửa sau quy trình</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td><small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TA084</td>
+      <td>批次加工量</td>
+      <td>Lượng gia công</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA085</td>
+      <td>APS變動工時</td>
+      <td>Giờ công biến động APS</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td>APS變動機時<small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TA086</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA087</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA088</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA089</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA090</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA091</td>
+      <td>機台數/人數</td>
+      <td>SL máy/người</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA092</td>
+      <td>產出頻率</td>
+      <td>năng xuất sản xuất</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>SFCTB</samp> : 移轉單單頭檔    <small>(HS tiêu đề dơn chuyển)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_SFCTB</samp></td>
+      <td>TB001+TB002</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>SFCTB_K01</td>
+      <td>TB003+TB001+TB002</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>SFCTB_K02</td>
+      <td>TB005+TB003</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TB001</td>
+      <td>移轉單單別</td>
+      <td>Loại phiếu chuyển</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB002</td>
+      <td>移轉單單號</td>
+      <td>Mã phiếu chuyển</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB003</td>
+      <td>移轉日期</td>
+      <td>Ngày di chuyển</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TB004</td>
+      <td>移出類別</td>
+      <td>Loại chuyển ra</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><small>(<samp>1</samp>:生產線別 <samp>2</samp>:加工廠商 <samp>3</samp>:庫別)</small></td>
+    </tr>
+    <tr>
+      <td>TB005</td>
+      <td>移出部門</td>
+      <td>Bộ phận chuyển ra</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB006</td>
+      <td>移出部門名稱</td>
+      <td>Tên bộ phận chuyển ra</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB007</td>
+      <td>移入類別</td>
+      <td>Loại chuyển vào</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><small>(<samp>1</samp>:生產線別 <samp>2</samp>:加工廠商 <samp>3</samp>:庫別)</small></td>
+    </tr>
+    <tr>
+      <td>TB008</td>
+      <td>移入部門</td>
+      <td>Bộ phận chuyển vào</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB009</td>
+      <td>移入部門名稱</td>
+      <td>Tên bộ phận chuyển vào</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB010</td>
+      <td>廠別代號</td>
+      <td>Mã xưởng</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB011</td>
+      <td>列印次數</td>
+      <td>Số lần in</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB012</td>
+      <td>更新碼</td>
+      <td>Mã cập nhật</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB013</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB014</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB015</td>
+      <td>單據日期</td>
+      <td>Ngày CT</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TB016</td>
+      <td>確認者</td>
+      <td>Xác nhận</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB017</td>
+      <td>簽核狀態碼</td>
+      <td>T.Thái xét duyệt</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.待處理、<samp>1</samp>.簽核中、<samp>2</samp>.退件、<samp>3</samp>.已核准、<samp>4</samp>.取消確認中、<samp>5</samp>.作廢中、<samp>6</samp>.取消作廢中、<samp>N</samp>.不執行電子簽核<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TB018</td>
+      <td>統一編號</td>
+      <td>MST</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB019</td>
+      <td>發票聯數</td>
+      <td>Số liên hóa đơn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB020</td>
+      <td>發票日期</td>
+      <td>Ngày</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TB021</td>
+      <td>發票號碼</td>
+      <td>Mã hóa đơn</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB022</td>
+      <td>課稅別</td>
+      <td>Loại thuế</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.應稅內含、<samp>2</samp>.應稅外加、<samp>3</samp>.零稅率、<samp>4</samp>.免稅、<samp>9</samp>.不計稅<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TB023</td>
+      <td>扣抵區分</td>
+      <td>Loại khấu trừ</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.可扣抵進貨及費用 <samp>2</samp>.可扣抵固定資產 <samp>3</samp>.不可扣抵進貨及費用 <samp>4</samp>.不可扣抵固定資產<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TB024</td>
+      <td>保留欄位</td>
+      <td>Cột để sẵn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>菸酒註記</td>
+    </tr>
+    <tr>
+      <td>TB025</td>
+      <td>申報年月</td>
+      <td>Tháng khai báo</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td><samp>[Formate:YM]</samp></td>
+    </tr>
+    <tr>
+      <td>TB026</td>
+      <td>營業稅率</td>
+      <td>Thuế suất</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td><small>(%)</small><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TB027</td>
+      <td>傳送次數</td>
+      <td>Số lần gửi</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TB028</td>
+      <td>廠商單號</td>
+      <td>Mã CT NCC</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td>廠商自己的單號</td>
+    </tr>
+    <tr>
+      <td>TB029</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB030</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB031</td>
+      <td>保稅碼</td>
+      <td>Mã bảo thuế</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.依品號預設 <samp>Y</samp>.預設為保稅品 <samp>N</samp>.預設為非保稅品<samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TB032</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB033</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB034</td>
+      <td>稅別碼</td>
+      <td>Mã thuế suất</td>
+      <td>V</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB035</td>
+      <td>註記號</td>
+      <td></td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB036</td>
+      <td>幣別</td>
+      <td>Loại tiền tệ</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB037</td>
+      <td>匯率</td>
+      <td>Tỷ giá</td>
+      <td>N</td>
+      <td>20.9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB038</td>
+      <td>SFT移轉單別</td>
+      <td>Loại phiếu chuyển công đoạn SFT</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB039</td>
+      <td>SFT移轉單號</td>
+      <td>Mã phiếu chuyển SFT</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>SFCTC</samp> : 移轉單單身檔    <small>(HS ND dơn chuyển)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_SFCTC</samp></td>
+      <td>TC001+TC002+TC003</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>SFCTC_K01</td>
+      <td>TC004+TC005</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>SFCTC_K02</td>
+      <td>TC028+TC029+TC030</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>SFCTC_K03</td>
+      <td>TC039+TC022+TC006+TC013</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TC001</td>
+      <td>移轉單單別</td>
+      <td>Loại phiếu chuyển</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC002</td>
+      <td>移轉單單號</td>
+      <td>Mã phiếu chuyển</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC003</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC004</td>
+      <td>製令單別</td>
+      <td>Lệnh SX</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC005</td>
+      <td>製令單號</td>
+      <td>Mã lệnh SX</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC006</td>
+      <td>移出工序</td>
+      <td>Trình tự xuất ra</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>移出加工順序</td>
+    </tr>
+    <tr>
+      <td>TC007</td>
+      <td>移出製程</td>
+      <td>CĐSX chuyển ra</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>移出製程代號</td>
+    </tr>
+    <tr>
+      <td>TC008</td>
+      <td>移入工序</td>
+      <td>Trình tự</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>移入加工順序</td>
+    </tr>
+    <tr>
+      <td>TC009</td>
+      <td>移入製程</td>
+      <td>Đưa vào CĐSX</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>移入製程代號</td>
+    </tr>
+    <tr>
+      <td>TC010</td>
+      <td>單位</td>
+      <td>ĐV</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td>小單位</td>
+    </tr>
+    <tr>
+      <td>TC012</td>
+      <td>計價單位</td>
+      <td>ĐV tính giá</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC013</td>
+      <td>型態</td>
+      <td>Kiểu</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>移轉型態<small>(<samp>1</samp>:正常完成 <samp>2</samp>:重工完成 <samp>3</samp>:退回重工 <samp>4</samp>:撥轉 <samp>5</samp>:盤盈損 <samp>6</samp>:投入 )</small></td>
+    </tr>
+    <tr>
+      <td>TC014</td>
+      <td>驗收數量</td>
+      <td>SL nghiệm thu</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC015</td>
+      <td>計價數量</td>
+      <td>SL tính giá</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC016</td>
+      <td>報廢數量</td>
+      <td>SL báo phế</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC017</td>
+      <td>加工單價</td>
+      <td>ĐG GC</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC018</td>
+      <td>加工金額</td>
+      <td>Số tiền GC</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC019</td>
+      <td>扣款金額</td>
+      <td>Số tiền khấu trừ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC020</td>
+      <td>使用人時(秒)</td>
+      <td>Giờ công đã dùng(giây)</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td>使用人時<small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TC021</td>
+      <td>使用機時(秒)</td>
+      <td>Giờ máy đã dùng(giây)</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td>使用機時<small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TC022</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC023</td>
+      <td>移出部門</td>
+      <td>Bộ phận chuyển ra</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC024</td>
+      <td>預交日期</td>
+      <td>Ngày dự kiến giao hàng</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TC025</td>
+      <td>已交數量</td>
+      <td>SL đã giao</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC026</td>
+      <td>結案碼</td>
+      <td>Mã kết thúc</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N</td>
+    </tr>
+    <tr>
+      <td>TC027</td>
+      <td>逾期碼</td>
+      <td>Mã quá hạn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N</td>
+    </tr>
+    <tr>
+      <td>TC028</td>
+      <td>託工單別</td>
+      <td>Phiếu ủy thác gia công</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC029</td>
+      <td>託工單號</td>
+      <td>Mã phiếu ủy thác gia công</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC030</td>
+      <td>託工序號</td>
+      <td>Mã thứ tự ủy thác gia công</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC031</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC032</td>
+      <td>批號</td>
+      <td>Số lô</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC033</td>
+      <td>有效日期</td>
+      <td>Ngày hiệu lực</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TC034</td>
+      <td>複檢日期</td>
+      <td>Ngày kiểm tra lại</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TC035</td>
+      <td>急料</td>
+      <td>NVL khẩn cấp</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N</td>
+    </tr>
+    <tr>
+      <td>TC036</td>
+      <td>數量</td>
+      <td>SL</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>移轉數量</td>
+    </tr>
+    <tr>
+      <td>TC037</td>
+      <td>驗退數量</td>
+      <td>SL nghiệm thu trả hàng</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TC038</td>
+      <td>驗收日期</td>
+      <td>Ngày nghiệm thu</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TC039</td>
+      <td>檢驗狀態</td>
+      <td>Trạng thái kiểm nghiệm</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.免檢、<samp>1</samp>.待驗、<samp>2</samp>.合格、<samp>3</samp>.不良、<samp>4</samp>.特採<samp>[DE<samp>F</samp>:'2']</samp></td>
+    </tr>
+    <tr>
+      <td>TC040</td>
+      <td>扣款說明</td>
+      <td>Diễn giải khấu trừ</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td>對於扣款之摘要說明</td>
+    </tr>
+    <tr>
+      <td>TC041</td>
+      <td>移入部門</td>
+      <td>Bộ phận chuyển vào</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC042</td>
+      <td>移轉包裝數量</td>
+      <td>SL đóng gói chuyển</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC043</td>
+      <td>驗收包裝數量</td>
+      <td>SL đóng gói nghiệm thu</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC044</td>
+      <td>驗退包裝數量</td>
+      <td>SL đóng gói nghiệm thu trả hàng</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC045</td>
+      <td>報廢包裝數量</td>
+      <td>SL đóng gói báo phế</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC046</td>
+      <td>已交包裝數量</td>
+      <td>SL đóng gói đã giao</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC047</td>
+      <td>產品品號</td>
+      <td>Mã SP</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC048</td>
+      <td>產品品名</td>
+      <td>Tên SP</td>
+      <td>V</td>
+      <td>120.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC049</td>
+      <td>產品規格</td>
+      <td>Quy cách SP</td>
+      <td>V</td>
+      <td>120.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC050</td>
+      <td>包裝單位</td>
+      <td>ĐV đóng gói</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC051</td>
+      <td>產品序號數量</td>
+      <td>SL STT SP</td>
+      <td>N</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC052</td>
+      <td>移入儲位</td>
+      <td>Vị trí lưu kho chuyển vào</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td>儲位</td>
+    </tr>
+    <tr>
+      <td>TC053</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC054</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC055</td>
+      <td>保稅碼</td>
+      <td>Mã bảo thuế</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N</td>
+    </tr>
+    <tr>
+      <td>TC056</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC057</td>
+      <td>SFT批號</td>
+      <td>Số lô SFT</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC058</td>
+      <td>模具群組編號</td>
+      <td>Mã nhóm khuôn</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>SFCTD</samp> : 報工單單頭檔    <small>(HS tiêu đề báo cáo công việc)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_SFCTD</samp></td>
+      <td>TD001+TD002</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>SFCTD_K01</td>
+      <td>TD003+TD001+TD002</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TD001</td>
+      <td>報工單單別</td>
+      <td>Phiếu báo cáo công việc</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD002</td>
+      <td>報工單單號</td>
+      <td>Mã báo cáo công việc</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD003</td>
+      <td>生產日期</td>
+      <td>Ngày SX</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TD004</td>
+      <td>生產線別</td>
+      <td>DCSX</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD005</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>本單已否確認之判斷碼<small>(Y/N)</small></td>
+    </tr>
+    <tr>
+      <td>TD006</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD007</td>
+      <td>列印次數</td>
+      <td>Số lần in</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD008</td>
+      <td>單據日期</td>
+      <td>Ngày CT</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TD009</td>
+      <td>確認者</td>
+      <td>Xác nhận</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD010</td>
+      <td>簽核狀態碼</td>
+      <td>T.Thái xét duyệt</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.待處理、<samp>1</samp>.簽核中、<samp>2</samp>.退件、<samp>3</samp>.已核准、<samp>4</samp>.取消確認中、<samp>5</samp>.作廢中、<samp>6</samp>.取消作廢中、<samp>N</samp>.不執行電子簽核<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TD011</td>
+      <td>傳送次數</td>
+      <td>Số lần gửi</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TD012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD015</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD016</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD017</td>
+      <td>SFT報工單別</td>
+      <td>Phiếu báo cáo công việc SFT</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD018</td>
+      <td>SFT報工單號</td>
+      <td>Mã báo cáo công việc SFT</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>SFCTE</samp> : 報工單單身檔    <small>(HS ND báo cáo công việc)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_SFCTE</samp></td>
+      <td>TE001+TE002+TE003</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>SFCTE_K01</td>
+      <td>TE006+TE007</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>SFCTE_K02</td>
+      <td>TE005+TE001+TE002</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TE001</td>
+      <td>報工單單別</td>
+      <td>Phiếu báo cáo công việc</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE002</td>
+      <td>報工單單號</td>
+      <td>Mã báo cáo công việc</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE003</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE004</td>
+      <td>員工代號</td>
+      <td>Mã NV</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE005</td>
+      <td>機台代號</td>
+      <td>Mã máy móc</td>
+      <td>V</td>
+      <td>15.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE006</td>
+      <td>製令單別</td>
+      <td>Lệnh SX</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE007</td>
+      <td>製令單號</td>
+      <td>Mã lệnh SX</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE008</td>
+      <td>工序</td>
+      <td>Trình tự GC</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>製令製程中的加工順序</td>
+    </tr>
+    <tr>
+      <td>TE009</td>
+      <td>製程代號</td>
+      <td>Mã CĐSX</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>製令製程中的製程代號</td>
+    </tr>
+    <tr>
+      <td>TE010</td>
+      <td>型態</td>
+      <td>Kiểu</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>移轉型態<small>(<samp>1</samp>:正常完成 <samp>2</samp>:重工完成 <samp>3</samp>:報廢 )</small></td>
+    </tr>
+    <tr>
+      <td>TE011</td>
+      <td>數量</td>
+      <td>SL</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>移轉數量</td>
+    </tr>
+    <tr>
+      <td>TE012</td>
+      <td>使用人時(秒)</td>
+      <td>Giờ công đã dùng(giây)</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td>對該製令製程所投入之人時<small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TE013</td>
+      <td>使用機時(秒)</td>
+      <td>Giờ máy đã dùng(giây)</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td>對該製令製程所投入之機時<small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TE014</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>本單已否確認之判斷碼<small>(Y/N)</small></td>
+    </tr>
+    <tr>
+      <td>TE015</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE016</td>
+      <td>包裝數量</td>
+      <td>SL đóng gói</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>移轉包裝數量</td>
+    </tr>
+    <tr>
+      <td>TE017</td>
+      <td>產品品號</td>
+      <td>Mã SP</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE018</td>
+      <td>產品品名</td>
+      <td>Tên SP</td>
+      <td>V</td>
+      <td>120.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE019</td>
+      <td>產品規格</td>
+      <td>Quy cách SP</td>
+      <td>V</td>
+      <td>120.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE020</td>
+      <td>單位</td>
+      <td>ĐV</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE021</td>
+      <td>包裝單位</td>
+      <td>ĐV đóng gói</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE022</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE023</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE024</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE025</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE026</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>SFCTF</samp> : 移轉單序號維護明細檔    <small>(Chi tiết duy trì STT phiếu di chuyển)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_SFCTF</samp></td>
+      <td>TF001+TF002+TF003+TF004</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TF001</td>
+      <td>移轉單單別</td>
+      <td>Loại phiếu chuyển</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF002</td>
+      <td>移轉單單號</td>
+      <td>Mã phiếu chuyển</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF003</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF004</td>
+      <td>產品序號起始編號</td>
+      <td>Mã BĐ của STT SP</td>
+      <td>C</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF005</td>
+      <td>產品序號迄止編號</td>
+      <td>Mã số cuối STT SP</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF006</td>
+      <td>數量</td>
+      <td>SL</td>
+      <td>N</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF007</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF008</td>
+      <td>序號前置碼</td>
+      <td>Mã liền trước STT</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF009</td>
+      <td>序號流水號碼數</td>
+      <td>Độ dài STT</td>
+      <td>V</td>
+      <td>2.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF010</td>
+      <td>序號編碼原則</td>
+      <td>Nguyên tắc tạo STT</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF011</td>
+      <td>品號</td>
+      <td>Mã SP</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF015</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF016</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>SFCTG</samp> : 製令製程指定工具單頭檔    <small>(Tập tin đầu đơn lệnh SX CĐSX chỉ định công cụ)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_SFCTG</samp></td>
+      <td>TG001+TG002+TG003+TG004+TG005</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TG001</td>
+      <td>製令單別</td>
+      <td>Lệnh SX</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG002</td>
+      <td>製令單號</td>
+      <td>Mã lệnh SX</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG003</td>
+      <td>加工順序</td>
+      <td>Thứ tự GC</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG004</td>
+      <td>製程代號</td>
+      <td>Mã CĐSX</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG005</td>
+      <td>模具群組編號</td>
+      <td>Mã nhóm khuôn</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG006</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>SFCTH</samp> : 製令製程指定工具單身檔    <small>(Tập tin thân đơn lệnh SX CĐSX chỉ định công cụ)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_SFCTH</samp></td>
+      <td>TH001+TH002+TH003+TH004+TH005+TH006</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TH001</td>
+      <td>製令單別</td>
+      <td>Lệnh SX</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH002</td>
+      <td>製令單號</td>
+      <td>Mã lệnh SX</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH003</td>
+      <td>加工順序</td>
+      <td>Thứ tự GC</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH004</td>
+      <td>製程代號</td>
+      <td>Mã CĐSX</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH005</td>
+      <td>模具群組編號</td>
+      <td>Mã nhóm khuôn</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH006</td>
+      <td>替代模具群組編號</td>
+      <td>Mã số nhóm khuôn thay thế</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH007</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>SFCTI</samp> : 製程模具使用指示維護檔</summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_SFCTI</samp></td>
+      <td>TI001+TI002+TI003+TI004</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TI001</td>
+      <td>移轉單別</td>
+      <td>Loại đơn di chuyển</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI002</td>
+      <td>移轉單號</td>
+      <td>Mã đơn di chuyển</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI003</td>
+      <td>移轉序號</td>
+      <td>STT chuyển</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI004</td>
+      <td>模具編號</td>
+      <td>MS khuôn</td>
+      <td>C</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI005</td>
+      <td>可用穴數</td>
+      <td>可用穴數</td>
+      <td>N</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI006</td>
+      <td>製程代號</td>
+      <td>Mã CĐSX</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI007</td>
+      <td>停用日期</td>
+      <td></td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TI008</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+  </div>
+  <!--- Footer
+  <footer><div class="uk-margin-left uk-text-small">Copyright &copy;2022 VPIC1. All Rights Reserved.  <i>(Japlin Chen)</i></div></footer>
+  --->
+</body>
+</html>

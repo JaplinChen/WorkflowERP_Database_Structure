@@ -1,0 +1,5789 @@
+
+<html>
+<head>
+  <title>IPS_進口作業管理系統</title>
+  <link rel="stylesheet" href="../df_style.css" />
+</head>
+<body>
+  <header>
+    <h3><span style="color:red">IPS</span> 進口作業管理系統</h3>
+  </header>
+  <div class="TableAccordion">
+
+   <details>
+   <summary><samp>IPSMA</samp> : 費用代號資料檔    <small>(HS DL mã CP)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IPSMA</samp></td>
+      <td>MA001</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MA001</td>
+      <td>費用代號</td>
+      <td>Mã CP</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA002</td>
+      <td>費用名稱</td>
+      <td>Tên CP</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA003</td>
+      <td>會計科目</td>
+      <td>TK</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA004</td>
+      <td>成本歸屬</td>
+      <td>Thuộc CP</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><small>(Y/N)</small></td>
+    </tr>
+    <tr>
+      <td>MA005</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA015</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA016</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA017</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IPSMB</samp> : 進口參數設定檔    <small>(HS tham số NK)</small></summary>
+   <content>
+
+      
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MB001</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td>商港建設對應之費用代號</td>
+    </tr>
+    <tr>
+      <td>MB002</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>7.6</td>
+      <td>商港建設費率</td>
+    </tr>
+    <tr>
+      <td>MB003</td>
+      <td>推廣貿易費用代號</td>
+      <td>Mã CP mở rộng mậu dịch</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td>推廣貿易對應之費用代號</td>
+    </tr>
+    <tr>
+      <td>MB004</td>
+      <td>推廣貿易費率</td>
+      <td>Tỷ lệ phí mở rộng mậu dịch</td>
+      <td>N</td>
+      <td>7.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB005</td>
+      <td>貨物稅額費用代號</td>
+      <td>Mã CP mức thuế HH</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td>貨物稅額對應之費用代號</td>
+    </tr>
+    <tr>
+      <td>MB006</td>
+      <td>進口關稅費用代號</td>
+      <td>Mã CP thuế quan NK</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td>進口關稅對應之費用代號</td>
+    </tr>
+    <tr>
+      <td>MB007</td>
+      <td>進口稅額費用代號</td>
+      <td>Mã CP mức thuế NK</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td>進口營業稅對應之費用代號</td>
+    </tr>
+    <tr>
+      <td>MB008</td>
+      <td>確認預交日更新採購單預交日</td>
+      <td>Xác nhận/cập nhật ngày dự tính giao của đơn mua hàng</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.直接更新採購預交日 <samp>2</samp>.產生採購變更單 <samp>3</samp>.不更新 <samp>[DE<samp>F</samp>:3]</samp></td>
+    </tr>
+    <tr>
+      <td>MB009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IPSTA</samp> : 預付購料資料單頭    <small>(Tiêu đề DL mua NVL trả trước)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IPSTA</samp></td>
+      <td>TA001+TA002</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>IPSTA_K01</td>
+      <td>TA008+TA001+TA002</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TA001</td>
+      <td>單別</td>
+      <td>Loại đơn</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td>預付購料單別代號</td>
+    </tr>
+    <tr>
+      <td>TA002</td>
+      <td>單號</td>
+      <td>Mã CT</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td>預付購料單號</td>
+    </tr>
+    <tr>
+      <td>TA003</td>
+      <td>類別</td>
+      <td>Loại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><small>(<samp>1</samp>:L/C,<samp>2</samp>:D/P,<samp>3</samp>:D/A,<samp>4</samp>:T/T,<samp>5</samp>:CHECK)</small></td>
+    </tr>
+    <tr>
+      <td>TA004</td>
+      <td>L/C單號</td>
+      <td>Mã CT L/C</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td>信用狀號</td>
+    </tr>
+    <tr>
+      <td>TA005</td>
+      <td>廠商代號</td>
+      <td>Mã nhà cung cấp</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td>供應廠商代號</td>
+    </tr>
+    <tr>
+      <td>TA006</td>
+      <td>開狀銀行</td>
+      <td>NH mở L/C</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA007</td>
+      <td>額度別</td>
+      <td>Loại mức độ</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA008</td>
+      <td>開狀日</td>
+      <td>Ngày mở L/C</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td>開狀日期<samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TA009</td>
+      <td>有效日期</td>
+      <td>Ngày hiệu lực</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TA010</td>
+      <td>遠期天數</td>
+      <td>Số ngày trước</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA011</td>
+      <td>許可證號</td>
+      <td>Số giấy phép</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA012</td>
+      <td>裝船期限</td>
+      <td>Ng.cuối xếp hàng</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TA013</td>
+      <td>運送方式</td>
+      <td>PT vận chuyển</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA014</td>
+      <td>E.T.D</td>
+      <td>E.T.D</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td>預計送貨日<samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TA015</td>
+      <td>E.T.A</td>
+      <td>E.T.A</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td>預計到達日<samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TA016</td>
+      <td>開狀幣別</td>
+      <td>Tiền tệ mở L/C</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA017</td>
+      <td>開狀匯率</td>
+      <td>Tỷ giá mở L/C</td>
+      <td>N</td>
+      <td>20.9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA018</td>
+      <td>開狀金額</td>
+      <td>Số tiền mở L/C</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA019</td>
+      <td>修改金額</td>
+      <td>Chỉnh sửa số tiền</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA020</td>
+      <td>已到貨額</td>
+      <td>Số tiền hàng đến hạn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA021</td>
+      <td>自籌比率</td>
+      <td>Tỷ lệ tự góp</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA022</td>
+      <td>原幣自籌金額</td>
+      <td>Vốn tự góp (ngoại tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA023</td>
+      <td>本幣自籌金額</td>
+      <td>Vốn tự góp (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA024</td>
+      <td>手續費</td>
+      <td>Phí thủ tục</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>手續費金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TA025</td>
+      <td>保險費</td>
+      <td>Phí bảo hiểm</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>保險費金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TA026</td>
+      <td>簽證費</td>
+      <td>Phí thị thực/ visa</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>簽證費金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TA027</td>
+      <td>郵電費</td>
+      <td>Bưu phí</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>郵電費金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TA028</td>
+      <td>雜項費用</td>
+      <td>CP khác</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>雜項費用金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TA029</td>
+      <td>其他費用</td>
+      <td>Chi phí khác</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>其他費用-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TA030</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>其他費用<small>(二)</small>-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TA031</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>其他費用<small>(三)</small>-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TA032</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>其他費用<small>(四)</small>-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TA033</td>
+      <td>費用合計</td>
+      <td>Tổng số CP</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>費用合計-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TA034</td>
+      <td>已攤費用</td>
+      <td>CP đã phân bổ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>已攤費用-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TA035</td>
+      <td>原幣已攤自籌額</td>
+      <td>Vốn tự góp đã phân bổ nguyên tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA036</td>
+      <td>廠別代號</td>
+      <td>Mã xưởng</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA037</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA038</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>本單已否確認之判斷碼<small>(Y/N)</small></td>
+    </tr>
+    <tr>
+      <td>TA039</td>
+      <td>結案碼</td>
+      <td>Mã kết thúc</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>本單已否結案之判斷碼<small>(Y/N)</small></td>
+    </tr>
+    <tr>
+      <td>TA040</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>單身採購金額合計</td>
+    </tr>
+    <tr>
+      <td>TA041</td>
+      <td>列印次數</td>
+      <td>Số lần in</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TA042</td>
+      <td>確認日期</td>
+      <td>Ngày xác nhận</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TA043</td>
+      <td>確認者</td>
+      <td>Xác nhận</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA044</td>
+      <td>簽核狀態碼</td>
+      <td>T.Thái xét duyệt</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.待處理、<samp>1</samp>.簽核中、<samp>2</samp>.退件、<samp>3</samp>.已核准、<samp>4</samp>.取消確認中、<samp>5</samp>.作廢中、<samp>6</samp>.取消作廢中、<samp>N</samp>.不執行電子簽核<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TA045</td>
+      <td>傳送次數</td>
+      <td>Số lần gửi</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TA046</td>
+      <td>應付憑單單別</td>
+      <td>Loại chứng từ phải trả</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA047</td>
+      <td>應付憑單單號</td>
+      <td>Mã chứng từ phải trả</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA048</td>
+      <td>應付憑單序號</td>
+      <td>STT chứng từ phải trả</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA049</td>
+      <td>結帳碼</td>
+      <td>Mã kết sổ</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>是否拋轉應付憑單之判斷碼<small>(Y/N)</small><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TA050</td>
+      <td>借款批號</td>
+      <td>Số lô vay</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td>票據系統之抵押借款批號</td>
+    </tr>
+    <tr>
+      <td>TA051</td>
+      <td>自籌金額會計科目</td>
+      <td>Mã TKKT vốn tự góp</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td>自籌金額之會計科目</td>
+    </tr>
+    <tr>
+      <td>TA052</td>
+      <td>承兌日期</td>
+      <td>Ngày chấp nhận</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TA053</td>
+      <td>裝船日期</td>
+      <td>Ngày xếp hàng lên tàu</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TA054</td>
+      <td>放款天數</td>
+      <td>Số ngày cho vay</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA055</td>
+      <td>預計付款日</td>
+      <td>Ngày thanh toán dự tính</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TA056</td>
+      <td>有效天數</td>
+      <td>Số ngày hiệu lực</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA057</td>
+      <td>利息比率</td>
+      <td>Tỷ lệ lãi</td>
+      <td>N</td>
+      <td>7.5</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA058</td>
+      <td>原幣借款金額</td>
+      <td>Tiền vay nguyên tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA059</td>
+      <td>原幣抵押金額</td>
+      <td>Tiền thế chấp (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA060</td>
+      <td>原幣還款金額</td>
+      <td>Tiền trả (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA061</td>
+      <td>本幣開狀金額</td>
+      <td>Tiền mở L/C (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA062</td>
+      <td>本幣借款金額</td>
+      <td>Tiền vay (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA063</td>
+      <td>本幣抵押金額</td>
+      <td>Tiền thế chấp nội tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA064</td>
+      <td>本幣還款金額</td>
+      <td>Tiền trả (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA065</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA066</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA067</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA068</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA069</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IPSTB</samp> : 預付購料資料單身    <small>(ND DL mua NVL trả trước)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IPSTB</samp></td>
+      <td>TB001+TB002+TB003</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TB001</td>
+      <td>單別</td>
+      <td>Loại đơn</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td>預付購料單別代號</td>
+    </tr>
+    <tr>
+      <td>TB002</td>
+      <td>單號</td>
+      <td>Mã CT</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td>預付購料單號</td>
+    </tr>
+    <tr>
+      <td>TB003</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB004</td>
+      <td>採購單別</td>
+      <td>Loại đơn mua hàng</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>對應之採購單別</td>
+    </tr>
+    <tr>
+      <td>TB005</td>
+      <td>採購單號</td>
+      <td>Mã đơn mua hàng</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td>對應之採購單號</td>
+    </tr>
+    <tr>
+      <td>TB006</td>
+      <td>採購序號</td>
+      <td>STT đặt mua</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>對應之採購序號</td>
+    </tr>
+    <tr>
+      <td>TB007</td>
+      <td>入庫庫別</td>
+      <td>Loại kho nhập</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB008</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>攤L/C費用金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TB009</td>
+      <td>確認</td>
+      <td>Xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>本單已否確認之判斷碼<small>(Y/N)</small></td>
+    </tr>
+    <tr>
+      <td>TB010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IPSTC</samp> : 預付購料資料變更單頭    <small>(Tiêu đề đổi dữ liệu mua VL tạm ứng)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IPSTC</samp></td>
+      <td>TC001+TC002+TC003</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>IPSTC_K01</td>
+      <td>TC004+TC001+TC002</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TC001</td>
+      <td>單別</td>
+      <td>Loại đơn</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td>預付購料變更之單別代號</td>
+    </tr>
+    <tr>
+      <td>TC002</td>
+      <td>單號</td>
+      <td>Mã CT</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td>預付購料變更之單號</td>
+    </tr>
+    <tr>
+      <td>TC003</td>
+      <td>變更版次</td>
+      <td>Phiên bản thay đổi</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td>預付購料變更之版次</td>
+    </tr>
+    <tr>
+      <td>TC004</td>
+      <td>變更日期</td>
+      <td>Ngày thay đổi</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TC005</td>
+      <td>類別</td>
+      <td>Loại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><small>(<samp>1</samp>:L/C,<samp>2</samp>:D/P,<samp>3</samp>:D/A,<samp>4</samp>:T/T,<samp>5</samp>:CHECK)</small></td>
+    </tr>
+    <tr>
+      <td>TC006</td>
+      <td>L/C單號</td>
+      <td>Mã CT L/C</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td>信用狀號</td>
+    </tr>
+    <tr>
+      <td>TC007</td>
+      <td>變更原因</td>
+      <td>Nguyên nhân</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC008</td>
+      <td>新備註</td>
+      <td>Ghi chú mới</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC009</td>
+      <td>廠別代號</td>
+      <td>Mã xưởng</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC010</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>本單已否確認之判斷碼<small>(Y/N)</small></td>
+    </tr>
+    <tr>
+      <td>TC011</td>
+      <td>開狀匯率</td>
+      <td>Tỷ giá mở L/C</td>
+      <td>N</td>
+      <td>20.9</td>
+      <td>變更後開狀匯率</td>
+    </tr>
+    <tr>
+      <td>TC012</td>
+      <td>修改金額</td>
+      <td>Chỉnh sửa số tiền</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>變更後修改金額</td>
+    </tr>
+    <tr>
+      <td>TC013</td>
+      <td>自籌比率</td>
+      <td>Tỷ lệ tự góp</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td>變更後預付購料之自籌比率</td>
+    </tr>
+    <tr>
+      <td>TC014</td>
+      <td>原幣修改自籌金額</td>
+      <td>Thay đổi vốn tự góp (ngoại tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>變更後預付購料之原幣修改自籌金額</td>
+    </tr>
+    <tr>
+      <td>TC015</td>
+      <td>修改自籌金額</td>
+      <td>Sửa đổi số tiền tự góp</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>變更後預付購料之修改自籌金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC016</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>變更後手續費金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC017</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>變更後保險費金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC018</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>變更後簽證費金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC019</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>變更後郵電費金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC020</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>變更後雜項費用金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC021</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>變更後其他費用-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC022</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>變更後其他費用<small>(二)</small>-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC023</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>變更後其他費用<small>(三)</small>-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC024</td>
+      <td>費用合計</td>
+      <td>Tổng số CP</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>變更後費用合計-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC025</td>
+      <td>單據日期</td>
+      <td>Ngày CT</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TC026</td>
+      <td>確認者</td>
+      <td>Xác nhận</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC027</td>
+      <td>簽核狀態碼</td>
+      <td>T.Thái xét duyệt</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.待處理、<samp>1</samp>.簽核中、<samp>2</samp>.退件、<samp>3</samp>.已核准、<samp>4</samp>.取消確認中、<samp>5</samp>.作廢中、<samp>6</samp>.取消作廢中、<samp>N</samp>.不執行電子簽核<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TC028</td>
+      <td>傳送次數</td>
+      <td>Số lần gửi</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TC029</td>
+      <td>應付憑單單別</td>
+      <td>Loại chứng từ phải trả</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC030</td>
+      <td>應付憑單單號</td>
+      <td>Mã chứng từ phải trả</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC031</td>
+      <td>應付憑單序號</td>
+      <td>STT chứng từ phải trả</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC032</td>
+      <td>結帳碼</td>
+      <td>Mã kết sổ</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>是否拋轉應付憑單之判斷碼<small>(Y/N)</small><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TC033</td>
+      <td>廠商代號</td>
+      <td>Mã nhà cung cấp</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC034</td>
+      <td>開狀幣別</td>
+      <td>Tiền tệ mở L/C</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC035</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC036</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC037</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC038</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC039</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC111</td>
+      <td>原開狀匯率</td>
+      <td>Tỷ giá mở L/C ban đầu</td>
+      <td>N</td>
+      <td>20.9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC112</td>
+      <td>原開狀金額</td>
+      <td>Số tiền mở L/C ban đầu</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC113</td>
+      <td>原自籌比率</td>
+      <td>Tỷ lệ tự góp ban đầu</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td>原預付購料變更之自籌比率</td>
+    </tr>
+    <tr>
+      <td>TC114</td>
+      <td>原原幣自籌金額</td>
+      <td>Vốn tự góp (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>原預付購料變更之原幣自籌金額</td>
+    </tr>
+    <tr>
+      <td>TC115</td>
+      <td>原本幣自籌金額</td>
+      <td>Vốn tự góp nội tệ ban đầu</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>原預付購料變更之自籌金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC116</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>原手續費金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC117</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>原保險費金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC118</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>原簽證費金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC119</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>原郵電費金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC120</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>原雜項費用金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC121</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>原其他費用-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC122</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>原其他費用<small>(二)</small>-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC123</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>原其他費用<small>(三)</small>-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC124</td>
+      <td>原費用合計</td>
+      <td>TC CP ban đầu</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>原費用合計-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TC125</td>
+      <td>列印次數</td>
+      <td>Số lần in</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TC126</td>
+      <td>原備註</td>
+      <td>Ghi chú ban đầu</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC135</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC136</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC137</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC138</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC139</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IPSTD</samp> : 預付購料資料變更單身    <small>(Nội dung đổi dữ liệu mua VL tạm ứng)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IPSTD</samp></td>
+      <td>TD001+TD002+TD003+TD004</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TD001</td>
+      <td>預付購料變更單別</td>
+      <td>Loại phiếu thay đổi mua NVL trả trước</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD002</td>
+      <td>預付購料變更單號</td>
+      <td>Mã phiếu thay đổi mua NVL trả trước</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD003</td>
+      <td>版次</td>
+      <td>Lần thay đổi</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td>變更單之版次</td>
+    </tr>
+    <tr>
+      <td>TD004</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD005</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>本單已否確認之判斷碼<small>(Y/N)</small></td>
+    </tr>
+    <tr>
+      <td>TD006</td>
+      <td>新採購單別</td>
+      <td>Loại đơn mua hàng mới</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>對應之新採購單別</td>
+    </tr>
+    <tr>
+      <td>TD007</td>
+      <td>新採購單號</td>
+      <td>Mã đơn mua hàng mới</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td>對應之新採購單號</td>
+    </tr>
+    <tr>
+      <td>TD008</td>
+      <td>新採購序號</td>
+      <td>STT mua mới</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>對應之新採購序號</td>
+    </tr>
+    <tr>
+      <td>TD009</td>
+      <td>新入庫庫別</td>
+      <td>Kho nhập mới</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD010</td>
+      <td>變更原因</td>
+      <td>Nguyên nhân</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD015</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD104</td>
+      <td>原序號</td>
+      <td>STT ban đầu</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD106</td>
+      <td>原採購單別</td>
+      <td>Loại đơn mua hàng ban đầu</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>對應之原採購單別</td>
+    </tr>
+    <tr>
+      <td>TD107</td>
+      <td>原採購單號</td>
+      <td>Mã đơn mua hàng ban đầu</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td>對應之原採購單號</td>
+    </tr>
+    <tr>
+      <td>TD108</td>
+      <td>原採購序號</td>
+      <td>STT mua ban đầu</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>對應之原採購序號</td>
+    </tr>
+    <tr>
+      <td>TD109</td>
+      <td>原入庫庫別</td>
+      <td>Loại kho nhập ban đầu</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD111</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD112</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD113</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD114</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD115</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IPSTE</samp> : SI 資料單頭檔    <small>(HS tiêu đề DL S/I)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IPSTE</samp></td>
+      <td>TE001</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>IPSTE_K01</td>
+      <td>TE002</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TE001</td>
+      <td>S/I單號</td>
+      <td>Mã CT S/I</td>
+      <td>C</td>
+      <td>20.0</td>
+      <td>Shipping-Instruction 單號</td>
+    </tr>
+    <tr>
+      <td>TE002</td>
+      <td>S/I日期</td>
+      <td>Ngày S/I</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td>Shipping-Instruction 日期<samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TE003</td>
+      <td>廠商代號</td>
+      <td>Mã nhà cung cấp</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE004</td>
+      <td>廠別代號</td>
+      <td>Mã xưởng</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE005</td>
+      <td>列印次數</td>
+      <td>Số lần in</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TE006</td>
+      <td>傳送次數</td>
+      <td>Số lần gửi</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TE007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IPSTF</samp> : SI 資料單身檔    <small>(HS ND DL S/I)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IPSTF</samp></td>
+      <td>TF001+TF002+TF003+TF004</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TF001</td>
+      <td>S/I單號</td>
+      <td>Mã CT S/I</td>
+      <td>C</td>
+      <td>20.0</td>
+      <td>Shipping-Instruction 單號</td>
+    </tr>
+    <tr>
+      <td>TF002</td>
+      <td>採購單別</td>
+      <td>Loại đơn mua hàng</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td>對應之採購單別</td>
+    </tr>
+    <tr>
+      <td>TF003</td>
+      <td>採購單號</td>
+      <td>Mã đơn mua hàng</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td>對應之採購單號</td>
+    </tr>
+    <tr>
+      <td>TF004</td>
+      <td>採購序號</td>
+      <td>STT đặt mua</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td>對應之採購序號</td>
+    </tr>
+    <tr>
+      <td>TF005</td>
+      <td>入庫庫別</td>
+      <td>Loại kho nhập</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF006</td>
+      <td>採購單價(一)</td>
+      <td>ĐG mua (1)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>採購單價<small>(一)</small></td>
+    </tr>
+    <tr>
+      <td>TF007</td>
+      <td>採購單價(二)</td>
+      <td>ĐG mua (2)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>採購單價<small>(二)</small></td>
+    </tr>
+    <tr>
+      <td>TF008</td>
+      <td>採購單價(三)</td>
+      <td>ĐG mua (3)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>採購單價<small>(三)</small></td>
+    </tr>
+    <tr>
+      <td>TF009</td>
+      <td>採購數量</td>
+      <td>SL mua hàng</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF010</td>
+      <td>採購金額(一)</td>
+      <td>Số tiền mua (1)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>採購金額<small>(一)</small></td>
+    </tr>
+    <tr>
+      <td>TF011</td>
+      <td>採購金額(二)</td>
+      <td>Số tiền mua (2)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>採購金額<small>(二)</small></td>
+    </tr>
+    <tr>
+      <td>TF012</td>
+      <td>採購金額(三)</td>
+      <td>Số tiền mua (3)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>採購金額<small>(三)</small></td>
+    </tr>
+    <tr>
+      <td>TF013</td>
+      <td>採購包裝數量</td>
+      <td>SL đóng gói mua</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF014</td>
+      <td>包裝單位</td>
+      <td>ĐV đóng gói</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF015</td>
+      <td>確認預交日</td>
+      <td>Xác nhận ngày dự tính giao</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TF016</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF017</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF018</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF019</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF020</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IPSTG</samp> : 報關贖單資料單頭檔    <small>(HS tiêu đề DL bộ CT thanh toán/tờ khai hải quanquan)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IPSTG</samp></td>
+      <td>TG001+TG002</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>IPSTG_K01</td>
+      <td>TG003+TG001+TG002</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TG001</td>
+      <td>報關單別</td>
+      <td>Loại tờ khai hải quan</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG002</td>
+      <td>報關單號</td>
+      <td>Mã tờ khai hải quan</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG003</td>
+      <td>報關日期</td>
+      <td>Ngày khai báo</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TG004</td>
+      <td>報單號碼</td>
+      <td>Số tờ khai</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG005</td>
+      <td>廠別代號</td>
+      <td>Mã xưởng</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG006</td>
+      <td>廠商代號</td>
+      <td>Mã nhà cung cấp</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG007</td>
+      <td>提單單號</td>
+      <td>Mã vận đơn</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG008</td>
+      <td>提單日期</td>
+      <td>Ngày vận đơn</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TG009</td>
+      <td>到港日期</td>
+      <td>Ngày đến cảng</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TG010</td>
+      <td>INVOICE-NO</td>
+      <td></td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG011</td>
+      <td>E.T.D</td>
+      <td>E.T.D</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td>預計送貨日<samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TG012</td>
+      <td>E.T.A</td>
+      <td>E.T.A</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td>預計到達日<samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TG013</td>
+      <td>船公司</td>
+      <td>Cty tàu biển</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG014</td>
+      <td>貨櫃場</td>
+      <td>Dãy công-ten-nơ</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG015</td>
+      <td>免費倉租日期</td>
+      <td>Ngày thuê kho miễn phí</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TG016</td>
+      <td>押匯日期</td>
+      <td>Ngày thương lượng</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TG017</td>
+      <td>幣別</td>
+      <td>Loại tiền tệ</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG018</td>
+      <td>匯率</td>
+      <td>Tỷ giá</td>
+      <td>N</td>
+      <td>20.9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG019</td>
+      <td>原幣贖單金額</td>
+      <td>Tiền ng.tệ bộ CT thanh toán</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG020</td>
+      <td>贖單金額</td>
+      <td>Tiền bộ CT thanh toán</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>贖單金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TG021</td>
+      <td>原幣沖自籌額</td>
+      <td>Khấu trừ vốn tự góp ng.tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG022</td>
+      <td>沖自籌額</td>
+      <td>Khấu trừ vốn tự góp</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>沖自籌額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TG023</td>
+      <td>原幣應還款額</td>
+      <td>Số tiền trả(ng.tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG024</td>
+      <td>應還款額</td>
+      <td>Số tiền trả</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>應還款額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TG025</td>
+      <td>遠期天數</td>
+      <td>Số ngày trước</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG026</td>
+      <td>年利率</td>
+      <td>Lãi suất năm</td>
+      <td>N</td>
+      <td>12.9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG027</td>
+      <td>應還款日</td>
+      <td>Ngày trả</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TG028</td>
+      <td>S/I單號</td>
+      <td>Mã CT S/I</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td>Shipping-Instruction單號</td>
+    </tr>
+    <tr>
+      <td>TG029</td>
+      <td>L/C單號</td>
+      <td>Mã CT L/C</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td>信用狀號</td>
+    </tr>
+    <tr>
+      <td>TG030</td>
+      <td>B/L費用總計</td>
+      <td>Tổng số CP B/L</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG031</td>
+      <td>L/C費用合計</td>
+      <td>Tổng số CP L/C</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG032</td>
+      <td>B/L成本合計</td>
+      <td>Tổng CP B/L</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG033</td>
+      <td>單身B/L費用合計</td>
+      <td>Tổng số CP ND B/L</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG034</td>
+      <td>本幣銀行利息</td>
+      <td>Lợi tức NH (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG035</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>國外銀行費用</td>
+    </tr>
+    <tr>
+      <td>TG036</td>
+      <td>更新碼</td>
+      <td>Mã cập nhật</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>更新進貨單碼<small>(Y/N)</small></td>
+    </tr>
+    <tr>
+      <td>TG037</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>本單已否確認之判斷碼<small>(Y/N)</small></td>
+    </tr>
+    <tr>
+      <td>TG038</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG039</td>
+      <td>列印次數</td>
+      <td>Số lần in</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TG040</td>
+      <td>原幣關稅合計</td>
+      <td>Tổng thuế quan (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG041</td>
+      <td>確認日期</td>
+      <td>Ngày xác nhận</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TG042</td>
+      <td>確認者</td>
+      <td>Xác nhận</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG043</td>
+      <td>付款條件代號</td>
+      <td>Mã ĐK thanh toán</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG044</td>
+      <td>報關行</td>
+      <td>Cơ quan khai báo</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG045</td>
+      <td>船名</td>
+      <td>Tên tàu</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG046</td>
+      <td>船次</td>
+      <td>Chuyến tàu</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG047</td>
+      <td>簽核狀態碼</td>
+      <td>T.Thái xét duyệt</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.待處理、<samp>1</samp>.簽核中、<samp>2</samp>.退件、<samp>3</samp>.已核准、<samp>4</samp>.取消確認中、<samp>5</samp>.作廢中、<samp>6</samp>.取消作廢中、<samp>N</samp>.不執行電子簽核<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TG048</td>
+      <td>傳送次數</td>
+      <td>Số lần gửi</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TG049</td>
+      <td>費用分攤方式</td>
+      <td>PT phân bổ CP</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.依進貨金額 <samp>2</samp>.依進貨數量 <samp>3</samp>.依毛重 <samp>4</samp>.依材積<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TG050</td>
+      <td>原幣完稅價格合計</td>
+      <td>TC giá có thuế (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>單身原幣完稅價格之累計</td>
+    </tr>
+    <tr>
+      <td>TG051</td>
+      <td>本幣完稅價格合計</td>
+      <td>TC giá có thuế (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>單身本幣完稅價格之累計</td>
+    </tr>
+    <tr>
+      <td>TG052</td>
+      <td>原幣加減費用</td>
+      <td>CP tăng giảm nguyên tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG053</td>
+      <td>推廣貿易費合計</td>
+      <td>Tổng số phí mở rộng mậu dịch</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>單身推廣貿易費之累計</td>
+    </tr>
+    <tr>
+      <td>TG054</td>
+      <td>貨物稅額合計</td>
+      <td>Tông số mức thuế HH</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>單身貨物稅額之累計</td>
+    </tr>
+    <tr>
+      <td>TG055</td>
+      <td>本幣關稅合計</td>
+      <td>Tổng thuế quan (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>單身本幣關稅之累計</td>
+    </tr>
+    <tr>
+      <td>TG056</td>
+      <td>更新碼</td>
+      <td>Mã cập nhật</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>是否產生費用資料之判斷碼<small>(Y/N)</small><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TG057</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.空運、<samp>2</samp>.海運、<samp>3</samp>.海空聯運、<samp>4</samp>.郵寄、<samp>5</samp>.陸運、<samp>6</samp>.自取、<samp>7</samp>.自送、<samp>8</samp>.快遞<samp>[DE<samp>F</samp>:2]</samp></td>
+    </tr>
+    <tr>
+      <td>TG058</td>
+      <td>申報年月</td>
+      <td>Tháng khai báo</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG059</td>
+      <td>營業稅率</td>
+      <td>Thuế suất</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TG060</td>
+      <td>稅款繳納證號</td>
+      <td>Mã CT đã nộp thuế</td>
+      <td>V</td>
+      <td>14.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG061</td>
+      <td>原幣運費</td>
+      <td>Cước vận chuyển ng.tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG062</td>
+      <td>原幣保險費</td>
+      <td>Phí bảo hiểm nguyên tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG063</td>
+      <td>本幣營業稅基</td>
+      <td>Thuế cơ bản (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG064</td>
+      <td>本幣營業稅額</td>
+      <td>Thuế(nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG065</td>
+      <td>扣抵區分</td>
+      <td>Loại khấu trừ</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.可扣抵進貨及費用、<samp>2</samp>.可扣抵固定資產、<samp>3</samp>.不可扣抵進貨及費用、<samp>4</samp>.不可扣抵固定資產<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TG066</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG067</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG068</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG069</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG070</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG071</td>
+      <td>小提單單號</td>
+      <td>House B/L No</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG072</td>
+      <td>海關手冊</td>
+      <td>Sổ tay hải quan</td>
+      <td>V</td>
+      <td>15.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IPSTH</samp> : 報關贖單費用資料檔    <small>(DL CP bộ CT thanh toán/tờ khai hải quan)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IPSTH</samp></td>
+      <td>TH001+TH002+TH003</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TH001</td>
+      <td>報關單別</td>
+      <td>Loại tờ khai hải quan</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH002</td>
+      <td>報關單號</td>
+      <td>Mã tờ khai hải quan</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH003</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH004</td>
+      <td>費用代號</td>
+      <td>Mã CP</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH005</td>
+      <td>費用金額</td>
+      <td>tiền CP</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>費用金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TH006</td>
+      <td>應付廠商代號</td>
+      <td>Mã nhà cung cấp phải trả</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td>應付費用廠商代號</td>
+    </tr>
+    <tr>
+      <td>TH007</td>
+      <td>課稅別</td>
+      <td>Loại thuế</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.應稅內含、<samp>2</samp>.應稅外加、<samp>3</samp>.零稅率、<samp>4</samp>.免稅、<samp>9</samp>.不計稅</td>
+    </tr>
+    <tr>
+      <td>TH008</td>
+      <td>發票號碼</td>
+      <td>Mã hóa đơn</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH009</td>
+      <td>會計科目</td>
+      <td>TK</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH010</td>
+      <td>成本歸屬</td>
+      <td>Thuộc CP</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><small>(Y/N)</small></td>
+    </tr>
+    <tr>
+      <td>TH011</td>
+      <td>結帳碼</td>
+      <td>Mã kết sổ</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>更新應付憑單碼<small>(Y/N)</small></td>
+    </tr>
+    <tr>
+      <td>TH012</td>
+      <td>應付憑單別</td>
+      <td>Loại chứng từ phải trả</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH013</td>
+      <td>應付憑單號</td>
+      <td>Mã chứng từ phải trả</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH014</td>
+      <td>應付憑單序號</td>
+      <td>STT chứng từ phải trả</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH015</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH016</td>
+      <td>付款條件代號</td>
+      <td>Mã ĐK thanh toán</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH017</td>
+      <td>稅款碼</td>
+      <td>Mã khoản thuế</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>是否為營業稅之判斷碼<small>(Y/N)</small><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TH018</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH019</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH020</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH021</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH022</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH023</td>
+      <td>稅別碼</td>
+      <td>Mã thuế suất</td>
+      <td>V</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH024</td>
+      <td>註記號</td>
+      <td></td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IPSTI</samp> : 報關贖單資料單身檔    <small>(HS ND DL bộ CT thanh toán/tờ khai hải quan)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IPSTI</samp></td>
+      <td>TI001+TI002+TI003</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>IPSTI_K01</td>
+      <td>TI004+TI005+TI006</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TI001</td>
+      <td>報關單別</td>
+      <td>Loại tờ khai hải quan</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI002</td>
+      <td>報關單號</td>
+      <td>Mã tờ khai hải quan</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI003</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI004</td>
+      <td>採購單別</td>
+      <td>Loại đơn mua hàng</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>對應之採購單別</td>
+    </tr>
+    <tr>
+      <td>TI005</td>
+      <td>採購單號</td>
+      <td>Mã đơn mua hàng</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td>對應之採購單號</td>
+    </tr>
+    <tr>
+      <td>TI006</td>
+      <td>採購序號</td>
+      <td>STT đặt mua</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>對應之採購序號</td>
+    </tr>
+    <tr>
+      <td>TI007</td>
+      <td>進貨單別</td>
+      <td>Phiếu nhập hàng</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>對應之進貨單別</td>
+    </tr>
+    <tr>
+      <td>TI008</td>
+      <td>進貨單號</td>
+      <td>Mã nhập hàng</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td>對應之進貨單號</td>
+    </tr>
+    <tr>
+      <td>TI009</td>
+      <td>進貨序號</td>
+      <td>STT nhập hàng</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>對應之進貨序號</td>
+    </tr>
+    <tr>
+      <td>TI010</td>
+      <td>材料品號</td>
+      <td>Mã NVL</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI011</td>
+      <td>預付購料單別</td>
+      <td>Loại phiếu mua NVL trả trước</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>對應之預付購料單別</td>
+    </tr>
+    <tr>
+      <td>TI012</td>
+      <td>預付購料單號</td>
+      <td>Mã phiếu mua NVL trả trước</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td>對應之預付購料單號</td>
+    </tr>
+    <tr>
+      <td>TI013</td>
+      <td>預付購料序號</td>
+      <td>STT mua NVL trả trước</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>對應之預付購料序號</td>
+    </tr>
+    <tr>
+      <td>TI014</td>
+      <td>進貨數量</td>
+      <td>SL nhập hàng</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI015</td>
+      <td>實收數量</td>
+      <td>SL thu thực tế</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI016</td>
+      <td>單位</td>
+      <td>ĐV</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI017</td>
+      <td>原幣進貨額</td>
+      <td>SL hàng mua nguyên tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI018</td>
+      <td>原幣沖自籌額</td>
+      <td>Khấu trừ vốn tự góp ng.tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI019</td>
+      <td>櫃號</td>
+      <td>Mã công-ten-nơ hàng</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI020</td>
+      <td>件數</td>
+      <td>Số kiện</td>
+      <td>N</td>
+      <td>5.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI021</td>
+      <td>櫃別</td>
+      <td>Loại công-ten-nơ hàng</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI022</td>
+      <td>B/L費用分攤</td>
+      <td>Phân bổ CP B/L</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>B/L費用分攤-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TI023</td>
+      <td>L/C費用分攤</td>
+      <td>Phân bổ CP L/C</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>L/C費用分攤-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TI024</td>
+      <td>更新碼</td>
+      <td>Mã cập nhật</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>更新進貨單碼<small>(Y/N)</small></td>
+    </tr>
+    <tr>
+      <td>TI025</td>
+      <td>確認</td>
+      <td>Xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>本單已否確認之判斷碼<small>(Y/N)</small></td>
+    </tr>
+    <tr>
+      <td>TI026</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI027</td>
+      <td>關稅率</td>
+      <td>T.suất hải quan</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI028</td>
+      <td>原幣關稅</td>
+      <td>Thuế quan nguyên tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI029</td>
+      <td>進貨包裝數量</td>
+      <td>SL đóng gói nhập hàng</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI030</td>
+      <td>實收包裝數量</td>
+      <td>SL đóng gói thu thực tế</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI031</td>
+      <td>包裝單位</td>
+      <td>ĐV đóng gói</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI032</td>
+      <td>批號</td>
+      <td>Số lô</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI033</td>
+      <td>有效日期</td>
+      <td>Ngày hiệu lực</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TI034</td>
+      <td>複檢日期</td>
+      <td>Ngày kiểm tra lại</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TI035</td>
+      <td>毛重(Kg)</td>
+      <td>Trọng lượng cả bì(kg)</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>毛重<small>(Kg)</small></td>
+    </tr>
+    <tr>
+      <td>TI036</td>
+      <td>材積(CUFT)</td>
+      <td>TTích(CUFT)</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>外包裝容積<small>(CUFT)</small></td>
+    </tr>
+    <tr>
+      <td>TI037</td>
+      <td>INVOICE_NO.</td>
+      <td></td>
+      <td>V</td>
+      <td>20.0</td>
+      <td>INVOICE N<samp>O</samp>.</td>
+    </tr>
+    <tr>
+      <td>TI038</td>
+      <td>本幣關稅</td>
+      <td>Thuế quan nội tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI039</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>原幣運費</td>
+    </tr>
+    <tr>
+      <td>TI040</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>本幣運費</td>
+    </tr>
+    <tr>
+      <td>TI041</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>原幣保險費</td>
+    </tr>
+    <tr>
+      <td>TI042</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>本幣保險費</td>
+    </tr>
+    <tr>
+      <td>TI043</td>
+      <td>原幣完稅價格</td>
+      <td>Giá có thuế (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI044</td>
+      <td>本幣完稅價格</td>
+      <td>Giá nội tệ có thuế</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI045</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>7.6</td>
+      <td>商港建設費率</td>
+    </tr>
+    <tr>
+      <td>TI046</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>商港建設費</td>
+    </tr>
+    <tr>
+      <td>TI047</td>
+      <td>推廣貿易費率</td>
+      <td>Tỷ lệ phí mở rộng mậu dịch</td>
+      <td>N</td>
+      <td>7.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI048</td>
+      <td>推廣貿易費</td>
+      <td>Phí mở rộng mậu dịch</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI049</td>
+      <td>貨物稅率</td>
+      <td>Thuế suất HH</td>
+      <td>N</td>
+      <td>7.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI050</td>
+      <td>貨物稅額</td>
+      <td>Mức thuế HH</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI051</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>原幣營業稅基</td>
+    </tr>
+    <tr>
+      <td>TI052</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>原幣營業稅額</td>
+    </tr>
+    <tr>
+      <td>TI053</td>
+      <td>本幣營業稅基</td>
+      <td>Thuế cơ bản (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI054</td>
+      <td>本幣營業稅額</td>
+      <td>Thuế(nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI055</td>
+      <td>分批</td>
+      <td>Phân đợt</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:'N']</samp></td>
+    </tr>
+    <tr>
+      <td>TI056</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI057</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI058</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI059</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI060</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IPSTJ</samp> : 進口費用資料單頭檔    <small>(HS tiêu đề DL CP NK)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IPSTJ</samp></td>
+      <td>TJ001+TJ002</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>IPSTJ_K01</td>
+      <td>TJ003+TJ001+TJ002</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TJ001</td>
+      <td>進口費用單別</td>
+      <td>Loại CT CP NK</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ002</td>
+      <td>進口費用單號</td>
+      <td>Mã CT CP NK</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ003</td>
+      <td>進口費用日期</td>
+      <td>Ngày CP NK</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TJ004</td>
+      <td>廠商代號</td>
+      <td>Mã nhà cung cấp</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ005</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td>發票日期<samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TJ006</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td>發票號碼</td>
+    </tr>
+    <tr>
+      <td>TJ007</td>
+      <td>廠別代號</td>
+      <td>Mã xưởng</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ008</td>
+      <td>交易幣別</td>
+      <td>Loại tiền tệ GD</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ009</td>
+      <td>匯率</td>
+      <td>Tỷ giá</td>
+      <td>N</td>
+      <td>20.9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ010</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>發票聯數:<samp>1</samp>.二聯式、<samp>2</samp>.三聯式、<samp>3</samp>.二聯式收銀機發票、<samp>4</samp>.三聯式收銀機發票、<samp>5</samp>.電子計算機發票、<samp>6</samp>.免用統一發票、<samp>A</samp>.增值稅專用發票、<samp>B</samp>.普通發票、<samp>C</samp>.免用發票</td>
+    </tr>
+    <tr>
+      <td>TJ011</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>課稅別:<samp>1</samp>.應稅內含、<samp>2</samp>.應稅外加、<samp>3</samp>.零稅率、<samp>4</samp>.免稅、<samp>9</samp>.不計稅</td>
+    </tr>
+    <tr>
+      <td>TJ012</td>
+      <td>原幣費用金額</td>
+      <td>Mức CP nguyên tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ013</td>
+      <td>原幣營業稅額</td>
+      <td>Thuế (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ014</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>本單已否確認之判斷碼<small>(Y/N)</small><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TJ015</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ016</td>
+      <td>列印次數</td>
+      <td>Số lần in</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ017</td>
+      <td>單據日期</td>
+      <td>Ngày CT</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TJ018</td>
+      <td>確認者</td>
+      <td>Xác nhận</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ019</td>
+      <td>費用分攤方式</td>
+      <td>PT phân bổ CP</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.依進貨金額 <samp>2</samp>.依進貨數量 <samp>3</samp>.依毛重 <samp>4</samp>.依材積<samp>5</samp>.依實際值<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TJ020</td>
+      <td>本幣費用金額</td>
+      <td>Tiền CP (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ021</td>
+      <td>本幣營業稅額</td>
+      <td>Thuế(nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ022</td>
+      <td>付款條件代號</td>
+      <td>Mã ĐK thanh toán</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ023</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td>統一編號</td>
+    </tr>
+    <tr>
+      <td>TJ024</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>扣抵區分:<samp>1</samp>.可扣抵進貨及費用 <samp>2</samp>.可扣抵固定資產 <samp>3</samp>.不可扣抵進貨及費用 <samp>4</samp>.不可扣抵固定資產<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TJ025</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>菸酒註記<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TJ026</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td>申報年月<samp>[Formate:YM]</samp></td>
+    </tr>
+    <tr>
+      <td>TJ027</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td>營業稅率<small>(%)</small><samp>[DE<samp>F</samp>:<samp>9</samp>.9999]</samp></td>
+    </tr>
+    <tr>
+      <td>TJ028</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>發票貨款</td>
+    </tr>
+    <tr>
+      <td>TJ029</td>
+      <td>成本金額合計</td>
+      <td>Tổng cộng tiền giá thành</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>子單頭之成本金額的累計</td>
+    </tr>
+    <tr>
+      <td>TJ030</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>發票作廢之判斷碼<small>(Y/N)</small><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TJ031</td>
+      <td>費用金額合計</td>
+      <td>Tổng số tiền CP</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>子單頭之費用金額的累計</td>
+    </tr>
+    <tr>
+      <td>TJ032</td>
+      <td>單身進貨數量合計</td>
+      <td>Tổng SL nhập hàng phần ND</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>單身之進貨數量的累計</td>
+    </tr>
+    <tr>
+      <td>TJ033</td>
+      <td>單身進貨金額合計</td>
+      <td>Tổng số tiền nhập hàng phần ND</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>單身之進貨金額的累計</td>
+    </tr>
+    <tr>
+      <td>TJ034</td>
+      <td>單身毛重合計</td>
+      <td>Tổng trọng lượng cả bao bì phần trên CT</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>單身之毛重的累計</td>
+    </tr>
+    <tr>
+      <td>TJ035</td>
+      <td>單身材積合計</td>
+      <td>Tổng TTích phần ND</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>單身之材積的累計</td>
+    </tr>
+    <tr>
+      <td>TJ036</td>
+      <td>簽核狀態碼</td>
+      <td>T.Thái xét duyệt</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.待處理、<samp>1</samp>.簽核中、<samp>2</samp>.退件、<samp>3</samp>.已核准、<samp>4</samp>.取消確認中、<samp>5</samp>.作廢中、<samp>6</samp>.取消作廢中、<samp>N</samp>.不執行電子簽核<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TJ037</td>
+      <td>傳送次數</td>
+      <td>Số lần gửi</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ038</td>
+      <td>原幣成本金額</td>
+      <td>Giá vốn (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ039</td>
+      <td>原幣成本稅額</td>
+      <td>Mức thuế giá vốn ng.tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ040</td>
+      <td>本幣成本金額</td>
+      <td>Tiền CP (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ041</td>
+      <td>本幣成本稅額</td>
+      <td>Thuế giá vốn (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ042</td>
+      <td>單身成本金額</td>
+      <td>Số tiền giá vốn ND</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>單身之成本金額的累計</td>
+    </tr>
+    <tr>
+      <td>TJ043</td>
+      <td>隱藏欄位</td>
+      <td>Cột ẩn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ044</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ045</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ046</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ047</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ048</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ049</td>
+      <td>註記號</td>
+      <td></td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ050</td>
+      <td>稅幣匯率</td>
+      <td>Tỷ giá tiền tệ thuế</td>
+      <td>N</td>
+      <td>20.9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ051</td>
+      <td>發票註記碼長度</td>
+      <td>Chiều dài mã chú thích hóa đơn</td>
+      <td>N</td>
+      <td>2.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ052</td>
+      <td>發票流水碼長度</td>
+      <td>Chiều dài mã thứ tự hóa đơn</td>
+      <td>N</td>
+      <td>2.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IPSTK</samp> : 進口費用資料子單頭檔    <small>(HS tiêu đề con DL CP NK)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IPSTK</samp></td>
+      <td>TK001+TK002+TK003</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TK001</td>
+      <td>進口費用單別</td>
+      <td>Loại CT CP NK</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK002</td>
+      <td>進口費用單號</td>
+      <td>Mã CT CP NK</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK003</td>
+      <td>進口費用序號</td>
+      <td>STT CP NK</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK004</td>
+      <td>費用代號</td>
+      <td>Mã CP</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK005</td>
+      <td>費用金額</td>
+      <td>tiền CP</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK006</td>
+      <td>會計科目</td>
+      <td>TK</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK007</td>
+      <td>應付憑單單別</td>
+      <td>Loại chứng từ phải trả</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK008</td>
+      <td>應付憑單單號</td>
+      <td>Mã chứng từ phải trả</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK009</td>
+      <td>應付憑單序號</td>
+      <td>STT chứng từ phải trả</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK010</td>
+      <td>結帳碼</td>
+      <td>Mã kết sổ</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>是否結帳之判斷碼<small>(Y/N)</small><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TK011</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>本單已否確認之判斷碼<small>(Y/N)</small><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TK012</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK013</td>
+      <td>原幣未稅金額</td>
+      <td>Tiền chưa thuế (Ngtệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK014</td>
+      <td>原幣稅額</td>
+      <td>Thuế (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK015</td>
+      <td>本幣未稅金額</td>
+      <td>Tiền chưa thuế(nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK016</td>
+      <td>本幣稅額</td>
+      <td>Thuế (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK017</td>
+      <td>成本歸屬</td>
+      <td>Thuộc CP</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><small>(Y/N)</small><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TK018</td>
+      <td>稅款碼</td>
+      <td>Mã khoản thuế</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>隱藏欄位,是否為營業稅之判斷碼<small>(Y/N)</small><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TK019</td>
+      <td>統一編號</td>
+      <td>MST</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK020</td>
+      <td>發票日期</td>
+      <td>Ngày</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TK021</td>
+      <td>發票號碼</td>
+      <td>Mã hóa đơn</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK022</td>
+      <td>發票聯數</td>
+      <td>Số liên hóa đơn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.二聯式、<samp>2</samp>.三聯式、<samp>3</samp>.二聯式收銀機發票、<samp>4</samp>.三聯式收銀機發票、<samp>5</samp>.電子計算機發票、<samp>6</samp>.免用統一發票<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TK023</td>
+      <td>課稅別</td>
+      <td>Loại thuế</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.應稅內含、<samp>2</samp>.應稅外加、<samp>3</samp>.零稅率、<samp>4</samp>.免稅、<samp>9</samp>.不計稅</td>
+    </tr>
+    <tr>
+      <td>TK024</td>
+      <td>扣抵區分</td>
+      <td>Loại khấu trừ</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.可扣抵進貨及費用 <samp>2</samp>.可扣抵固定資產 <samp>3</samp>.不可扣抵進貨及費用 <samp>4</samp>.不可扣抵固定資產<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TK025</td>
+      <td>菸酒註記</td>
+      <td>G.chú thuốc lá/rượu</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TK026</td>
+      <td>申報年月</td>
+      <td>Tháng khai báo</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td><samp>[Formate:YM]</samp></td>
+    </tr>
+    <tr>
+      <td>TK027</td>
+      <td>營業稅率</td>
+      <td>Thuế suất</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td><small>(%)</small><samp>[DE<samp>F</samp>:<samp>9</samp>.9999]</samp></td>
+    </tr>
+    <tr>
+      <td>TK028</td>
+      <td>發票貨款</td>
+      <td>Số tiền có thuế</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK029</td>
+      <td>發票稅額</td>
+      <td>Mức thuế HĐ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK030</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK031</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK032</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK033</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK034</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK035</td>
+      <td>稅別碼</td>
+      <td>Mã thuế suất</td>
+      <td>V</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK036</td>
+      <td>註記號</td>
+      <td></td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK037</td>
+      <td>專案代號</td>
+      <td>Mã dự án</td>
+      <td>C</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IPSTL</samp> : 進口費用資料單身檔    <small>(HS ND DL CP NK)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IPSTL</samp></td>
+      <td>TL001+TL002+TL003</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TL001</td>
+      <td>進口費用單別</td>
+      <td>Loại CT CP NK</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL002</td>
+      <td>進口費用單號</td>
+      <td>Mã CT CP NK</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL003</td>
+      <td>進口費用序號</td>
+      <td>STT CP NK</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL004</td>
+      <td>報關單別</td>
+      <td>Loại tờ khai hải quan</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL005</td>
+      <td>報關單號</td>
+      <td>Mã tờ khai hải quan</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL006</td>
+      <td>報關序號</td>
+      <td>STT tờ khai</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL007</td>
+      <td>費用比率</td>
+      <td>Tỷ lệ CP</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL008</td>
+      <td>原幣費用未稅金額</td>
+      <td>CP chưa thuế (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL009</td>
+      <td>原幣費用稅額</td>
+      <td>Thuế CP (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL010</td>
+      <td>本幣費用未稅金額</td>
+      <td>CP chưa thuế (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL011</td>
+      <td>本幣費用稅額</td>
+      <td>Thuế CP (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL012</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>是否確認之判斷碼<small>(Y/N)</small><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TL013</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL014</td>
+      <td>費用金額</td>
+      <td>tiền CP</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL015</td>
+      <td>成本金額</td>
+      <td>Số tiền giá vốn</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL016</td>
+      <td>原幣成本未稅金額</td>
+      <td>Giá vốn chưa thuế (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL017</td>
+      <td>原幣成本稅額</td>
+      <td>Mức thuế giá vốn ng.tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL018</td>
+      <td>本幣成本未稅金額</td>
+      <td>Giá vốn chưa thuế (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL019</td>
+      <td>本幣成本稅額</td>
+      <td>Thuế giá vốn (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL020</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL021</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL022</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL023</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL024</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IPSTM</samp> : 預付購料費用資料檔    <small>(HS DL CP mua NVL trả trước)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IPSTM</samp></td>
+      <td>TM001+TM002+TM003</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TM001</td>
+      <td>預付購料單別</td>
+      <td>Loại phiếu mua NVL trả trước</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM002</td>
+      <td>預付購料單號</td>
+      <td>Mã phiếu mua NVL trả trước</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM003</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM004</td>
+      <td>費用代號</td>
+      <td>Mã CP</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM005</td>
+      <td>交易幣別</td>
+      <td>Loại tiền tệ GD</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM006</td>
+      <td>匯率</td>
+      <td>Tỷ giá</td>
+      <td>N</td>
+      <td>20.9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM007</td>
+      <td>費用金額</td>
+      <td>tiền CP</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>費用金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TM008</td>
+      <td>應付廠商代號</td>
+      <td>Mã nhà cung cấp phải trả</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td>應付費用廠商代號</td>
+    </tr>
+    <tr>
+      <td>TM009</td>
+      <td>統一編號</td>
+      <td>MST</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM010</td>
+      <td>發票聯數</td>
+      <td>Số liên hóa đơn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.二聯式、<samp>2</samp>.三聯式、<samp>3</samp>.二聯式收銀機發票、<samp>4</samp>.三聯式收銀機發票、<samp>5</samp>.電子計算機發票、<samp>6</samp>.免用統一發票、<samp>A</samp>.增值稅專用發票、<samp>B</samp>.普通發票、<samp>C</samp>.免用發票</td>
+    </tr>
+    <tr>
+      <td>TM011</td>
+      <td>課稅別</td>
+      <td>Loại thuế</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.應稅內含、<samp>2</samp>.應稅外加、<samp>3</samp>.零稅率、<samp>4</samp>.免稅、<samp>9</samp>.不計稅</td>
+    </tr>
+    <tr>
+      <td>TM012</td>
+      <td>發票日期</td>
+      <td>Ngày</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TM013</td>
+      <td>發票號碼</td>
+      <td>Mã hóa đơn</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM014</td>
+      <td>營業稅率</td>
+      <td>Thuế suất</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td><small>(%)</small><samp>[DE<samp>F</samp>:<samp>9</samp>.9999]</samp></td>
+    </tr>
+    <tr>
+      <td>TM015</td>
+      <td>扣抵區分</td>
+      <td>Loại khấu trừ</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.可扣抵進貨及費用 <samp>2</samp>.可扣抵固定資產 <samp>3</samp>.不可扣抵進貨及費用 <samp>4</samp>.不可扣抵固定資產<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TM016</td>
+      <td>菸酒註記</td>
+      <td>G.chú thuốc lá/rượu</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TM017</td>
+      <td>申報年月</td>
+      <td>Tháng khai báo</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td><samp>[Formate:YM]</samp></td>
+    </tr>
+    <tr>
+      <td>TM018</td>
+      <td>會計科目</td>
+      <td>TK</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM019</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM020</td>
+      <td>付款條件代號</td>
+      <td>Mã ĐK thanh toán</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM021</td>
+      <td>原幣未稅金額</td>
+      <td>Tiền chưa thuế (Ngtệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM022</td>
+      <td>原幣稅額</td>
+      <td>Thuế (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM023</td>
+      <td>本幣未稅金額</td>
+      <td>Tiền chưa thuế(nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM024</td>
+      <td>本幣稅額</td>
+      <td>Thuế (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM025</td>
+      <td>結帳碼</td>
+      <td>Mã kết sổ</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>更新應付憑單碼<small>(Y/N)</small><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TM026</td>
+      <td>應付憑單別</td>
+      <td>Loại chứng từ phải trả</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM027</td>
+      <td>應付憑單號</td>
+      <td>Mã chứng từ phải trả</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM028</td>
+      <td>應付憑單序號</td>
+      <td>STT chứng từ phải trả</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM029</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM030</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM031</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM032</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM033</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM034</td>
+      <td>稅別碼</td>
+      <td>Mã thuế suất</td>
+      <td>V</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM035</td>
+      <td>註記號</td>
+      <td></td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM036</td>
+      <td>稅幣匯率</td>
+      <td>Tỷ giá tiền tệ thuế</td>
+      <td>N</td>
+      <td>20.9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM037</td>
+      <td>發票註記碼長度</td>
+      <td>Chiều dài mã chú thích hóa đơn</td>
+      <td>N</td>
+      <td>2.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM038</td>
+      <td>發票流水碼長度</td>
+      <td>Chiều dài mã thứ tự hóa đơn</td>
+      <td>N</td>
+      <td>2.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IPSTN</samp> : 預付購料費用資料變更    <small>(Thay đổi DL CP mua NVL trả trước)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IPSTN</samp></td>
+      <td>TN001+TN002+TN003+TN004</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TN001</td>
+      <td>預付購料變更單別</td>
+      <td>Loại phiếu thay đổi mua NVL trả trước</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN002</td>
+      <td>預付購料變更單號</td>
+      <td>Mã phiếu thay đổi mua NVL trả trước</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN003</td>
+      <td>版次</td>
+      <td>Lần thay đổi</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td>變更單之版次</td>
+    </tr>
+    <tr>
+      <td>TN004</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN005</td>
+      <td>費用代號</td>
+      <td>Mã CP</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN006</td>
+      <td>交易幣別</td>
+      <td>Loại tiền tệ GD</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN007</td>
+      <td>匯率</td>
+      <td>Tỷ giá</td>
+      <td>N</td>
+      <td>20.9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN008</td>
+      <td>費用金額</td>
+      <td>tiền CP</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>費用金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TN009</td>
+      <td>應付廠商代號</td>
+      <td>Mã nhà cung cấp phải trả</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td>應付費用廠商代號</td>
+    </tr>
+    <tr>
+      <td>TN010</td>
+      <td>統一編號</td>
+      <td>MST</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN011</td>
+      <td>發票聯數</td>
+      <td>Số liên hóa đơn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.二聯式、<samp>2</samp>.三聯式、<samp>3</samp>.二聯式收銀機發票、<samp>4</samp>.三聯式收銀機發票、<samp>5</samp>.電子計算機發票、<samp>6</samp>.免用統一發票、<samp>A</samp>.增值稅專用發票、<samp>B</samp>.普通發票、<samp>C</samp>.免用發票</td>
+    </tr>
+    <tr>
+      <td>TN012</td>
+      <td>課稅別</td>
+      <td>Loại thuế</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.應稅內含、<samp>2</samp>.應稅外加、<samp>3</samp>.零稅率、<samp>4</samp>.免稅、<samp>9</samp>.不計稅</td>
+    </tr>
+    <tr>
+      <td>TN013</td>
+      <td>發票日期</td>
+      <td>Ngày</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TN014</td>
+      <td>發票號碼</td>
+      <td>Mã hóa đơn</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN015</td>
+      <td>營業稅率</td>
+      <td>Thuế suất</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td><small>(%)</small><samp>[DE<samp>F</samp>:<samp>9</samp>.9999]</samp></td>
+    </tr>
+    <tr>
+      <td>TN016</td>
+      <td>扣抵區分</td>
+      <td>Loại khấu trừ</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.可扣抵進貨及費用 <samp>2</samp>.可扣抵固定資產 <samp>3</samp>.不可扣抵進貨及費用 <samp>4</samp>.不可扣抵固定資產<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TN017</td>
+      <td>菸酒註記</td>
+      <td>G.chú thuốc lá/rượu</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TN018</td>
+      <td>申報年月</td>
+      <td>Tháng khai báo</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td><samp>[Formate:YM]</samp></td>
+    </tr>
+    <tr>
+      <td>TN019</td>
+      <td>會計科目</td>
+      <td>TK</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN020</td>
+      <td>付款條件代號</td>
+      <td>Mã ĐK thanh toán</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN021</td>
+      <td>原幣未稅金額</td>
+      <td>Tiền chưa thuế (Ngtệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN022</td>
+      <td>原幣稅額</td>
+      <td>Thuế (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN023</td>
+      <td>本幣未稅金額</td>
+      <td>Tiền chưa thuế(nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN024</td>
+      <td>本幣稅額</td>
+      <td>Thuế (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN025</td>
+      <td>變更原因</td>
+      <td>Nguyên nhân</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN026</td>
+      <td>新備註</td>
+      <td>Ghi chú mới</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN027</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN028</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN029</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN030</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN031</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN032</td>
+      <td>稅別碼</td>
+      <td>Mã thuế suất</td>
+      <td>V</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN033</td>
+      <td>註記號</td>
+      <td></td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN104</td>
+      <td>原序號</td>
+      <td>STT ban đầu</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN105</td>
+      <td>原費用代號</td>
+      <td>Mã CP ban đầu</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN106</td>
+      <td>原交易幣別</td>
+      <td>Loại tiền tệ GD ban đầu</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN107</td>
+      <td>原匯率</td>
+      <td>Tỷ giá ban đầu</td>
+      <td>N</td>
+      <td>20.9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN108</td>
+      <td>原費用金額</td>
+      <td>Số tiền CP ban đầu</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>原費用金額-本國幣別</td>
+    </tr>
+    <tr>
+      <td>TN109</td>
+      <td>原應付廠商代號</td>
+      <td>Mã nhà cung cấp phải trả ban đầu</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td>原應付費用廠商代號</td>
+    </tr>
+    <tr>
+      <td>TN110</td>
+      <td>原統一編號</td>
+      <td>MST ban đầu</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN111</td>
+      <td>原發票聯數</td>
+      <td>Số liên hóa đơn ban đầu</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.二聯式、<samp>2</samp>.三聯式、<samp>3</samp>.二聯式收銀機發票、<samp>4</samp>.三聯式收銀機發票、<samp>5</samp>.電子計算機發票、<samp>6</samp>.免用統一發票、<samp>A</samp>.增值稅專用發票、<samp>B</samp>.普通發票、<samp>C</samp>.免用發票</td>
+    </tr>
+    <tr>
+      <td>TN112</td>
+      <td>原課稅別</td>
+      <td>Loại thuế ban đầu</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.應稅內含、<samp>2</samp>.應稅外加、<samp>3</samp>.零稅率、<samp>4</samp>.免稅、<samp>9</samp>.不計稅</td>
+    </tr>
+    <tr>
+      <td>TN113</td>
+      <td>原發票日期</td>
+      <td>Ngày hóa đơn ban đầu</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TN114</td>
+      <td>原發票號碼</td>
+      <td>Mã hóa đơn ban đầu</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN115</td>
+      <td>原營業稅率</td>
+      <td>Thuế suất ban đầu</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td><small>(%)</small><samp>[DE<samp>F</samp>:<samp>9</samp>.9999]</samp></td>
+    </tr>
+    <tr>
+      <td>TN116</td>
+      <td>原扣抵區分</td>
+      <td>Phân biệt khấu trừ ban đầu</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.可扣抵進貨及費用 <samp>2</samp>.可扣抵固定資產 <samp>3</samp>.不可扣抵進貨及費用 <samp>4</samp>.不可扣抵固定資產<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TN117</td>
+      <td>原菸酒註記</td>
+      <td>Ghi chú thuốc lá/rượu ban đầu</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TN118</td>
+      <td>原申報年月</td>
+      <td>Tháng năm khai báo ban đầu</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td><samp>[Formate:YM]</samp></td>
+    </tr>
+    <tr>
+      <td>TN119</td>
+      <td>原會計科目</td>
+      <td>TKKT ban đầu</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN120</td>
+      <td>原付款條件代號</td>
+      <td>Mã ĐK thanh toán ban đầu</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN121</td>
+      <td>原原幣未稅金額</td>
+      <td>Tiền nguyên tệ chưa có thuế ban đầu</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN122</td>
+      <td>原原幣稅額</td>
+      <td>Mức thuế nguyên tệ ban đầu</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN123</td>
+      <td>原本幣未稅金額</td>
+      <td>Số tiền nội tệ chưa thuế ban đầu</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN124</td>
+      <td>原本幣稅額</td>
+      <td>Mức thuế nội tệ ban đầu</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN125</td>
+      <td>原備註</td>
+      <td>Ghi chú ban đầu</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN127</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN128</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN129</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN130</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN131</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN132</td>
+      <td>原稅別碼</td>
+      <td>Mã thuế suất ban đầu</td>
+      <td>V</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TN133</td>
+      <td>原註記號</td>
+      <td>Mã ghi chú ban đầu</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IPSTO</samp> : 預付購料借款明細檔    <small>(Hồ sơ chi tiết tiền vay mua vật liệu tạm ứng)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IPSTO</samp></td>
+      <td>TO001+TO002+TO003</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TO001</td>
+      <td>單別</td>
+      <td>Loại đơn</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td>預付購料單別代號</td>
+    </tr>
+    <tr>
+      <td>TO002</td>
+      <td>單號</td>
+      <td>Mã CT</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td>預付購料單號</td>
+    </tr>
+    <tr>
+      <td>TO003</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TO004</td>
+      <td>借款批號</td>
+      <td>Số lô vay</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TO005</td>
+      <td>借款幣別</td>
+      <td>Đồng tiền vay</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TO006</td>
+      <td>起息日</td>
+      <td>Ngày bắt đầu tính lãi</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td>起息日期<samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TO007</td>
+      <td>到期日</td>
+      <td>Ngày đáo hạn</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td>到期日期<samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TO008</td>
+      <td>利息天數</td>
+      <td>Số ngày lãi</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TO009</td>
+      <td>抵押金額</td>
+      <td>Số tiền thế chấp</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TO010</td>
+      <td>自籌額</td>
+      <td>Số tiền tự góp</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TO011</td>
+      <td>借款金額</td>
+      <td>Số tiền tạm ứng</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TO012</td>
+      <td>還款金額</td>
+      <td>Thanh toán tiền tạm ứng</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TO013</td>
+      <td>借還款單別</td>
+      <td>Phiếu vay hoàn trả</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TO014</td>
+      <td>借還款單號</td>
+      <td>Mã phiếu hoàn trả</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TO015</td>
+      <td>借還款序號</td>
+      <td>STT hoàn trả</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TO016</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TO017</td>
+      <td>信用狀號</td>
+      <td>Mã tín dụng</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TO018</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TO019</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TO020</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TO021</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TO022</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IPSTP</samp> : 報關贖單批號資料維護檔    <small>(Văn kiện duy trì dữ liệu số đợt hải quan/đơn chuộc)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IPSTP</samp></td>
+      <td>TP001+TP002+TP003+TP004</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TP001</td>
+      <td>報關單別</td>
+      <td>Loại tờ khai hải quan</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TP002</td>
+      <td>報關單號</td>
+      <td>Mã tờ khai hải quan</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TP003</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TP004</td>
+      <td>批號</td>
+      <td>Số lô</td>
+      <td>C</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TP005</td>
+      <td>實收數量</td>
+      <td>SL thu thực tế</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TP006</td>
+      <td>實收包裝數量</td>
+      <td>SL đóng gói thu thực tế</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TP007</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TP008</td>
+      <td>進貨單別</td>
+      <td>Phiếu nhập hàng</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>對應之進貨單別</td>
+    </tr>
+    <tr>
+      <td>TP009</td>
+      <td>進貨單號</td>
+      <td>Mã nhập hàng</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td>對應之進貨單號</td>
+    </tr>
+    <tr>
+      <td>TP010</td>
+      <td>進貨序號</td>
+      <td>STT nhập hàng</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td>對應之進貨序號</td>
+    </tr>
+    <tr>
+      <td>TP011</td>
+      <td>更新碼</td>
+      <td>Mã cập nhật</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TP012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TP013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TP014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TP015</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TP016</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+  </div>
+  <!--- Footer
+  <footer><div class="uk-margin-left uk-text-small">Copyright &copy;2022 VPIC1. All Rights Reserved.  <i>(Japlin Chen)</i></div></footer>
+  --->
+</body>
+</html>

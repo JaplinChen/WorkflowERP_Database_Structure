@@ -1,0 +1,374 @@
+[
+  {
+    "ModuleID": "ADM",
+    "ModuleName": "管理維護系統",
+    "ModuleNameViet": "Hệ thống duy trì quản lý",
+    "ModuleType": "N",
+    "ModuleClass": "系統"
+  },
+  {
+    "ModuleID": "CMS",
+    "ModuleName": "基本資料管理系統",
+    "ModuleNameViet": "Hệ thống quản lý dữ liệu cơ bản",
+    "ModuleType": "N",
+    "ModuleClass": "系統"
+  },
+  {
+    "ModuleID": "EBO",
+    "ModuleName": "e-B Online 連結系統",
+    "ModuleNameViet": "Hệ thống liên kết e-B Online",
+    "ModuleType": "N",
+    "ModuleClass": "系統"
+  },
+  {
+    "ModuleID": "FTS",
+    "ModuleName": "資料傳輸管理系統",
+    "ModuleNameViet": "HT QL gửi dữ liệu",
+    "ModuleType": "N",
+    "ModuleClass": "系統"
+  },
+  {
+    "ModuleID": "LAN",
+    "ModuleName": "自訂語系管理系統",
+    "ModuleNameViet": "Hệ thống quản lý ngôn ngữ đặt riêng",
+    "ModuleType": "N",
+    "ModuleClass": "系統_"
+  },
+  {
+    "ModuleID": "PIP",
+    "ModuleName": "個人資料保護管理系統",
+    "ModuleNameViet": "Hệ thống quản lý bảo mật dữ liệu cá nhân",
+    "ModuleType": "N",
+    "ModuleClass": "系統_"
+  },
+  {
+    "ModuleID": "RGR",
+    "ModuleName": "自訂報表系統",
+    "ModuleNameViet": "HT bảng đặt riêng",
+    "ModuleType": "Y",
+    "ModuleClass": "系統_"
+  },
+  {
+    "ModuleID": "INV",
+    "ModuleName": "庫存管理系統",
+    "ModuleNameViet": "Hệ thống quản lý kho",
+    "ModuleType": "N",
+    "ModuleClass": "資材"
+  },
+  {
+    "ModuleID": "PUR",
+    "ModuleName": "採購管理系統",
+    "ModuleNameViet": "Hệ thống quản lý mua hàng",
+    "ModuleType": "N",
+    "ModuleClass": "資材"
+  },
+  {
+    "ModuleID": "BCH",
+    "ModuleName": "園區保稅管理系統",
+    "ModuleNameViet": "Hệ thống quản lý bảo thuế khu vự",
+    "ModuleType": "N",
+    "ModuleClass": "資材"
+  },
+  {
+    "ModuleID": "BCS",
+    "ModuleName": "保稅管理系統",
+    "ModuleNameViet": "HT quản lý bảo thuế",
+    "ModuleType": "N",
+    "ModuleClass": "資材"
+  },
+  {
+    "ModuleID": "EPS",
+    "ModuleName": "出口作業管理系統",
+    "ModuleNameViet": "Hệ thống quản lý thao tác xuất khẩu",
+    "ModuleType": "N",
+    "ModuleClass": "資材"
+  },
+  {
+    "ModuleID": "IPS",
+    "ModuleName": "進口作業管理系統",
+    "ModuleNameViet": "Hệ thống quản lý nhập khẩu",
+    "ModuleType": "N",
+    "ModuleClass": "資材"
+  },
+  {
+    "ModuleID": "CUS",
+    "ModuleName": "海關合同管理系統",
+    "ModuleNameViet": "Customs Bonded Contract System",
+    "ModuleType": "N",
+    "ModuleClass": "資材_"
+  },
+  {
+    "ModuleID": "PXM",
+    "ModuleName": "軍福品管理系統",
+    "ModuleNameViet": "Hệ thống quản lý",
+    "ModuleType": "Y",
+    "ModuleClass": "資材_"
+  },
+  {
+    "ModuleID": "WSC",
+    "ModuleName": "專櫃管理系統",
+    "ModuleNameViet": "HT quản lý QR",
+    "ModuleType": "Y",
+    "ModuleClass": "資材_"
+  },
+  {
+    "ModuleID": "ACP",
+    "ModuleName": "應付管理系統",
+    "ModuleNameViet": "Hệ thống quản lý công nợ phải trả",
+    "ModuleType": "N",
+    "ModuleClass": "財務"
+  },
+  {
+    "ModuleID": "ACR",
+    "ModuleName": "應收管理系統",
+    "ModuleNameViet": "Hệ thống quản lý công nợ phải thu",
+    "ModuleType": "N",
+    "ModuleClass": "財務"
+  },
+  {
+    "ModuleID": "AJS",
+    "ModuleName": "自動分錄系統",
+    "ModuleNameViet": "Hệ thống bút toán tự đông",
+    "ModuleType": "N",
+    "ModuleClass": "財務"
+  },
+  {
+    "ModuleID": "ACT",
+    "ModuleName": "會計總帳管理系統",
+    "ModuleNameViet": "Hệ thống quản lý sổ kế toán",
+    "ModuleType": "N",
+    "ModuleClass": "財務"
+  },
+  {
+    "ModuleID": "AST",
+    "ModuleName": "固定資產管理系統",
+    "ModuleNameViet": "Hệ thống quản lý tài sản cố định",
+    "ModuleType": "N",
+    "ModuleClass": "財務"
+  },
+  {
+    "ModuleID": "CST",
+    "ModuleName": "成本計算管理系統",
+    "ModuleNameViet": "Hệ thống quản lý tính toán giá thành",
+    "ModuleType": "N",
+    "ModuleClass": "財務"
+  },
+  {
+    "ModuleID": "NOT",
+    "ModuleName": "票據資金管理系統",
+    "ModuleNameViet": "Hệ thống quản lý chi phiếu",
+    "ModuleType": "N",
+    "ModuleClass": "財務"
+  },
+  {
+    "ModuleID": "FCS",
+    "ModuleName": "合併財報管理系統",
+    "ModuleNameViet": "HT QL tổ hợp BC tài chính",
+    "ModuleType": "N",
+    "ModuleClass": "財務"
+  },
+  {
+    "ModuleID": "PCM",
+    "ModuleName": "零用金管理系統",
+    "ModuleNameViet": "Hệ thống quản lý tiền chi vặt",
+    "ModuleType": "N",
+    "ModuleClass": "財務"
+  },
+  {
+    "ModuleID": "TAX",
+    "ModuleName": "營業稅申報系統",
+    "ModuleNameViet": "HT khai thuế doanh thu",
+    "ModuleType": "N",
+    "ModuleClass": "財務"
+  },
+  {
+    "ModuleID": "IFB",
+    "ModuleName": "金流整合管理系統",
+    "ModuleNameViet": "HT QL tổng hợp lưu động vốn",
+    "ModuleType": "Y",
+    "ModuleClass": "財務_"
+  },
+  {
+    "ModuleID": "VTA",
+    "ModuleName": "增值稅管理系統",
+    "ModuleNameViet": "Hệ thống quản lý thuế giá trị gia tăng",
+    "ModuleType": "N",
+    "ModuleClass": "財務_"
+  },
+  {
+    "ModuleID": "COP",
+    "ModuleName": "訂單管理系統",
+    "ModuleNameViet": "Hệ thống quản lý đơn đặt hàng",
+    "ModuleType": "N",
+    "ModuleClass": "業務"
+  },
+  {
+    "ModuleID": "MTP",
+    "ModuleName": "多角貿易管理系統",
+    "ModuleNameViet": "Hệ thống quản lý mậu dịch đa phương",
+    "ModuleType": "N",
+    "ModuleClass": "業務"
+  },
+  {
+    "ModuleID": "BOM",
+    "ModuleName": "產品結構管理系統",
+    "ModuleNameViet": "Hệ thống quản lý cấu trúc thành phẩm",
+    "ModuleType": "N",
+    "ModuleClass": "研發"
+  },
+  {
+    "ModuleID": "MTM",
+    "ModuleName": "模具管理系統",
+    "ModuleNameViet": "HT quản lý khuôn",
+    "ModuleType": "N",
+    "ModuleClass": "研發"
+  },
+  {
+    "ModuleID": "PSM",
+    "ModuleName": "產品序號管理系統",
+    "ModuleNameViet": "Quản lý STT SP",
+    "ModuleType": "N",
+    "ModuleClass": "研發_"
+  },
+
+  {
+    "ModuleID": "MOC",
+    "ModuleName": "製令_託外管理系統",
+    "ModuleNameViet": "Hệ thống quản lý lệnh sản xuất/uỷ thác",
+    "ModuleType": "N",
+    "ModuleClass": "生產"
+  },
+  {
+    "ModuleID": "APS",
+    "ModuleName": "生產排程規劃系統",
+    "ModuleNameViet": "Hệ thống kế hoạch sắp xếp quy trình sản xuất",
+    "ModuleType": "N",
+    "ModuleClass": "生產_"
+  },
+  {
+    "ModuleID": "LRP",
+    "ModuleName": "批次需求計劃系統",
+    "ModuleNameViet": "Hệ thống hoạch định nhu cầu nguyên vật liệu",
+    "ModuleType": "N",
+    "ModuleClass": "生產_"
+  },
+  {
+    "ModuleID": "MPS",
+    "ModuleName": "主生產排程系統",
+    "ModuleNameViet": "Hệ thống xếp trình SX chính",
+    "ModuleType": "N",
+    "ModuleClass": "生產_"
+  },
+  {
+    "ModuleID": "MRP",
+    "ModuleName": "物料需求計劃系統",
+    "ModuleNameViet": "Hệ thống kế hoạch yều cầu VL",
+    "ModuleType": "N",
+    "ModuleClass": "生產_"
+  },
+  {
+    "ModuleID": "SFT",
+    "ModuleName": "廠區生產追蹤系統",
+    "ModuleNameViet": "Hệ thống theo dõi điều độ sản xuất",
+    "ModuleType": "N",
+    "ModuleClass": "生產_"
+  },
+  {
+    "ModuleID": "SFC",
+    "ModuleName": "製程管理系統",
+    "ModuleNameViet": "Hệ thống quản lý công đoạn sản xuất",
+    "ModuleType": "Y",
+    "ModuleClass": "生產_"
+  },
+  {
+    "ModuleID": "QMS",
+    "ModuleName": "品質管理系統",
+    "ModuleNameViet": "HT quản lý chất lượng SP",
+    "ModuleType": "N",
+    "ModuleClass": "品管"
+  },
+  {
+    "ModuleID": "RMA",
+    "ModuleName": "維修服務系統",
+    "ModuleNameViet": "Hệ thống phục vụ sửa chữa",
+    "ModuleType": "Y",
+    "ModuleClass": "品管_"
+  },
+  {
+    "ModuleID": "AMS",
+    "ModuleName": "刷卡管理系統",
+    "ModuleNameViet": "Hệ thống quản lý quẹt thẻ",
+    "ModuleType": "Y",
+    "ModuleClass": "人資_"
+  },
+  {
+    "ModuleID": "HRS",
+    "ModuleName": "人力資源系統",
+    "ModuleNameViet": "HT HR",
+    "ModuleType": "Y",
+    "ModuleClass": "人資_"
+  },
+  {
+    "ModuleID": "PAL",
+    "ModuleName": "人事薪資管理系統",
+    "ModuleNameViet": "Hệ thống quản lý nhân sự tiền lương",
+    "ModuleType": "Y",
+    "ModuleClass": "人資_"
+  },
+  {
+    "ModuleID": "VAM",
+    "ModuleName": "刷卡管理系統(越南版)",
+    "ModuleNameViet": "Hệ thống quản lý quẹt thẻ(Việt Nam)",
+    "ModuleType": "N",
+    "ModuleClass": "人資_"
+  },
+  {
+    "ModuleID": "VPA",
+    "ModuleName": "人事薪資管理系統(越南版)",
+    "ModuleNameViet": "Hệ thống quản lý nhân sự tiền lương(Việt Nam)",
+    "ModuleType": "N",
+    "ModuleClass": "人資_"
+  },
+  {
+    "ModuleID": "YAM",
+    "ModuleName": "刷卡管理系統(大陸版)",
+    "ModuleNameViet": "",
+    "ModuleType": "Y",
+    "ModuleClass": "人資_"
+  },
+  {
+    "ModuleID": "YPA",
+    "ModuleName": "人事薪資管理系統(大陸版)",
+    "ModuleNameViet": "",
+    "ModuleType": "Y",
+    "ModuleClass": "人資_"
+  },
+  {
+    "ModuleID": "BTS",
+    "ModuleName": "行動條碼解決方案",
+    "ModuleNameViet": "Phương án giải quyết mã vạch di động",
+    "ModuleType": "N",
+    "ModuleClass": "整合_"
+  },
+  {
+    "ModuleID": "EBC",
+    "ModuleName": "e-B Chain整合系統",
+    "ModuleNameViet": "HT tổng hợp e-B Chain",
+    "ModuleType": "Y",
+    "ModuleClass": "整合_"
+  },
+  {
+    "ModuleID": "TIS",
+    "ModuleName": "稅控接口系統",
+    "ModuleNameViet": "Tax-controlled Anti-forgery Interface",
+    "ModuleType": "N",
+    "ModuleClass": "整合_"
+  },
+  {
+    "ModuleID": "IDL",
+    "ModuleName": "IC 設計行業系統",
+    "ModuleNameViet": "HT thiết kế IC",
+    "ModuleType": "N",
+    "ModuleClass": "行業_"
+  }
+]

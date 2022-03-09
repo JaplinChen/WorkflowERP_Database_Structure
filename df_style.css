@@ -1,0 +1,333 @@
+/*  '芫荽' */
+/*
+@font-face {
+  font-family: iansui; 
+  src: url(https://github.com/ButTaiwan/iansui/blob/main/Iansui094-Regular.ttf);
+  font-weight: normal;
+  font-display: swap;
+}
+*/
+table.dataframe {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.dataframe th, .dataframe td {
+    border: #fff 1px solid;
+    text-align:left;
+    padding: 4px 8px 4px 8px;   /* top right bottom left */
+    font-size: 0.9em;
+}
+.dataframe th {
+    background-color: #75ada6;
+    color:#fff;
+    font-weight: bold;
+    text-align: left;
+}
+/* Field Name */
+.dataframe td:nth-child(2) {
+    width: 106.45pt;
+}
+/* 
+.dataframe td:nth-child(2):hover .tooltip {
+    display: inline-block;
+}
+*/
+/* Field Name Vietnam */
+.dataframe td:nth-child(3) {
+  color: blue;
+}
+/* Field Type */
+.dataframe td:nth-child(4) {
+    width: 30pt;
+    text-align: center;
+}
+/* Field Length */
+.dataframe td:nth-child(5) {
+    width: 30pt;
+    text-align: right;
+}
+/* Field Decimal */
+.dataframe td:nth-child(6) {
+    min-width: 145.25pt;
+}
+tr:nth-child(odd)   { background-color:#fff; }
+tr:nth-child(even)  { background-color:#D5E6E4; }
+tr:hover                 { background-color: #ffff99;}
+
+/* 自定義 accordion */
+summary {
+    padding: 5px;
+    margin: 0;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+content {
+    display: block;
+    padding: 5px;
+    margin: 0;
+    background-color: #f5f7f7;
+}
+/* 自定义的三角 */
+summary::after {
+    content: '';
+    position: absolute;
+    width: 1em; 
+    height: 1em;
+    margin: .2em 0 0 .5ch;
+    background-size: 100% 100%;
+    transition: transform .2s;
+}
+details:not([open]) summary::after {
+    margin-top: .25em;
+    transform: rotate(90deg);    
+}
+/* 隐藏默认三角 */
+::-webkit-details-marker {    display: none;   }
+::-moz-list-bullet {    font-size: 0;   }
+
+html {
+    -ms-overflow-style: none;   /*隱藏滾動條，當IE下溢位，仍然可以滾動*/
+    scrollbar-width: none;    /*火狐下隱藏滾動條*/
+}
+
+html::-webkit-scrollbar{width:0px}  /*Chrome下隱藏滾動條，溢位可以透明滾動*/
+html::-moz-scrollbar{width:0px}     /*Firefox下隱藏滾動條，溢位可以透明滾動*/
+html::-ms-scrollbar{width:0px}      /*IE下隱藏滾動條，溢位可以透明滾動*/
+html::-o-scrollbar{width:0px}       /*Opera下隱藏滾動條，溢位可以透明滾動*/
+
+body {
+  /*font-family: iansui;*/
+  margin: 0px;
+}
+
+/* header */
+header {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-top: 0.01em;
+    font-weight: bold;
+    line-height: 1em;
+    color: #000;
+    text-shadow: #ccc 2px 2px 3px;  /* 字體陰影 */
+}
+
+Footer {
+    clear: both;
+    height: 30px;
+    position: relative;
+    padding-top: 7px;
+    background-color: #f0f0f0;
+    text-align: center;
+    font-size: 0.8em;
+    color: #666;
+    text-shadow: #ccc 3px 3px 3px;  /* 字體陰影 */
+}
+
+.TableAccordion {
+    width: 100%;
+    height: max-content;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    clear: both;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: calc(100% - 92px);
+    flex-wrap: wrap;    /* 元素換行 */
+    margin: 0;
+    padding: 0;
+}
+.MenuBlock {
+    display: flex;
+    float:left;
+    margin: 8px;
+    padding: 0;
+    width: 220px;
+    height: calc(100% - 20px);
+    overflow: auto;     /* 允許滾動 */
+    background-color: #f0f0f0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.MenuBlock::-webkit-scrollbar{width:0px}
+.FrameBlock {
+    display: flex;
+    position: relative;
+    float: left;
+    flex: 1;
+    margin: 0px;
+    margin-bottom: 8px;
+    margin-right: 5px;
+    padding: 5px;
+    width: calc(100% - 230px);
+    height: calc(100%-20px);
+    /*overflow: auto;*/     /* 允許滾動 */
+    overflow:inherit;
+}
+.FrameBlock > iframe {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    overflow: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.vertical-menu {
+    width: 100%; /* Set a width if you like */
+  }
+.vertical-menu a {
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 5px; /* Add some padding */
+    padding-left: 12px; /* Add some space between links */
+    text-decoration: none; /* Remove underline from links */
+    /*border-bottom: 1px solid #ccc;*/
+  }
+.vertical-menu a:hover {
+    background-color: #D5E6E4; /* Dark grey background on mouse-over */
+  }
+.vertical-menu a.active {
+    background-color: #04AA6D; /* Add a green color to the "active/current" link */
+    color: white;
+  }
+  samp { color: red;}
+  small { font-weight:300 ; font-size: small; }
+  hr {
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid #d0d0d5;
+  }
+  .wavy {
+    display: block;
+    height: .5em;
+    white-space: nowrap;
+    letter-spacing: 100vw;
+    padding-top: .5em;
+    overflow: hidden;
+  }
+  .wavy::before {
+      content: "\2000\2000";
+      /* IE浏览器实线代替 */
+      text-decoration: overline;
+      /* 现代浏览器 */
+      text-decoration: overline wavy;
+  }
+
+ /* tooltip settings start */
+ /* 
+ [data-tooltip] {
+    position: relative;
+    cursor: pointer;
+  }
+  [data-tooltip]:before,
+  [data-tooltip]:after {
+    line-height: 1;
+    font-size: .9em;
+    pointer-events: none;
+    position: absolute;
+    box-sizing: border-box;
+    display: none;
+    opacity: 0;
+    filter: drop-shadow(-6px 6px 3px #DDDDDD);
+  }
+  [data-tooltip]:before {
+    content: "";
+    border: 5px solid transparent;
+    z-index: 100;
+  }
+  [data-tooltip]:after {
+    content: attr(data-tooltip);
+    text-align: center;
+    min-width: 3em;
+    max-width: 21em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 6px 8px;
+    border-radius: 3px;
+    background: #75ada6;
+    color: #000000;
+    z-index: 99;
+  }
+  [data-tooltip]:hover:before,
+  [data-tooltip]:hover:after {
+    display: block;
+    opacity: 1;
+  }
+  [data-tooltip]:not([data-flow])::before,
+  [data-tooltip][data-flow="top"]::before {
+    bottom: 100%;
+    border-bottom-width: 0;
+    border-top-color: #75ada6;
+  }
+  [data-tooltip]:not([data-flow])::after,
+  [data-tooltip][data-flow="top"]::after {
+    bottom: calc(100% + 5px);
+  }
+  [data-tooltip]:not([data-flow])::before, [tooltip]:not([data-flow])::after,
+  [data-tooltip][data-flow="top"]::before,
+  [data-tooltip][data-flow="top"]::after {
+    left: 50%;
+    -webkit-transform: translate(-50%, -4px);
+            transform: translate(-50%, -4px);
+  }
+  [data-tooltip][data-flow="bottom"]::before {
+    top: 100%;
+    border-top-width: 0;
+    border-bottom-color: #75ada6;
+  }
+  [data-tooltip][data-flow="bottom"]::after {
+    top: calc(100% + 5px);
+  }
+  [data-tooltip][data-flow="bottom"]::before, [data-tooltip][data-flow="bottom"]::after {
+    left: 50%;
+    -webkit-transform: translate(-50%, 8px);
+            transform: translate(-50%, 8px);
+  }
+  [data-tooltip][data-flow="left"]::before {
+    top: 50%;
+    border-right-width: 0;
+    border-left-color: #75ada6;
+    left: calc(0em - 5px);
+    -webkit-transform: translate(-8px, -50%);
+            transform: translate(-8px, -50%);
+  }
+  [data-tooltip][data-flow="left"]::after {
+    top: 50%;
+    right: calc(100% + 5px);
+    -webkit-transform: translate(-8px, -50%);
+            transform: translate(-8px, -50%);
+  }
+  [data-tooltip][data-flow="right"]::before {
+    top: 50%;
+    border-left-width: 0;
+    border-right-color: #75ada6;
+    right: calc(0em - 5px);
+    -webkit-transform: translate(8px, -50%);
+            transform: translate(8px, -50%);
+  }
+  [data-tooltip][data-flow="right"]::after {
+    top: 50%;
+    left: calc(100% + 5px);
+    -webkit-transform: translate(8px, -50%);
+            transform: translate(8px, -50%);
+  }
+  [data-tooltip=""]::after, [data-tooltip=""]::before {
+    display: none !important;
+  } 
+  */

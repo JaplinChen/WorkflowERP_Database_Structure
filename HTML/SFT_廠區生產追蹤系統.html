@@ -1,0 +1,875 @@
+
+<html>
+<head>
+  <title>SFT_廠區生產追蹤系統</title>
+  <link rel="stylesheet" href="../df_style.css" />
+</head>
+<body>
+  <header>
+    <h3><span style="color:red">SFT</span> 廠區生產追蹤系統</h3>
+  </header>
+  <div class="TableAccordion">
+
+   <details>
+   <summary><samp>SFTTB</samp> : 製程明細檔    <small>(Tập tin chi tiết CĐSX)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_SFTTB</samp></td>
+      <td>TB001+TB002+TB003+TB006+TB064+TB065</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>SFTTB_K01</td>
+      <td>TB008+TB006+TB001+TB002</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TB001</td>
+      <td>製令單別</td>
+      <td>Lệnh SX</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB002</td>
+      <td>製令單號</td>
+      <td>Mã lệnh SX</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB003</td>
+      <td>加工順序</td>
+      <td>Thứ tự GC</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB006</td>
+      <td>線別/廠商代號</td>
+      <td>Mã DCSX / NCC</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td>此製程生產之主要生產線/主要加工廠商代號</td>
+    </tr>
+    <tr>
+      <td>TB007</td>
+      <td>線別/廠商名稱</td>
+      <td>Tên DCSX/NCC</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td>此製程生產之主要生產線/主要加工廠商名稱</td>
+    </tr>
+    <tr>
+      <td>TB008</td>
+      <td>預計開工日</td>
+      <td>Ngày dự tính BĐ SX</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TB009</td>
+      <td>預計完工日</td>
+      <td>Ngày dự tính hoàn thành</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TB010</td>
+      <td>投入數量</td>
+      <td>SL đầu vào</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之投入數量</td>
+    </tr>
+    <tr>
+      <td>TB011</td>
+      <td>完成數量</td>
+      <td>SL hoàn tất</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之完成數量</td>
+    </tr>
+    <tr>
+      <td>TB012</td>
+      <td>報廢數量</td>
+      <td>SL báo phế</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之報廢數量</td>
+    </tr>
+    <tr>
+      <td>TB013</td>
+      <td>重工投入</td>
+      <td>Đầu vào làm lại</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之重工投入數量</td>
+    </tr>
+    <tr>
+      <td>TB014</td>
+      <td>重工完成</td>
+      <td>Hoàn thành làm lại</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之重工完成數量</td>
+    </tr>
+    <tr>
+      <td>TB015</td>
+      <td>撥轉數量</td>
+      <td>SL chuyển</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之撥轉數量</td>
+    </tr>
+    <tr>
+      <td>TB016</td>
+      <td>盤盈虧量</td>
+      <td>SL lỗ lãi kiểm kê</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之盤盈虧數量</td>
+    </tr>
+    <tr>
+      <td>TB022</td>
+      <td>標準人時(秒)</td>
+      <td>Số giờ nhân công TC(giây)</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td>對此製程之標準人時<small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TB023</td>
+      <td>實際人時(秒)</td>
+      <td>Giờ nhân công thực(giây)</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td>對此製程之實際人時<small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TB030</td>
+      <td>實際開工日</td>
+      <td>Ngày BĐ SX thực tế</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td>對此製程之實際開工日<samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TB031</td>
+      <td>實際完工日</td>
+      <td>Ngày hoàn thành thực tế</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td>對此製程之實際完工日<samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TB032</td>
+      <td>完工碼</td>
+      <td>Mã hoàn thành</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>對此製程之完工碼</td>
+    </tr>
+    <tr>
+      <td>TB033</td>
+      <td>檢驗方式</td>
+      <td>PT kiểm nghiệm</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>:免檢、<samp>1</samp>:抽檢<small>(減量)</small>、<samp>2</samp>:抽檢<small>(正常)</small>、<samp>3</samp>:抽檢<small>(加嚴)</small>、<samp>4</samp>:全檢<samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TB034</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB035</td>
+      <td>標準機時(秒)</td>
+      <td>Số giờ máy TC(giây)</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td>對此製程之標準機時<small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TB036</td>
+      <td>實際機時(秒)</td>
+      <td>Thời gian máy thực(giây)</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td>對此製程之實際機時<small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TB037</td>
+      <td>檢驗天數</td>
+      <td>S.ngày kiểm tra</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TB038</td>
+      <td>投入包裝數量</td>
+      <td>SL đóng gói đầu vào</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之投入包裝數量</td>
+    </tr>
+    <tr>
+      <td>TB039</td>
+      <td>完成包裝數量</td>
+      <td>SL đóng gói hoàn thành</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之完成包裝數量</td>
+    </tr>
+    <tr>
+      <td>TB040</td>
+      <td>報廢包裝數量</td>
+      <td>SL đóng gói báo phế</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之報廢包裝數量</td>
+    </tr>
+    <tr>
+      <td>TB041</td>
+      <td>重工投入包裝</td>
+      <td>Đưa vào đóng gói lại</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之重工投入包裝數量</td>
+    </tr>
+    <tr>
+      <td>TB042</td>
+      <td>重工完成包裝</td>
+      <td>Hoàn thành đóng gói lại</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之重工完成包裝數量</td>
+    </tr>
+    <tr>
+      <td>TB043</td>
+      <td>撥轉包裝數量</td>
+      <td>SL đóng gói chuyển phát</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之撥轉包裝數量</td>
+    </tr>
+    <tr>
+      <td>TB044</td>
+      <td>盤盈虧包裝量</td>
+      <td>SL đóng gói tăng giảm sau kiểm kê</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之盤盈虧包裝數量</td>
+    </tr>
+    <tr>
+      <td>TB045</td>
+      <td>待轉包裝數量</td>
+      <td>SL đóng gói chờ chuyển</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>對此製程之待轉包裝數量</td>
+    </tr>
+    <tr>
+      <td>TB047</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB048</td>
+      <td>換算單位分母</td>
+      <td>Conversion Unit - Denominator</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB049</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB050</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB051</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB052</td>
+      <td>資源群組</td>
+      <td>Tên nhóm tài nguyên</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td>資源群組編號</td>
+    </tr>
+    <tr>
+      <td>TB053</td>
+      <td>批次加工量</td>
+      <td>Lượng gia công</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB054</td>
+      <td>APS固定機時</td>
+      <td>Giờ máy cố định APS</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td><small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TB055</td>
+      <td>APS變動機時</td>
+      <td>Giờ máy biến động APS</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td><small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TB056</td>
+      <td>預計開工時間</td>
+      <td>Thời gian khởi công dự kiến</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td><samp>[Formate:HMS]</samp></td>
+    </tr>
+    <tr>
+      <td>TB057</td>
+      <td>預計完工時間</td>
+      <td>Thời gian hoàn công dự kiến</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td><samp>[Formate:HMS]</samp></td>
+    </tr>
+    <tr>
+      <td>TB058</td>
+      <td>實際開工時間</td>
+      <td>Thời gian bắt đầu khai công thực tế</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td><samp>[Formate:HMS]</samp></td>
+    </tr>
+    <tr>
+      <td>TB059</td>
+      <td>替代順序</td>
+      <td>Thứ tự thay thế</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>同加工順序的優先次序</td>
+    </tr>
+    <tr>
+      <td>TB060</td>
+      <td>APS移轉批量</td>
+      <td>Số Lô APS di chuyển</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB061</td>
+      <td>鎖定開工時間</td>
+      <td>Khóa lại thời gian khởi công</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TB062</td>
+      <td>鎖定完工時間</td>
+      <td>Khóa lại thời gian hoàn công</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TB063</td>
+      <td>外包類型</td>
+      <td>Loại hình gia công</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.固定期間、<samp>2</samp>.固定開始結束時間<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TB064</td>
+      <td>SFT批號</td>
+      <td>Số lô SFT</td>
+      <td>C</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB065</td>
+      <td>機台</td>
+      <td>Máy móc</td>
+      <td>C</td>
+      <td>15.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB066</td>
+      <td>作業時間</td>
+      <td>Thời gian thao tác</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td><small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TB067</td>
+      <td>批次加工</td>
+      <td>Gia công theo xêri</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>批次加工否Y/N<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TB068</td>
+      <td>基準數量</td>
+      <td>Số lượng tiêu chuẩn</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB069</td>
+      <td>指定資源</td>
+      <td>Tài nguyên chỉ định</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>指定資源<samp>1</samp>.資源、<samp>2</samp>.資源群組<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TB070</td>
+      <td>單位產出分子</td>
+      <td>Tử số đơn vị phát sinh</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB071</td>
+      <td>設備規格一</td>
+      <td>Thiết bị quy cách 1</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB072</td>
+      <td>設備規格二</td>
+      <td>Thiết bị quy cách 2</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB073</td>
+      <td>設備規格三</td>
+      <td>Thiết bị quy cách 3</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB074</td>
+      <td>設備規格四</td>
+      <td>Thiết bị quy cách 4</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB075</td>
+      <td>設備規格五</td>
+      <td>Thiết bị quy cách 5</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB076</td>
+      <td>設備規格六</td>
+      <td>Thiết bị quy cách 6</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB077</td>
+      <td>設備規格七</td>
+      <td>Thiết bị quy cách 7</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB078</td>
+      <td>設備規格八</td>
+      <td>Thiết bị quy cách 8</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB079</td>
+      <td>設備規格九</td>
+      <td>Thiết bị quy cách 9</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB080</td>
+      <td>設備規格十</td>
+      <td>Thiết bị quy cách 10</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB081</td>
+      <td>設備規格十一</td>
+      <td>Thiết bị quy cách 11</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB082</td>
+      <td>設備規格十二</td>
+      <td>Thiết bị quy cách 12</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB083</td>
+      <td>設備規格十三</td>
+      <td>Thiết bị quy cách 13</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB084</td>
+      <td>設備規格十四</td>
+      <td>Thiết bị quy cách 14</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB085</td>
+      <td>設備規格十五</td>
+      <td>Thiết bị quy cách 15</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB086</td>
+      <td>後製工時</td>
+      <td>Thời gian làm việc nửa sau quy trình</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td><small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TB087</td>
+      <td>是否平行機台</td>
+      <td>Có phải cân băng máy</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>0/1<samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TB088</td>
+      <td>預計產量</td>
+      <td>SL dự tính</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>SFTTD</samp> : SFT製令檔    <small>(Tập tin SX SFT)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_SFTTD</samp></td>
+      <td>TD001+TD002+TD089</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TD001</td>
+      <td>製令單別</td>
+      <td>Lệnh SX</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD002</td>
+      <td>製令單號</td>
+      <td>Mã lệnh SX</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD009</td>
+      <td>預計開工</td>
+      <td>Dự tính BĐ SX</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TD010</td>
+      <td>預計完工</td>
+      <td>Dự tính hoàn thành</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TD011</td>
+      <td>狀態碼</td>
+      <td>Mã trạng thái</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.未生產、<samp>2</samp>.已發料、<samp>3</samp>.生產中、<samp>Y</samp>.已完工、<samp>y</samp>.指定完工<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TD012</td>
+      <td>實際開工</td>
+      <td>Thực tế BĐ SX</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TD013</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y、N、V<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TD014</td>
+      <td>實際完工</td>
+      <td>Thực tế h.thành</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TD015</td>
+      <td>預計產量</td>
+      <td>SL dự tính</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD016</td>
+      <td>已領套數</td>
+      <td>SL đã lãnh</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD017</td>
+      <td>已生產量</td>
+      <td>SL đã SX</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD018</td>
+      <td>報廢數量</td>
+      <td>SL báo phế</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD045</td>
+      <td>預計產包裝量</td>
+      <td>SL đóng gói dự tính</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD046</td>
+      <td>已生產包裝量</td>
+      <td>SL đóng gói đã SX</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD047</td>
+      <td>報廢包裝數量</td>
+      <td>SL đóng gói báo phế</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD082</td>
+      <td>鎖定開工時間</td>
+      <td>Khóa lại thời gian khởi công</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TD083</td>
+      <td>鎖定完工時間</td>
+      <td>Khóa lại thời gian hoàn công</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TD084</td>
+      <td>預計開工時間</td>
+      <td>Thời gian khởi công dự kiến</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td><samp>[Formate:HM]</samp></td>
+    </tr>
+    <tr>
+      <td>TD085</td>
+      <td>預計完工時間</td>
+      <td>Thời gian hoàn công dự kiến</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td><samp>[Formate:HM]</samp></td>
+    </tr>
+    <tr>
+      <td>TD086</td>
+      <td>製程否</td>
+      <td>Có CĐSX</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>有無製程Y/N，<samp>N</samp>.不使用<small>(表示無製程)</small>、<samp>Y</samp>.使用製令製程<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TD087</td>
+      <td>外包類型</td>
+      <td>Loại hình gia công</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.固定期間、<samp>2</samp>.固定開始結束時間<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TD088</td>
+      <td>作業時間</td>
+      <td>Thời gian thao tác</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td><small>(時:分:秒)</small><samp>[Formate:S]</samp></td>
+    </tr>
+    <tr>
+      <td>TD089</td>
+      <td>SFT批號</td>
+      <td>Số lô SFT</td>
+      <td>C</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+  </div>
+  <!--- Footer
+  <footer><div class="uk-margin-left uk-text-small">Copyright &copy;2022 VPIC1. All Rights Reserved.  <i>(Japlin Chen)</i></div></footer>
+  --->
+</body>
+</html>

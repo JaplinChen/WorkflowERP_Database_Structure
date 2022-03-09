@@ -1,0 +1,4745 @@
+
+<html>
+<head>
+  <title>RMA_維修服務系統</title>
+  <link rel="stylesheet" href="../df_style.css" />
+</head>
+<body>
+  <header>
+    <h3><span style="color:red">RMA</span> 維修服務系統</h3>
+  </header>
+  <div class="TableAccordion">
+
+   <details>
+   <summary><samp>RMAMA</samp> : 維修服務站資料檔    <small>(Dữ liệu trạm phục vụ tu sửa)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMAMA</samp></td>
+      <td>MA001</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MA001</td>
+      <td>站別代號</td>
+      <td>MS trạm</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA002</td>
+      <td>站別簡稱</td>
+      <td>Tên tắt trạm</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA003</td>
+      <td>站別全名</td>
+      <td>Tên ĐĐ trạm</td>
+      <td>V</td>
+      <td>80.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA004</td>
+      <td>維修人員數</td>
+      <td>Số người sửa chữa</td>
+      <td>N</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA005</td>
+      <td>站別地址(一)</td>
+      <td>Địa chỉ trạm (1)</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td>站別地址</td>
+    </tr>
+    <tr>
+      <td>MA006</td>
+      <td>站別地址(二)</td>
+      <td>Địa chỉ trạm (2)</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td>站別地址</td>
+    </tr>
+    <tr>
+      <td>MA007</td>
+      <td>郵遞區號</td>
+      <td>Mã bưu điện</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA008</td>
+      <td>TEL_NO(一)</td>
+      <td>TEL_NO(1)</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td>TEL_NO<small>(一)</small></td>
+    </tr>
+    <tr>
+      <td>MA009</td>
+      <td>TEL_NO(二)</td>
+      <td>TEL_NO(2)</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td>TEL_NO<small>(二)</small></td>
+    </tr>
+    <tr>
+      <td>MA010</td>
+      <td>FAX_NO</td>
+      <td>FAX_NO</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA011</td>
+      <td>E-Mail</td>
+      <td>E-MAIL</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA012</td>
+      <td>站別等級</td>
+      <td>Đẳng cấp trạm</td>
+      <td>V</td>
+      <td>3.0</td>
+      <td><small>(memo欄位)</small></td>
+    </tr>
+    <tr>
+      <td>MA013</td>
+      <td>下站代號</td>
+      <td>Mã số trạm dưới</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA014</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA015</td>
+      <td>下站站別簡稱</td>
+      <td>Tên trạm dưới</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA016</td>
+      <td>進階處理</td>
+      <td>Xử lý</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.無、<samp>1</samp>.轉維修站、<samp>2</samp>.送原廠</td>
+    </tr>
+    <tr>
+      <td>MA017</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA018</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA019</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA020</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA021</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMAMB</samp> : 維修人員代號資料檔    <small>(Dữ liệu MS người tu sửa)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMAMB</samp></td>
+      <td>MB001</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MB001</td>
+      <td>維修人員代號</td>
+      <td>Mã số người sửa chữa</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB002</td>
+      <td>庫別代號</td>
+      <td>Mã kho</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td><small>(可空白)</small></td>
+    </tr>
+    <tr>
+      <td>MB003</td>
+      <td>站別代號</td>
+      <td>MS trạm</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB004</td>
+      <td>技術等級</td>
+      <td>Cấp kỹ thuật</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB005</td>
+      <td>部門代號</td>
+      <td>Mã bộ phận</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB006</td>
+      <td>所屬群組</td>
+      <td>Nhóm</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB007</td>
+      <td>通訊電話</td>
+      <td>ĐT</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB008</td>
+      <td>大哥大電話</td>
+      <td>ĐTDĐ</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB009</td>
+      <td>E-Mail</td>
+      <td>E-MAIL</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB010</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB015</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMAMC</samp> : 維修問題解決方法單頭檔    <small>(Tiêu đề vấn đề/giải pháp tu sửa)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMAMC</samp></td>
+      <td>MC001</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MC001</td>
+      <td>問題代號</td>
+      <td>MS hệ thống</td>
+      <td>C</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC002</td>
+      <td>問題描述</td>
+      <td>Giới thiệu vấn đề</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC003</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC004</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC005</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC006</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MC008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMAMD</samp> : 維修問題解決方法單身檔    <small>(Nội dung vấn đề/giải phát tu sửa)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMAMD</samp></td>
+      <td>MD001+MD002</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MD001</td>
+      <td>問題代號</td>
+      <td>MS hệ thống</td>
+      <td>C</td>
+      <td>6.0</td>
+      <td><small>(mc001)</small></td>
+    </tr>
+    <tr>
+      <td>MD002</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD003</td>
+      <td>處理狀況敘述</td>
+      <td>Diễn giải tình trạng xử lý</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD004</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD005</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD006</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MD009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMAME</samp> : 維修項目資料檔    <small>(Dữ liệu mục tu sửa)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMAME</samp></td>
+      <td>ME001</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ME001</td>
+      <td>維修項目代號</td>
+      <td>Mã số dự án sửa chữa</td>
+      <td>C</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME002</td>
+      <td>維修項目名稱</td>
+      <td>Tên dự án sửa chữa</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME003</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME004</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME005</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME006</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ME008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMAMF</samp> : 維修零件價格資料檔    <small>(DL giá linh kiện tu sửa)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMAMF</samp></td>
+      <td>MF001+MF002+MF005+MF008</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MF001</td>
+      <td>品號</td>
+      <td>Mã SP</td>
+      <td>C</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF002</td>
+      <td>計價單位</td>
+      <td>ĐV tính giá</td>
+      <td>C</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF003</td>
+      <td>單價</td>
+      <td>ĐG</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF004</td>
+      <td>核價日</td>
+      <td>Ngày duyệt giá</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>MF005</td>
+      <td>生效日</td>
+      <td>Ngày có hiệu lực</td>
+      <td>C</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>MF006</td>
+      <td>失效日</td>
+      <td>Ngày hết hiệu lực</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>MF007</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF008</td>
+      <td>幣別</td>
+      <td>Loại tiền tệ</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MF013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMAMG</samp> : 維修站目標設定檔    <small>(Hồ sơ thiết lập mục tiêu trạm tu sửa)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMAMG</samp></td>
+      <td>MG001+MG002</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MG001</td>
+      <td>站別代號</td>
+      <td>MS trạm</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG002</td>
+      <td>年份</td>
+      <td>Năm</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td><samp>[Formate:Y]</samp></td>
+    </tr>
+    <tr>
+      <td>MG003</td>
+      <td>目標維修額(一月)</td>
+      <td>Mục tiêu tu sửa (tháng 1)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>目標維修額<small>(一月)</small>權限金額</td>
+    </tr>
+    <tr>
+      <td>MG004</td>
+      <td>目標維修額(二月)</td>
+      <td>Mục tiêu tu sửa (tháng 2)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>目標維修額<small>(二月)</small></td>
+    </tr>
+    <tr>
+      <td>MG005</td>
+      <td>目標維修額(三月)</td>
+      <td>MT tu sửa (tháng 3)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>目標維修額<small>(三月)</small></td>
+    </tr>
+    <tr>
+      <td>MG006</td>
+      <td>目標維修額(四月)</td>
+      <td>MT tu sửa (tháng 4)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>目標維修額<small>(四月)</small></td>
+    </tr>
+    <tr>
+      <td>MG007</td>
+      <td>目標維修額(五月)</td>
+      <td>MT tu sửa (tháng 5)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>目標維修額<small>(五月)</small></td>
+    </tr>
+    <tr>
+      <td>MG008</td>
+      <td>目標維修額(六月)</td>
+      <td>MT tu sửa (tháng 6)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>目標維修額<small>(六月)</small></td>
+    </tr>
+    <tr>
+      <td>MG009</td>
+      <td>目標維修額(七月)</td>
+      <td>MT tu sửa (tháng 7)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>目標維修額<small>(七月)</small></td>
+    </tr>
+    <tr>
+      <td>MG010</td>
+      <td>目標維修額(八月)</td>
+      <td>MT tu sửa (tháng 8)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>目標維修額<small>(八月)</small></td>
+    </tr>
+    <tr>
+      <td>MG011</td>
+      <td>目標維修額(九月)</td>
+      <td>Mục tiêu tu sửa (tháng 9)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>目標維修額<small>(九月)</small></td>
+    </tr>
+    <tr>
+      <td>MG012</td>
+      <td>目標維修額(十月)</td>
+      <td>MT tu sửa (tháng 10)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>目標維修額<small>(十月)</small></td>
+    </tr>
+    <tr>
+      <td>MG013</td>
+      <td>目標維修額(十一月)</td>
+      <td>Mục tiêu tu sửa (tháng 11)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>目標維修額<small>(十一月)</small></td>
+    </tr>
+    <tr>
+      <td>MG014</td>
+      <td>目標維修額(十二月)</td>
+      <td>Mục tiêu tu sửa (tháng 12)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>目標維修額<small>(十二月)</small></td>
+    </tr>
+    <tr>
+      <td>MG015</td>
+      <td>實際維修額(一月)</td>
+      <td>SL thực tu sửa (tháng 1)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>實際維修額<small>(一月)</small>   權限成本金額</td>
+    </tr>
+    <tr>
+      <td>MG016</td>
+      <td>實際維修額(二月)</td>
+      <td>SL thực tu sửa (tháng 2)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>實際維修額<small>(二月)</small></td>
+    </tr>
+    <tr>
+      <td>MG017</td>
+      <td>實際維修額(三月)</td>
+      <td>SL sửa thực (tháng 3)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>實際維修額<small>(三月)</small></td>
+    </tr>
+    <tr>
+      <td>MG018</td>
+      <td>實際維修額(四月)</td>
+      <td>SL sửa thực (tháng 4)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>實際維修額<small>(四月)</small></td>
+    </tr>
+    <tr>
+      <td>MG019</td>
+      <td>實際維修額(五月)</td>
+      <td>SL sửa thực (tháng 5)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>實際維修額<small>(五月)</small></td>
+    </tr>
+    <tr>
+      <td>MG020</td>
+      <td>實際維修額(六月)</td>
+      <td>SL sửa thực (tháng 6)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>實際維修額<small>(六月)</small></td>
+    </tr>
+    <tr>
+      <td>MG021</td>
+      <td>實際維修額(七月)</td>
+      <td>SL sửa thực (tháng 7)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>實際維修額<small>(七月)</small></td>
+    </tr>
+    <tr>
+      <td>MG022</td>
+      <td>實際維修額(八月)</td>
+      <td>SL thực tu sửa (tháng 8)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>實際維修額<small>(八月)</small></td>
+    </tr>
+    <tr>
+      <td>MG023</td>
+      <td>實際維修額(九月)</td>
+      <td>SL thực tu sửa (tháng 9)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>實際維修額<small>(九月)</small></td>
+    </tr>
+    <tr>
+      <td>MG024</td>
+      <td>實際維修額(十月)</td>
+      <td>SL thực tu sửa (tháng 10)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>實際維修額<small>(十月)</small></td>
+    </tr>
+    <tr>
+      <td>MG025</td>
+      <td>實際維修額(十一月)</td>
+      <td>SL thực tu sửa (tháng 11)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>實際維修額<small>(十一月)</small></td>
+    </tr>
+    <tr>
+      <td>MG026</td>
+      <td>實際維修額(十二月)</td>
+      <td>SL thực tu sửa (tháng 12)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>實際維修額<small>(十二月)</small></td>
+    </tr>
+    <tr>
+      <td>MG027</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG028</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG029</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG030</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG031</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMAMH</samp> : 維修品號類別資料檔    <small>(Dữ liệu phân loại mã số tu sửa)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMAMH</samp></td>
+      <td>MH001</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MH001</td>
+      <td>品號</td>
+      <td>Mã SP</td>
+      <td>C</td>
+      <td>40.0</td>
+      <td>維修品號</td>
+    </tr>
+    <tr>
+      <td>MH002</td>
+      <td>類別代號</td>
+      <td>Mã loại</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td>維修品號類別代號</td>
+    </tr>
+    <tr>
+      <td>MH003</td>
+      <td>類別名稱</td>
+      <td>Tên loại</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td>維修品號類別名稱或維修項目統稱</td>
+    </tr>
+    <tr>
+      <td>MH004</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH005</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH006</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMAMI</samp> : 產品序號資料單頭    <small>(Tiêu đề dữ liệu STT sản phẩm)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMAMI</samp></td>
+      <td>MI001+MI002</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MI001</td>
+      <td>品號</td>
+      <td>Mã SP</td>
+      <td>C</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MI002</td>
+      <td>產品序號</td>
+      <td>STT SP</td>
+      <td>C</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MI003</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MI004</td>
+      <td>最近I/O別</td>
+      <td>I/O gần nhất</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td>I=+1、O=-1、空白<small>(預訂)</small>=0</td>
+    </tr>
+    <tr>
+      <td>MI005</td>
+      <td>最近I/O別說明</td>
+      <td>Thuyết minh I/O</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MI006</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MI007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MI008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MI009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MI010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMAMJ</samp> : 產品序號資料單身    <small>(Nội dung DL STT SP)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMAMJ</samp></td>
+      <td>MJ001+MJ002+MJ003+MJ004+MJ005+MJ006+MJ009+MJ014</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>RMAMJ_K01</td>
+      <td>MJ001+MJ002+MJ012+MJ013</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MJ001</td>
+      <td>品號</td>
+      <td>Mã SP</td>
+      <td>C</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MJ002</td>
+      <td>產品序號</td>
+      <td>STT SP</td>
+      <td>C</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MJ003</td>
+      <td>異動日期</td>
+      <td>Ngày biến động</td>
+      <td>C</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>MJ004</td>
+      <td>異動單別</td>
+      <td>Loại CT biến động</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MJ005</td>
+      <td>異動單號</td>
+      <td>Mã CT biến động</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MJ006</td>
+      <td>異動序號</td>
+      <td>STT biến động</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MJ007</td>
+      <td>對象代號</td>
+      <td>Mã đối tượng</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MJ008</td>
+      <td>對象名稱</td>
+      <td>Tên đối tượng</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MJ009</td>
+      <td>I/O別</td>
+      <td>Loại nhập/xuất</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td>I=+1、O=-1、空白<small>(預訂)</small>=0</td>
+    </tr>
+    <tr>
+      <td>MJ010</td>
+      <td>異動別</td>
+      <td>Loại biến động</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.入庫、<samp>2</samp>.銷貨、<samp>3</samp>.領用、<samp>4</samp>.轉撥、<samp>5</samp>.調整、<samp>6</samp>.維修、<samp>7</samp>.出貨通知、<samp>8</samp>.製令、<samp>0</samp>.期初導入</td>
+    </tr>
+    <tr>
+      <td>MJ011</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MJ012</td>
+      <td>資料日期</td>
+      <td>Ngày DL</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MJ013</td>
+      <td>資料時間</td>
+      <td>Thì giờ DL</td>
+      <td>V</td>
+      <td>9.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MJ014</td>
+      <td>庫別</td>
+      <td>Kho</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MJ015</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MJ016</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MJ017</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MJ018</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MJ019</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMATA</samp> : 叫修單單頭檔    <small>(Tiêu đề phiếu xin tu sửa)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMATA</samp></td>
+      <td>TA001+TA002</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TA001</td>
+      <td>叫修單別</td>
+      <td>Loại đơn sửa chữa</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA002</td>
+      <td>叫修單號</td>
+      <td>Số đơn sửa chữa</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA003</td>
+      <td>單據日期</td>
+      <td>Ngày CT</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TA004</td>
+      <td>客戶代號</td>
+      <td>Mã KH</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA005</td>
+      <td>產品品號</td>
+      <td>Mã SP</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA006</td>
+      <td>產品品名</td>
+      <td>Tên SP</td>
+      <td>V</td>
+      <td>120.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA007</td>
+      <td>產品規格</td>
+      <td>Quy cách SP</td>
+      <td>V</td>
+      <td>120.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA008</td>
+      <td>合約代號</td>
+      <td>Mã số khê ước</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA009</td>
+      <td>接單人員</td>
+      <td>Người nhận đơn</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td>接單人員memo</td>
+    </tr>
+    <tr>
+      <td>TA010</td>
+      <td>問題描述</td>
+      <td>Giới thiệu vấn đề</td>
+      <td>V</td>
+      <td>180.0</td>
+      <td><small>(可開窗mc002,同片語)</small></td>
+    </tr>
+    <tr>
+      <td>TA011</td>
+      <td>預計完修日</td>
+      <td>Ngày hết sửa dự định</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TA012</td>
+      <td>實際完修日</td>
+      <td>Ngày hết sử thực</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp>update</td>
+    </tr>
+    <tr>
+      <td>TA013</td>
+      <td>產品序號</td>
+      <td>STT SP</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA014</td>
+      <td>客戶確認</td>
+      <td>KH xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><small>(Y/N)</small></td>
+    </tr>
+    <tr>
+      <td>TA015</td>
+      <td>確認日期</td>
+      <td>Ngày xác nhận</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TA016</td>
+      <td>確認者</td>
+      <td>Xác nhận</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA017</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA018</td>
+      <td>叫修列印次數</td>
+      <td>Số lần in xin tu sửa</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA019</td>
+      <td>報價列印次數</td>
+      <td>Số lần in báo giá</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA020</td>
+      <td>客戶收件者</td>
+      <td>Người nhận KH</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td>客戶收貨人</td>
+    </tr>
+    <tr>
+      <td>TA021</td>
+      <td>客戶全名</td>
+      <td>Tên đầy đủ KH</td>
+      <td>V</td>
+      <td>80.0</td>
+      <td>發票對象</td>
+    </tr>
+    <tr>
+      <td>TA022</td>
+      <td>發票地址(一)</td>
+      <td>ĐC hóa đơn (1)</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td>發票地址<small>(一)</small></td>
+    </tr>
+    <tr>
+      <td>TA023</td>
+      <td>發票地址(二)</td>
+      <td>ĐC hóa đơn (2)</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td>發票地址<small>(二)</small></td>
+    </tr>
+    <tr>
+      <td>TA024</td>
+      <td>發票郵遞區號</td>
+      <td>MBĐ HĐ</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA025</td>
+      <td>TEL_NO</td>
+      <td>TEL_NO</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA026</td>
+      <td>交貨地址(一)</td>
+      <td>Địa chỉ giao hàng(1)</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td>交貨地址<small>(一)</small></td>
+    </tr>
+    <tr>
+      <td>TA027</td>
+      <td>交貨地址(二)</td>
+      <td>ĐC giao hàng(2)</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td>交貨地址<small>(二)</small></td>
+    </tr>
+    <tr>
+      <td>TA028</td>
+      <td>郵遞區號</td>
+      <td>Mã bưu điện</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA029</td>
+      <td>報價金額(改成合計)</td>
+      <td>Báo giá(đổi là tổng kê)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>報價金額<small>(改成合計)</small></td>
+    </tr>
+    <tr>
+      <td>TA030</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N/V</td>
+    </tr>
+    <tr>
+      <td>TA031</td>
+      <td>狀態碼</td>
+      <td>Mã trạng thái</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.未處理 <samp>1</samp>.維修中、<samp>2</samp>.送原廠、3送廠商歸還 <samp>4</samp>.維修完工 <samp>5</samp>.交貨完成</td>
+    </tr>
+    <tr>
+      <td>TA032</td>
+      <td>下站代號</td>
+      <td>Mã số trạm dưới</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td><small>(站別or廠商)</small></td>
+    </tr>
+    <tr>
+      <td>TA033</td>
+      <td>下站簡稱</td>
+      <td>Tên tắt trạm dưới</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA034</td>
+      <td>FAX_NO</td>
+      <td>FAX_NO</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA035</td>
+      <td>派工碼</td>
+      <td>Mã phân phối</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.未派工 <samp>1</samp>.轉維修站、<samp>2</samp>.送原廠</td>
+    </tr>
+    <tr>
+      <td>TA036</td>
+      <td>統一編號</td>
+      <td>MST</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA037</td>
+      <td>發票聯數</td>
+      <td>Số liên hóa đơn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.二聯式、<samp>2</samp>.三聯式、<samp>3</samp>.二聯式收銀機發票、<samp>4</samp>.三聯式收銀機發票、<samp>5</samp>.電子計算機發票、<samp>6</samp>.免用統一發票、<samp>A</samp>.增值稅專用發票、<samp>B</samp>.普通發票、<samp>C</samp>.免用發票</td>
+    </tr>
+    <tr>
+      <td>TA038</td>
+      <td>簽核狀態碼</td>
+      <td>T.Thái xét duyệt</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.待處理、<samp>1</samp>.簽核中、<samp>2</samp>.退件、<samp>3</samp>.已核准、<samp>4</samp>.取消確認中、<samp>5</samp>.作廢中、<samp>6</samp>.取消作廢中、<samp>N</samp>.不執行電子簽核<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TA039</td>
+      <td>叫修傳送次數</td>
+      <td>Số lần gửi xin tu sửa</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TA040</td>
+      <td>報價傳送次數</td>
+      <td>Số lần gửi báo giá</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TA041</td>
+      <td>幣別</td>
+      <td>Loại tiền tệ</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA042</td>
+      <td>匯率</td>
+      <td>Tỷ giá</td>
+      <td>N</td>
+      <td>20.9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA043</td>
+      <td>課稅別</td>
+      <td>Loại thuế</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.內含、<samp>2</samp>.外加、<samp>3</samp>.零稅率、<samp>4</samp>.免稅、<samp>9</samp>.不計稅</td>
+    </tr>
+    <tr>
+      <td>TA044</td>
+      <td>營業稅率</td>
+      <td>Thuế suất</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td><small>(%)</small><samp>[DE<samp>F</samp>:<samp>9</samp>.9999]</samp></td>
+    </tr>
+    <tr>
+      <td>TA045</td>
+      <td>稅額</td>
+      <td>Mức thuế</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA046</td>
+      <td>報價金額</td>
+      <td>Số tiền báo giá</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA047</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA048</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA049</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA050</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA051</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TA052</td>
+      <td>稅別碼</td>
+      <td>Mã thuế suất</td>
+      <td>V</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMATB</samp> : 叫修單單身檔    <small>(Nội dugn phiếu xin tu sửa)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMATB</samp></td>
+      <td>TB001+TB002+TB003</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TB001</td>
+      <td>叫修單別</td>
+      <td>Loại đơn sửa chữa</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB002</td>
+      <td>叫修單號</td>
+      <td>Số đơn sửa chữa</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB003</td>
+      <td>叫修序號</td>
+      <td>STT xin tu sửa</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB004</td>
+      <td>品號</td>
+      <td>Mã SP</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td><small>(一定存在)</small></td>
+    </tr>
+    <tr>
+      <td>TB005</td>
+      <td>品名</td>
+      <td>Tên SP</td>
+      <td>V</td>
+      <td>120.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB006</td>
+      <td>規格</td>
+      <td>Quy cách</td>
+      <td>V</td>
+      <td>120.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB007</td>
+      <td>數量</td>
+      <td>SL</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB008</td>
+      <td>計價單位</td>
+      <td>ĐV tính giá</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td>單位<small>(pcs,次,天,時)</small></td>
+    </tr>
+    <tr>
+      <td>TB009</td>
+      <td>單價</td>
+      <td>ĐG</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB010</td>
+      <td>金額</td>
+      <td>Số tiền</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB011</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N/V</td>
+    </tr>
+    <tr>
+      <td>TB012</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB015</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB016</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TB017</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMATC</samp> : 維修單單頭檔    <small>(Tiêu đề phiếu tu sửa)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMATC</samp></td>
+      <td>TC001+TC002</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TC001</td>
+      <td>維修單別</td>
+      <td>Loại đơn sửa chữa</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC002</td>
+      <td>維修單號</td>
+      <td>Số đơn sửa chữa</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC003</td>
+      <td>單據日期</td>
+      <td>Ngày CT</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TC004</td>
+      <td>確認日期</td>
+      <td>Ngày xác nhận</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TC005</td>
+      <td>叫修單別</td>
+      <td>Loại đơn sửa chữa</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC006</td>
+      <td>叫修單號</td>
+      <td>Số đơn sửa chữa</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC007</td>
+      <td>客戶代號</td>
+      <td>Mã KH</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td><small>(display only call from 叫修單)</small></td>
+    </tr>
+    <tr>
+      <td>TC008</td>
+      <td>產品品號</td>
+      <td>Mã SP</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td><small>(display only call from 叫修單)</small></td>
+    </tr>
+    <tr>
+      <td>TC009</td>
+      <td>產品品名</td>
+      <td>Tên SP</td>
+      <td>V</td>
+      <td>120.0</td>
+      <td><small>(display only call from 叫修單)</small></td>
+    </tr>
+    <tr>
+      <td>TC010</td>
+      <td>產品規格</td>
+      <td>Quy cách SP</td>
+      <td>V</td>
+      <td>120.0</td>
+      <td><small>(display only call from 叫修單)</small></td>
+    </tr>
+    <tr>
+      <td>TC011</td>
+      <td>送修人員</td>
+      <td>NV đưa sửa</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td><small>(<samp>1</samp>.叫修單接單人2上站維修人員)</small></td>
+    </tr>
+    <tr>
+      <td>TC012</td>
+      <td>送修部門</td>
+      <td>Bộ môn đưa sửa</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC013</td>
+      <td>問題描述</td>
+      <td>Giới thiệu vấn đề</td>
+      <td>V</td>
+      <td>180.0</td>
+      <td><small>(display only call from 叫修單)</small></td>
+    </tr>
+    <tr>
+      <td>TC014</td>
+      <td>預計完修日</td>
+      <td>Ngày hết sửa dự định</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TC015</td>
+      <td>實際完修日</td>
+      <td>Ngày hết sử thực</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp><small>(update)</small></td>
+    </tr>
+    <tr>
+      <td>TC016</td>
+      <td>維修人員</td>
+      <td>NV tu chữa</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC017</td>
+      <td>維修部門</td>
+      <td>Bộ môn sửa chữa</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC018</td>
+      <td>狀態碼</td>
+      <td>Mã trạng thái</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.維修中、<samp>1</samp>.轉下站、<samp>2</samp>.送原廠、<samp>3</samp>.完成</td>
+    </tr>
+    <tr>
+      <td>TC019</td>
+      <td>下站代號</td>
+      <td>Mã số trạm dưới</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td><small>(站別or廠商)</small></td>
+    </tr>
+    <tr>
+      <td>TC020</td>
+      <td>下站單別</td>
+      <td>Loại đơn trạm dưới</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td><small>(維修單or送修單)</small>UPDATE <small>(確認時,維修單自動產生)</small></td>
+    </tr>
+    <tr>
+      <td>TC021</td>
+      <td>下站單號</td>
+      <td>Số đơn trạm dưới</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC022</td>
+      <td>列印次數</td>
+      <td>Số lần in</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC023</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC024</td>
+      <td>確認者</td>
+      <td>Xác nhận</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC025</td>
+      <td>預計工時</td>
+      <td>Số giờ làm việc dự định</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC026</td>
+      <td>實際工時</td>
+      <td>Số giờ làm thực</td>
+      <td>N</td>
+      <td>7.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC027</td>
+      <td>結帳碼</td>
+      <td>Mã kết sổ</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N</td>
+    </tr>
+    <tr>
+      <td>TC028</td>
+      <td>結帳單別</td>
+      <td>Phiếu kết sổ</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC029</td>
+      <td>結帳單號</td>
+      <td>Mã phiếu kết sổ</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC030</td>
+      <td>結帳序號</td>
+      <td>STT kết sổ</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC031</td>
+      <td>本幣總金額</td>
+      <td>Tổng tiền nội tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC032</td>
+      <td>保固否</td>
+      <td>Có phải cố định</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><small>(Y/N)</small></td>
+    </tr>
+    <tr>
+      <td>TC033</td>
+      <td>下站代號名稱</td>
+      <td>Mã số/tên trạm dưới</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC034</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N/V</td>
+    </tr>
+    <tr>
+      <td>TC035</td>
+      <td>維修站別</td>
+      <td>Loại trạm sửa chữa</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC036</td>
+      <td>客戶全名</td>
+      <td>Tên đầy đủ KH</td>
+      <td>V</td>
+      <td>80.0</td>
+      <td>發票對象</td>
+    </tr>
+    <tr>
+      <td>TC037</td>
+      <td>發票郵遞區號</td>
+      <td>MBĐ HĐ</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC038</td>
+      <td>統一編號</td>
+      <td>MST</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC039</td>
+      <td>發票聯數</td>
+      <td>Số liên hóa đơn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.二聯式、<samp>2</samp>.三聯式、<samp>3</samp>.二聯式收銀機發票、<samp>4</samp>.三聯式收銀機發票、<samp>5</samp>.電子計算機發票、<samp>6</samp>.免用統一發票、<samp>A</samp>.增值稅專用發票、<samp>B</samp>.普通發票、<samp>C</samp>.免用發票</td>
+    </tr>
+    <tr>
+      <td>TC040</td>
+      <td>發票地址(一)</td>
+      <td>ĐC hóa đơn (1)</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td>發票地址<small>(一)</small></td>
+    </tr>
+    <tr>
+      <td>TC041</td>
+      <td>發票地址(二)</td>
+      <td>ĐC hóa đơn (2)</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td>發票地址<small>(二)</small></td>
+    </tr>
+    <tr>
+      <td>TC042</td>
+      <td>簽核狀態碼</td>
+      <td>T.Thái xét duyệt</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.待處理、<samp>1</samp>.簽核中、<samp>2</samp>.退件、<samp>3</samp>.已核准、<samp>4</samp>.取消確認中、<samp>5</samp>.作廢中、<samp>6</samp>.取消作廢中、<samp>N</samp>.不執行電子簽核<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TC043</td>
+      <td>發票號碼</td>
+      <td>Mã hóa đơn</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC044</td>
+      <td>發票日期</td>
+      <td>Ngày</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TC045</td>
+      <td>申報年月</td>
+      <td>Tháng khai báo</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td><samp>[Formate:YM]</samp></td>
+    </tr>
+    <tr>
+      <td>TC046</td>
+      <td>營業稅率</td>
+      <td>Thuế suất</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td><small>(%)</small><samp>[DE<samp>F</samp>:<samp>9</samp>.9999]</samp></td>
+    </tr>
+    <tr>
+      <td>TC047</td>
+      <td>發票列印次數</td>
+      <td>Số lần in hoá đơn</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TC048</td>
+      <td>發票作廢</td>
+      <td>Hủy</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TC049</td>
+      <td>本幣銷貨金額</td>
+      <td>Số tiền (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC050</td>
+      <td>本幣銷貨稅額</td>
+      <td>Thuế (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC051</td>
+      <td>課稅別</td>
+      <td>Loại thuế</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.應稅內含、<samp>2</samp>.應稅外加、<samp>3</samp>.零稅率、<samp>4</samp>.免稅、<samp>9</samp>.不計稅<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>TC052</td>
+      <td>傳送次數</td>
+      <td>Số lần gửi</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TC053</td>
+      <td>產品序號</td>
+      <td>STT SP</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC054</td>
+      <td>幣別</td>
+      <td>Loại tiền tệ</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC055</td>
+      <td>匯率</td>
+      <td>Tỷ giá</td>
+      <td>N</td>
+      <td>20.9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC056</td>
+      <td>原幣銷貨金額</td>
+      <td>Số tiền (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC057</td>
+      <td>原幣銷貨稅額</td>
+      <td>Thuế (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC058</td>
+      <td>送貨地址一</td>
+      <td>ĐC giao hàng 1</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC059</td>
+      <td>送貨地址二</td>
+      <td>ĐC giao hàng 2</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC060</td>
+      <td>原幣總金額</td>
+      <td>Tổng số tiền nguyên tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC061</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC062</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC063</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC064</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC065</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC066</td>
+      <td>稅別碼</td>
+      <td>Mã thuế suất</td>
+      <td>V</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TC067</td>
+      <td>註記號</td>
+      <td></td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMATD</samp> : 維修單單身檔    <small>(Nội dung phiếu tu sửa)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMATD</samp></td>
+      <td>TD001+TD002+TD003</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TD001</td>
+      <td>維修單別</td>
+      <td>Loại đơn sửa chữa</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD002</td>
+      <td>維修單號</td>
+      <td>Số đơn sửa chữa</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD003</td>
+      <td>維修序號</td>
+      <td>STT tu sửa</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD004</td>
+      <td>品號</td>
+      <td>Mã SP</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD005</td>
+      <td>品名</td>
+      <td>Tên SP</td>
+      <td>V</td>
+      <td>120.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD006</td>
+      <td>規格</td>
+      <td>Quy cách</td>
+      <td>V</td>
+      <td>120.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD007</td>
+      <td>單位</td>
+      <td>ĐV</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD008</td>
+      <td>庫別</td>
+      <td>Kho</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td><small>(維修人員庫)</small></td>
+    </tr>
+    <tr>
+      <td>TD009</td>
+      <td>數量</td>
+      <td>SL</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD010</td>
+      <td>單價</td>
+      <td>ĐG</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td><small>(售價)</small></td>
+    </tr>
+    <tr>
+      <td>TD011</td>
+      <td>金額</td>
+      <td>Số tiền</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD012</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD013</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N/V</td>
+    </tr>
+    <tr>
+      <td>TD014</td>
+      <td>批號</td>
+      <td>Số lô</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD015</td>
+      <td>包裝數量</td>
+      <td>SL đóng gói</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD016</td>
+      <td>包裝單位</td>
+      <td>ĐV đóng gói</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD017</td>
+      <td>本幣未稅金額</td>
+      <td>Tiền chưa thuế(nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD018</td>
+      <td>本幣稅額</td>
+      <td>Thuế (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD019</td>
+      <td>產品序號數量</td>
+      <td>SL STT SP</td>
+      <td>N</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD020</td>
+      <td>原幣未稅金額</td>
+      <td>Tiền chưa thuế (Ngtệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD021</td>
+      <td>原幣稅額</td>
+      <td>Thuế (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD022</td>
+      <td>儲位</td>
+      <td>Vị trí lưu kho</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD023</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD024</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD025</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD026</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TD027</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMATE</samp> : 維修單單頭明細檔    <small>(Chi tiết TĐ CT tu sửa)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMATE</samp></td>
+      <td>TE001+TE002+TE003+TE004</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TE001</td>
+      <td>單別</td>
+      <td>Loại đơn</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE002</td>
+      <td>單號</td>
+      <td>Mã CT</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE003</td>
+      <td>問題代號</td>
+      <td>MS hệ thống</td>
+      <td>C</td>
+      <td>6.0</td>
+      <td><small>(mc001)</small>Q</td>
+    </tr>
+    <tr>
+      <td>TE004</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td><small>(A)</small></td>
+    </tr>
+    <tr>
+      <td>TE005</td>
+      <td>問題描述</td>
+      <td>Giới thiệu vấn đề</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td><small>(代出可修改)</small></td>
+    </tr>
+    <tr>
+      <td>TE006</td>
+      <td>處理狀況敘述</td>
+      <td>Diễn giải tình trạng xử lý</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TE011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMATF</samp> : 送廠維修單單頭檔    <small>(TĐ CT tu sửa đưa xưởng)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMATF</samp></td>
+      <td>TF001+TF002</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TF001</td>
+      <td>送廠維修單別</td>
+      <td>Loại đơn đưa sửa xưởng</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF002</td>
+      <td>送廠維修單號</td>
+      <td>Số đơn đưa sửa xưởng</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF003</td>
+      <td>單據日期</td>
+      <td>Ngày CT</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TF004</td>
+      <td>確認日期</td>
+      <td>Ngày xác nhận</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TF005</td>
+      <td>維修廠商</td>
+      <td>Nhà máy sửa</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF006</td>
+      <td>送修人員</td>
+      <td>NV đưa sửa</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF007</td>
+      <td>送修部門</td>
+      <td>Bộ môn đưa sửa</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF008</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF009</td>
+      <td>確認者</td>
+      <td>Xác nhận</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF010</td>
+      <td>總數量</td>
+      <td>Tổng SL</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF011</td>
+      <td>列印次數</td>
+      <td>Số lần in</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF012</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N/V</td>
+    </tr>
+    <tr>
+      <td>TF013</td>
+      <td>簽核狀態碼</td>
+      <td>T.Thái xét duyệt</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.待處理、<samp>1</samp>.簽核中、<samp>2</samp>.退件、<samp>3</samp>.已核准、<samp>4</samp>.取消確認中、<samp>5</samp>.作廢中、<samp>6</samp>.取消作廢中、<samp>N</samp>.不執行電子簽核<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TF014</td>
+      <td>傳送次數</td>
+      <td>Số lần gửi</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TF015</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF016</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF017</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF018</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TF019</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMATG</samp> : 送廠維修單單身檔    <small>(ND CT tu sửa đưa xưởng)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMATG</samp></td>
+      <td>TG001+TG002+TG003</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TG001</td>
+      <td>送廠維修單別</td>
+      <td>Loại đơn đưa sửa xưởng</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG002</td>
+      <td>送廠維修單號</td>
+      <td>Số đơn đưa sửa xưởng</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG003</td>
+      <td>送廠維修序號</td>
+      <td>STT đưa xưởng tu sửa</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG004</td>
+      <td>產品品號</td>
+      <td>Mã SP</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG005</td>
+      <td>產品品名</td>
+      <td>Tên SP</td>
+      <td>V</td>
+      <td>120.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG006</td>
+      <td>產品規格</td>
+      <td>Quy cách SP</td>
+      <td>V</td>
+      <td>120.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG007</td>
+      <td>問題描述</td>
+      <td>Giới thiệu vấn đề</td>
+      <td>V</td>
+      <td>180.0</td>
+      <td><small>(可修改copy from 叫修單)</small></td>
+    </tr>
+    <tr>
+      <td>TG008</td>
+      <td>叫修單別</td>
+      <td>Loại đơn sửa chữa</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG009</td>
+      <td>叫修單號</td>
+      <td>Số đơn sửa chữa</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG010</td>
+      <td>維修單別</td>
+      <td>Loại đơn sửa chữa</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG011</td>
+      <td>維修單號</td>
+      <td>Số đơn sửa chữa</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG012</td>
+      <td>數量</td>
+      <td>SL</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG013</td>
+      <td>單位</td>
+      <td>ĐV</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG014</td>
+      <td>歸還量</td>
+      <td>SL trả lại</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td>已歸還數量</td>
+    </tr>
+    <tr>
+      <td>TG015</td>
+      <td>預計歸還日</td>
+      <td>Ngày dự tính trả lại</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TG016</td>
+      <td>結案碼</td>
+      <td>Mã kết thúc</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N</td>
+    </tr>
+    <tr>
+      <td>TG017</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG018</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N/V</td>
+    </tr>
+    <tr>
+      <td>TG019</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG020</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG021</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG022</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TG023</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMATH</samp> : 送廠歸還單單頭檔    <small>(Tiêu đề hoàn lại đưa xưởng)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMATH</samp></td>
+      <td>TH001+TH002</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TH001</td>
+      <td>送廠歸還單別</td>
+      <td>Phiếu hoàn lại đưa xưởng</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH002</td>
+      <td>送廠歸還單號</td>
+      <td>MS CT hoàn lại đưa xưởng</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH003</td>
+      <td>單據日期</td>
+      <td>Ngày CT</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TH004</td>
+      <td>確認日期</td>
+      <td>Ngày xác nhận</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TH005</td>
+      <td>維修廠商</td>
+      <td>Nhà máy sửa</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH006</td>
+      <td>送修人員</td>
+      <td>NV đưa sửa</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH007</td>
+      <td>送修部門</td>
+      <td>Bộ môn đưa sửa</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH008</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH009</td>
+      <td>確認者</td>
+      <td>Xác nhận</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH010</td>
+      <td>總金額</td>
+      <td>Tổng số tiền</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH011</td>
+      <td>列印次數</td>
+      <td>Số lần in</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH012</td>
+      <td>結帳碼</td>
+      <td>Mã kết sổ</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N</td>
+    </tr>
+    <tr>
+      <td>TH013</td>
+      <td>應付單別</td>
+      <td>Phiếu phải trả</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH014</td>
+      <td>應付單號</td>
+      <td>Mã CT phải trả</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH015</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N/V</td>
+    </tr>
+    <tr>
+      <td>TH016</td>
+      <td>應付序號</td>
+      <td>STT TK phải trả</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH017</td>
+      <td>簽核狀態碼</td>
+      <td>T.Thái xét duyệt</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>0</samp>.待處理、<samp>1</samp>.簽核中、<samp>2</samp>.退件、<samp>3</samp>.已核准、<samp>4</samp>.取消確認中、<samp>5</samp>.作廢中、<samp>6</samp>.取消作廢中、<samp>N</samp>.不執行電子簽核<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TH018</td>
+      <td>傳送次數</td>
+      <td>Số lần gửi</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TH019</td>
+      <td>幣別</td>
+      <td>Loại tiền tệ</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH020</td>
+      <td>匯率</td>
+      <td>Tỷ giá</td>
+      <td>N</td>
+      <td>20.9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH021</td>
+      <td>統一編號</td>
+      <td>MST</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH022</td>
+      <td>發票聯數</td>
+      <td>Số liên hóa đơn</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.二聯式、<samp>2</samp>.三聯式、<samp>3</samp>.二聯式收銀機發票、<samp>4</samp>.三聯式收銀機發票、<samp>5</samp>.電子計算機發票、<samp>6</samp>.免用統一發票、<samp>A</samp>.農產品收購憑證、<samp>G</samp>.海關代徵完稅憑證、<samp>N</samp>.不可抵扣專用發票、<samp>S</samp>.可抵扣專用發票、<samp>T</samp>.運輸發票、<samp>W</samp>.廢舊物資收購憑證、<samp>Z</samp>.其他</td>
+    </tr>
+    <tr>
+      <td>TH023</td>
+      <td>發票日期</td>
+      <td>Ngày</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TH024</td>
+      <td>發票號碼</td>
+      <td>Mã hóa đơn</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH025</td>
+      <td>課稅別</td>
+      <td>Loại thuế</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.應稅內含、<samp>2</samp>.應稅外加、<samp>3</samp>.零稅率、<samp>4</samp>.免稅、<samp>9</samp>.不計稅</td>
+    </tr>
+    <tr>
+      <td>TH026</td>
+      <td>扣抵區分</td>
+      <td>Loại khấu trừ</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.可扣抵進貨及費用、<samp>2</samp>.可扣抵固定資產、<samp>3</samp>.不可扣抵進貨及費用、<samp>4</samp>.不可扣抵固定資產</td>
+    </tr>
+    <tr>
+      <td>TH027</td>
+      <td>菸酒註記</td>
+      <td>G.chú thuốc lá/rượu</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TH028</td>
+      <td>申報年月</td>
+      <td>Tháng khai báo</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td><samp>[Formate:YM]</samp></td>
+    </tr>
+    <tr>
+      <td>TH029</td>
+      <td>營業稅率</td>
+      <td>Thuế suất</td>
+      <td>N</td>
+      <td>8.5</td>
+      <td><small>(%)</small><samp>[DE<samp>F</samp>:<samp>9</samp>.9999]</samp></td>
+    </tr>
+    <tr>
+      <td>TH030</td>
+      <td>原幣維修金額</td>
+      <td>Số tiền sửa chữa nguyên tệ</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>原幣未稅維修金額</td>
+    </tr>
+    <tr>
+      <td>TH031</td>
+      <td>原幣稅額</td>
+      <td>Thuế (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH032</td>
+      <td>本幣維修金額</td>
+      <td>Số tiền sửa chữa tệ này</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td>本幣未稅維修金額</td>
+    </tr>
+    <tr>
+      <td>TH033</td>
+      <td>本幣稅額</td>
+      <td>Thuế (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH034</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH035</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH036</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH037</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH038</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH039</td>
+      <td>稅別碼</td>
+      <td>Mã thuế suất</td>
+      <td>V</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TH040</td>
+      <td>註記號</td>
+      <td></td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMATI</samp> : 送廠歸還單單身檔    <small>(Nội dung hoàn lại đưa xưởng)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMATI</samp></td>
+      <td>TI001+TI002+TI003</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TI001</td>
+      <td>送廠歸還單別</td>
+      <td>Phiếu hoàn lại đưa xưởng</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI002</td>
+      <td>送廠歸還單號</td>
+      <td>MS CT hoàn lại đưa xưởng</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI003</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI004</td>
+      <td>產品品號</td>
+      <td>Mã SP</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI005</td>
+      <td>產品品名</td>
+      <td>Tên SP</td>
+      <td>V</td>
+      <td>120.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI006</td>
+      <td>產品規格</td>
+      <td>Quy cách SP</td>
+      <td>V</td>
+      <td>120.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI007</td>
+      <td>數量</td>
+      <td>SL</td>
+      <td>N</td>
+      <td>16.3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI008</td>
+      <td>單位</td>
+      <td>ĐV</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI009</td>
+      <td>單價</td>
+      <td>ĐG</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI010</td>
+      <td>金額</td>
+      <td>Số tiền</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td><small>(應付)</small></td>
+    </tr>
+    <tr>
+      <td>TI011</td>
+      <td>送廠維修單別</td>
+      <td>Loại đơn đưa sửa xưởng</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI012</td>
+      <td>送廠維修單號</td>
+      <td>Số đơn đưa sửa xưởng</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI013</td>
+      <td>送廠維修序號</td>
+      <td>STT đưa xưởng tu sửa</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI014</td>
+      <td>叫修單別</td>
+      <td>Loại đơn sửa chữa</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI015</td>
+      <td>叫修單號</td>
+      <td>Số đơn sửa chữa</td>
+      <td>V</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI016</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI017</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N/V</td>
+    </tr>
+    <tr>
+      <td>TI018</td>
+      <td>原幣未稅金額</td>
+      <td>Tiền chưa thuế (Ngtệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI019</td>
+      <td>原幣稅額</td>
+      <td>Thuế (nguyên tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI020</td>
+      <td>本幣未稅金額</td>
+      <td>Tiền chưa thuế(nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI021</td>
+      <td>本幣稅額</td>
+      <td>Thuế (nội tệ)</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI022</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI023</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI024</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI025</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TI026</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMATJ</samp> : 單據產品序號維護單頭檔    <small>(Tiêu đề duy trì STT sản phẩm chứng từ)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMATJ</samp></td>
+      <td>TJ001+TJ002</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TJ001</td>
+      <td>單別</td>
+      <td>Loại đơn</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ002</td>
+      <td>單號</td>
+      <td>Mã CT</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ003</td>
+      <td>單據日期</td>
+      <td>Ngày CT</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TJ004</td>
+      <td>單據確認日期</td>
+      <td>Ngày chấp nhận chứng từ</td>
+      <td>V</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>TJ005</td>
+      <td>對象代號</td>
+      <td>Mã đối tượng</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ006</td>
+      <td>對象名稱</td>
+      <td>Tên đối tượng</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ007</td>
+      <td>I/O別</td>
+      <td>Loại nhập/xuất</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td>入=+1、出=-1</td>
+    </tr>
+    <tr>
+      <td>TJ008</td>
+      <td>異動別</td>
+      <td>Loại biến động</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.入庫、<samp>2</samp>.銷貨、<samp>3</samp>.領用、<samp>4</samp>.轉撥、<samp>5</samp>.調整</td>
+    </tr>
+    <tr>
+      <td>TJ009</td>
+      <td>總數量</td>
+      <td>Tổng SL</td>
+      <td>N</td>
+      <td>10.0</td>
+      <td><samp>[DE<samp>F</samp>:0]</samp></td>
+    </tr>
+    <tr>
+      <td>TJ010</td>
+      <td>確認碼</td>
+      <td>Mã xác nhận</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>TJ011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TJ015</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMATK</samp> : 單據產品序號維護單身檔    <small>(Nội dung duy trì STT sản phẩm chứng từ)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMATK</samp></td>
+      <td>TK001+TK002+TK003</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TK001</td>
+      <td>單別</td>
+      <td>Loại đơn</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK002</td>
+      <td>單號</td>
+      <td>Mã CT</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK003</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK004</td>
+      <td>品號</td>
+      <td>Mã SP</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK005</td>
+      <td>數量</td>
+      <td>SL</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK006</td>
+      <td>更新碼</td>
+      <td>Mã cập nhật</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><small>(Y/N)</small></td>
+    </tr>
+    <tr>
+      <td>TK007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TK011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMATL</samp> : 單據產品序號維護單身明細    <small>(Chi tiết nội dung duy trì STT sản phẩm chứng từ)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMATL</samp></td>
+      <td>TL001+TL002+TL003+TL004</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TL001</td>
+      <td>單別</td>
+      <td>Loại đơn</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL002</td>
+      <td>單號</td>
+      <td>Mã CT</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL003</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL004</td>
+      <td>子序號</td>
+      <td>STT con</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL005</td>
+      <td>數量</td>
+      <td>SL</td>
+      <td>N</td>
+      <td>8.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL006</td>
+      <td>編碼格式</td>
+      <td>Định dạng</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL007</td>
+      <td>起始產品序號</td>
+      <td>STT sản phẩm bắt đầu</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL008</td>
+      <td>截止產品序號</td>
+      <td>STT hết sản phẩm</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL009</td>
+      <td>更新碼</td>
+      <td>Mã cập nhật</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><small>(Y/N)</small> 是否更新至產品序號</td>
+    </tr>
+    <tr>
+      <td>TL010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TL014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RMATM</samp> : 維修單序號維護明細檔    <small>(Chi tiết duy trì STT đơn tu sửa)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_RMATM</samp></td>
+      <td>TM001+TM002+TM003+TM004</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TM001</td>
+      <td>維修單別</td>
+      <td>Loại đơn sửa chữa</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM002</td>
+      <td>維修單號</td>
+      <td>Số đơn sửa chữa</td>
+      <td>C</td>
+      <td>11.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM003</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM004</td>
+      <td>產品序號起始編號</td>
+      <td>Mã BĐ của STT SP</td>
+      <td>C</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM005</td>
+      <td>產品序號迄止編號</td>
+      <td>Mã số cuối STT SP</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM006</td>
+      <td>數量</td>
+      <td>SL</td>
+      <td>N</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM007</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM008</td>
+      <td>序號前置碼</td>
+      <td>Mã liền trước STT</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM009</td>
+      <td>序號流水號碼數</td>
+      <td>Độ dài STT</td>
+      <td>V</td>
+      <td>2.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM010</td>
+      <td>序號編碼原則</td>
+      <td>Nguyên tắc tạo STT</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM011</td>
+      <td>品號</td>
+      <td>Mã SP</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM015</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TM016</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+  </div>
+  <!--- Footer
+  <footer><div class="uk-margin-left uk-text-small">Copyright &copy;2022 VPIC1. All Rights Reserved.  <i>(Japlin Chen)</i></div></footer>
+  --->
+</body>
+</html>

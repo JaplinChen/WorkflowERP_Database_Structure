@@ -1,0 +1,1276 @@
+
+<html>
+<head>
+  <title>IFB_金流整合管理系統</title>
+  <link rel="stylesheet" href="../df_style.css" />
+</head>
+<body>
+  <header>
+    <h3><span style="color:red">IFB</span> 金流整合管理系統</h3>
+  </header>
+  <div class="TableAccordion">
+
+   <details>
+   <summary><samp>IFBLB</samp> : 銷帳明細資料檔    <small>(DL chi tiết xóa sổ)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IFBLB</samp></td>
+      <td>LB001+LB002+LB003+LB004</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LB001</td>
+      <td>銀行行號</td>
+      <td>Mã ngân hàng</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LB002</td>
+      <td>帳號</td>
+      <td>Số TK</td>
+      <td>C</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LB003</td>
+      <td>交易日期</td>
+      <td>Ngày GD</td>
+      <td>C</td>
+      <td>8.0</td>
+      <td><samp>[Formate:YMD]</samp></td>
+    </tr>
+    <tr>
+      <td>LB004</td>
+      <td>交易序號</td>
+      <td>STT GD</td>
+      <td>C</td>
+      <td>5.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LB005</td>
+      <td>幣別</td>
+      <td>Loại tiền tệ</td>
+      <td>V</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LB006</td>
+      <td>借方金額</td>
+      <td>Số tiền bên Nợ</td>
+      <td>N</td>
+      <td>13.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LB007</td>
+      <td>貸方金額</td>
+      <td>Số tiền bên Có</td>
+      <td>N</td>
+      <td>13.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LB008</td>
+      <td>餘額</td>
+      <td>Số dư</td>
+      <td>N</td>
+      <td>13.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LB009</td>
+      <td>支票號碼</td>
+      <td>Mã số séc</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LB010</td>
+      <td>交易代碼</td>
+      <td>MS GD</td>
+      <td>V</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LB011</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LB012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LB013</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LB014</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>21.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LB015</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LB016</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LB017</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IFBMG</samp> : 銷帳明細資料定義單頭檔    <small>(Tiêu đề định nghĩa dữ liệu chi tiết xóa sổ)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IFBMG</samp></td>
+      <td>MG001</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MG001</td>
+      <td>銀行行號</td>
+      <td>Mã ngân hàng</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG002</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG003</td>
+      <td>年別</td>
+      <td>Năm</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>4</samp>.民國年YYMMDD <samp>1</samp>.西元年 YYYYMMDD<samp>[DE<samp>F</samp>:4]</samp></td>
+    </tr>
+    <tr>
+      <td>MG004</td>
+      <td>帳號起始位置</td>
+      <td>Vị trí đầu tài khoản</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG005</td>
+      <td>帳號截止位置</td>
+      <td>Vị trí hết tài khoản</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG006</td>
+      <td>交易日期起始位置</td>
+      <td>Vị trí bắt đầu ngày giao dịch</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG007</td>
+      <td>交易日期截止位置</td>
+      <td>Vị trí đến hết ngày giao dịch</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG008</td>
+      <td>交易序號起始位置</td>
+      <td>Vị trí đầu STT giao dịch</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG009</td>
+      <td>交易序號截止位置</td>
+      <td>Vị trí cuối STT giao dịch</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG010</td>
+      <td>交易幣別起始位置</td>
+      <td>Vị trí đầu tiền tệ giao dịch</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG011</td>
+      <td>交易幣別截止位置</td>
+      <td>Vị trí cuối loại tiền tệ GD</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG012</td>
+      <td>借方金額起始位置</td>
+      <td>Vị trí đầu số tiền bên vay</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG013</td>
+      <td>借方金額截止位置</td>
+      <td>Vị trí đến hết số tiền bên vay</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG014</td>
+      <td>借方金額正負位置</td>
+      <td>Vị trí dương âm số tiền bên vay</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td>借方金額正負號位置</td>
+    </tr>
+    <tr>
+      <td>MG015</td>
+      <td>貸方金額起始位置</td>
+      <td>Vị trí đầu tiền bên cho vay</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG016</td>
+      <td>貸方金額截止位置</td>
+      <td>Vị trí hết tiền bên cho vay</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG017</td>
+      <td>貸方金額正負位置</td>
+      <td>Vị trí dương âm số tiền bên cho vay</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td>貸方金額正負號位置</td>
+    </tr>
+    <tr>
+      <td>MG018</td>
+      <td>餘額起始位置</td>
+      <td>Vị trí bắt đầu số dư</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG019</td>
+      <td>餘額截止位置</td>
+      <td>Vị trí đến hết số dư</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG020</td>
+      <td>餘額正負位置</td>
+      <td>Vị trí dương âm số dư</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td>餘額正負號位置</td>
+    </tr>
+    <tr>
+      <td>MG021</td>
+      <td>金額含小數位數</td>
+      <td>Số vị thập phân số tiền</td>
+      <td>N</td>
+      <td>2.0</td>
+      <td>借貸方金額含小數位數</td>
+    </tr>
+    <tr>
+      <td>MG022</td>
+      <td>金額含小數點</td>
+      <td>Dấu thập phân số tiền</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>MG023</td>
+      <td>支票號碼起始位置</td>
+      <td>Vị trí bắt đầu mã số séc</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG024</td>
+      <td>支票號碼截止位置</td>
+      <td>Vị trí đến hết mã số séc</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG025</td>
+      <td>交易代碼起始位置</td>
+      <td>Vị trí bắt đầu mã số giao dịch</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG026</td>
+      <td>交易代碼截止位置</td>
+      <td>Vị trí cuối MS giao dịch</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG027</td>
+      <td>媒體檔名</td>
+      <td>Tên tập tin media</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td>轉出媒體檔名</td>
+    </tr>
+    <tr>
+      <td>MG028</td>
+      <td>金額定義</td>
+      <td>Định nghĩa tiền</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.借貸金額分開 <samp>2</samp>.依借貸別區分<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>MG029</td>
+      <td>借貸別起始位置</td>
+      <td>Vị trí đầu vay/cho vay</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG030</td>
+      <td>借貸別截止位置</td>
+      <td>Vị trí đến hết lọa vay mượn</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG031</td>
+      <td>借貸金額起始位置</td>
+      <td>Vị trí bắt đầu số tiền vay mượ</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG032</td>
+      <td>借貸金額截止位置</td>
+      <td>Vị trí đến hết số tiền vay mượn</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG033</td>
+      <td>借貸金額正負位置</td>
+      <td>Vị trí dương âm số tiền vay mượn</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG034</td>
+      <td>備註起始位置</td>
+      <td>Vị trí bắt đầu ghi chú</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG035</td>
+      <td>備註截止位置</td>
+      <td>Vị trí đến hết ghi chú</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG036</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>13.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG037</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG038</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG039</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG040</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MG041</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>預留欄位:檔案格式<small>(BIG5,UNICODE)</small></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IFBMH</samp> : 銷帳明細資料定義單身檔    <small>(Nội dung định nghĩa dữ liệu chi tiết xóa sổ)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IFBMH</samp></td>
+      <td>MH001+MH002+MH003</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MH001</td>
+      <td>銀行行號</td>
+      <td>Mã ngân hàng</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH002</td>
+      <td>欄位代號</td>
+      <td>Mã trường</td>
+      <td>C</td>
+      <td>5.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH003</td>
+      <td>原值</td>
+      <td>Giá trị ban đầu</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH004</td>
+      <td>轉換值</td>
+      <td>Giá trị chuyển đổi</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH005</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>13.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH006</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MH009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IFBMI</samp> : 票據託收交易代碼檔    <small>(Mã số giao dịch nhờ thu chứng từ)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IFBMI</samp></td>
+      <td>MI001+MI002</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MI001</td>
+      <td>銀行行號</td>
+      <td>Mã ngân hàng</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MI002</td>
+      <td>交易代碼</td>
+      <td>MS GD</td>
+      <td>C</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MI003</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>13.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MI004</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MI005</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MI006</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MI007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IFBNB</samp> : 轉帳媒體結構單頭檔    <small>(Tiêu đề kết cấu media sang sổ)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IFBNB</samp></td>
+      <td>NB001</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>NB001</td>
+      <td>媒體編號</td>
+      <td>Mã media</td>
+      <td>C</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NB002</td>
+      <td>媒體名稱</td>
+      <td>Tên media</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NB003</td>
+      <td>媒體性質</td>
+      <td>Tính chất media</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.票據託收 <samp>2</samp>.銀行存提 <samp>3</samp>.薪資轉帳 <samp>4</samp>.獨立發放 <samp>5</samp>.固定轉帳金額 <samp>6</samp>.預約付款</td>
+    </tr>
+    <tr>
+      <td>NB004</td>
+      <td>媒體檔名</td>
+      <td>Tên tập tin media</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td>轉出媒體檔名</td>
+    </tr>
+    <tr>
+      <td>NB005</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NB006</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>13.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NB007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NB008</td>
+      <td>轉出方式</td>
+      <td>轉出方式</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.固定欄寬 <samp>2</samp>.逗號區隔</td>
+    </tr>
+    <tr>
+      <td>NB009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NB010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NB011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>預留欄位:檔案格式<small>(BIG5,UNICODE)</small></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IFBNC</samp> : 轉帳媒體結構單身檔    <small>(Nội dung kết cấu media sang sổ)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IFBNC</samp></td>
+      <td>NC001+NC002</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>NC001</td>
+      <td>媒體編號</td>
+      <td>Mã media</td>
+      <td>C</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NC002</td>
+      <td>序號</td>
+      <td>Số thứ tự</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NC003</td>
+      <td>區別碼</td>
+      <td>Mã phân biệt</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.首筆,<samp>2</samp>.異動,<samp>3</samp>.明細,<samp>4</samp>.末筆</td>
+    </tr>
+    <tr>
+      <td>NC004</td>
+      <td>來源</td>
+      <td>Nguồn</td>
+      <td>V</td>
+      <td>2.0</td>
+      <td><samp>1</samp>.固定值,<samp>2</samp>.檔案<samp>3</samp>.系統日<samp>4</samp>.換行符號<samp>5</samp>.明細末筆換行符號<samp>6</samp>.國泰檢查碼<samp>7</samp>.選項輸入日期<samp>8</samp>.聯/跨行9<samp>N</samp>.第N項合計值</td>
+    </tr>
+    <tr>
+      <td>NC005</td>
+      <td>檔案代號</td>
+      <td>Mã số tập tin</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td>ERP檔案代號</td>
+    </tr>
+    <tr>
+      <td>NC006</td>
+      <td>欄位代號</td>
+      <td>Mã trường</td>
+      <td>V</td>
+      <td>15.0</td>
+      <td>ERP欄位代號</td>
+    </tr>
+    <tr>
+      <td>NC007</td>
+      <td>欄位名稱</td>
+      <td>Tên trường</td>
+      <td>V</td>
+      <td>40.0</td>
+      <td>ERP欄位名稱</td>
+    </tr>
+    <tr>
+      <td>NC008</td>
+      <td>欄位型態</td>
+      <td>TTính cột</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>ERP欄位型態</td>
+    </tr>
+    <tr>
+      <td>NC009</td>
+      <td>固定數值</td>
+      <td>Trị số cố định</td>
+      <td>N</td>
+      <td>13.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NC010</td>
+      <td>固定文字</td>
+      <td>Chữ cố định</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NC011</td>
+      <td>合計階1</td>
+      <td>TL cãp 1</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NC012</td>
+      <td>合計階2</td>
+      <td>TL cãp 2</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NC013</td>
+      <td>合計階3</td>
+      <td>TL cãp 3</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NC014</td>
+      <td>合計階4</td>
+      <td>TL cãp 4</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NC015</td>
+      <td>合計階5</td>
+      <td>TL cãp 5</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NC016</td>
+      <td>轉出長度</td>
+      <td>Đồ dài chuyển xuất</td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NC017</td>
+      <td>備註</td>
+      <td>Ghi chú</td>
+      <td>V</td>
+      <td>255.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NC018</td>
+      <td>小數位數</td>
+      <td>Vị số thập phân</td>
+      <td>N</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NC019</td>
+      <td>填空方式</td>
+      <td>Ppháp bổ khuyết</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td><samp>1</samp>.左靠右補空白 <samp>2</samp>.右靠左補零<samp>[DE<samp>F</samp>:1]</samp></td>
+    </tr>
+    <tr>
+      <td>NC020</td>
+      <td>欄位可空白</td>
+      <td>Cột có thể để trống</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>Y/N<samp>[DE<samp>F</samp>:Y]</samp></td>
+    </tr>
+    <tr>
+      <td>NC021</td>
+      <td>起始碼</td>
+      <td></td>
+      <td>N</td>
+      <td>3.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NC022</td>
+      <td>含小數點</td>
+      <td>Gồm số thập phân</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td>轉出含小數點<samp>[DE<samp>F</samp>:N]</samp></td>
+    </tr>
+    <tr>
+      <td>NC023</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>13.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NC024</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NC025</td>
+      <td>字串相接</td>
+      <td></td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NC026</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NC027</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>IFBND</samp> : 轉帳媒體代碼轉換檔    <small>(Hồ sơ chuyển đổi mã số media sang sổ)</small></summary>
+   <content>
+
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>IndexName</th>
+      <th>IndexColumnName</th>
+      <th>isPrimaryKey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><samp>PK_IFBND</samp></td>
+      <td>ND001+ND002+ND003</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ND001</td>
+      <td>媒體編號</td>
+      <td>Mã media</td>
+      <td>C</td>
+      <td>6.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ND002</td>
+      <td>媒體序號</td>
+      <td>STT media</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ND003</td>
+      <td>原值</td>
+      <td>Giá trị ban đầu</td>
+      <td>C</td>
+      <td>4.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ND004</td>
+      <td>轉換值</td>
+      <td>Giá trị chuyển đổi</td>
+      <td>V</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ND005</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ND006</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>20.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ND007</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>15.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ND008</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>13.2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ND009</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>N</td>
+      <td>15.6</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ND010</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ND011</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>30.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ND012</td>
+      <td>預留欄位</td>
+      <td>Cột đặt lại</td>
+      <td>V</td>
+      <td>60.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+  </div>
+  <!--- Footer
+  <footer><div class="uk-margin-left uk-text-small">Copyright &copy;2022 VPIC1. All Rights Reserved.  <i>(Japlin Chen)</i></div></footer>
+  --->
+</body>
+</html>

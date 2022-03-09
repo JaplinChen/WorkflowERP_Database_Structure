@@ -1,0 +1,112 @@
+
+<html>
+<head>
+  <title>RGR_自訂報表系統</title>
+  <link rel="stylesheet" href="../df_style.css" />
+</head>
+<body>
+  <header>
+    <h3><span style="color:red">RGR</span> 自訂報表系統</h3>
+  </header>
+  <div class="TableAccordion">
+
+   <details>
+   <summary><samp>RGRMA</samp> : 自訂報表單頭檔</summary>
+   <content>
+
+      
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MA001</td>
+      <td>報表代號</td>
+      <td>Mã báo biểu</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MA002</td>
+      <td>報表名稱</td>
+      <td>Tên báo biểu</td>
+      <td>C</td>
+      <td>40.0</td>
+      <td><small>(24C->40C)</small>S00-9006042 <samp>3</samp>.1V</td>
+    </tr>
+    <tr>
+      <td>MA003</td>
+      <td>限定使用者</td>
+      <td>Người dùng hạn định</td>
+      <td>C</td>
+      <td>1.0</td>
+      <td>Y/N</td>
+    </tr>
+    <tr>
+      <td>MA004</td>
+      <td>UIDATA</td>
+      <td>UIDATA</td>
+      <td>I</td>
+      <td>0.0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+   <details>
+   <summary><samp>RGRMB</samp> : 自訂報表單身檔</summary>
+   <content>
+
+      
+      <table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>FieldName</th>
+      <th>NameVietnam</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MB001</td>
+      <td>報表代號</td>
+      <td>Mã báo biểu</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MB002</td>
+      <td>使用者代碼</td>
+      <td>Mã người dùng</td>
+      <td>C</td>
+      <td>10.0</td>
+      <td><small>(設定權限)</small></td>
+    </tr>
+  </tbody>
+</table>
+   </content>
+</details>
+
+
+  </div>
+  <!--- Footer
+  <footer><div class="uk-margin-left uk-text-small">Copyright &copy;2022 VPIC1. All Rights Reserved.  <i>(Japlin Chen)</i></div></footer>
+  --->
+</body>
+</html>
