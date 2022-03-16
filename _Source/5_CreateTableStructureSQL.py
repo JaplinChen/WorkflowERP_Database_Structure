@@ -2,19 +2,15 @@
 # coding: utf-8
 # coding: unicode_escape
 import os
-#from pickle import FALSE, TRUE
 import re
 import json
-#from tkinter.tix import INTEGER
+import pandas as pd
 from pandas.io.json import json_normalize
 def jsonToDataFrame(jsonStr):    
      return pd.json_normalize(jsonStr)
 
-import pandas as pd
-
 #TableName_Columns = ['TableID', 'TableName', 'TableNameViet', 'ModuleID', 'ModuleName', 'ModuleType']
 #TableStructure_Columns=['TableID', 'TableName', 'ModuleID', 'sID', 'ID', '_FieldName', 'NameVietnam', 'Type', 'Length', 'Description']
-#TableIndex_Columns = ['TableName', 'IndexName', 'IndexColumnName', 'isPrimaryKey']
 
 # -- SQL Strings for Table Structure
 TableSQL = '''--{TableName}
@@ -39,7 +35,6 @@ def Description_Convert(Description):
             n = n + x.rstrip() + "'\n"
         m = n[2:]  #--去掉第一個 '\n
         m = m.replace('、','')
-        #print(m)
         return m
     else:
         return ''
