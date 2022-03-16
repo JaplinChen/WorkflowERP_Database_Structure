@@ -2,7 +2,12 @@
 SELECT
   ,MG001 AS "使用者代碼"
   ,MG002 AS "程式代碼"
-  ,MG003 AS "頁次權限"
+  ,CASE 
+   WHEN '0' THEN N'表可見可改,'
+   WHEN '1' THEN N'表可見不可改,'
+   WHEN '2' THEN N'表不可見不可改'
+   ELSE ""
+   END AS "頁次權限"
   ,MG004 AS "執行權限"
   ,MG005 AS "資料管制"
   ,MG006 AS "基本權限"

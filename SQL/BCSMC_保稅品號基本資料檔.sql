@@ -30,7 +30,12 @@ SELECT
   ,MC011 AS "關稅率"
   ,MC012 AS "保稅單價"
   ,MC013 AS "備註"
-  ,MC014 AS "資料來源"
+  ,CASE 
+   WHEN '1' THEN N'系統轉入'
+   WHEN '2' THEN N'自行輸入'
+   WHEN '3' THEN N'轉入後修改'
+   ELSE ""
+   END AS "資料來源"
   ,MC015 AS "保稅庫存數量"
   ,MC016 AS "保留欄位"
   ,MC017 AS "保稅生效日期"

@@ -10,7 +10,12 @@ SELECT
   ,TA008 AS "入出別"
   ,TA009 AS "保稅編號"
   ,TA010 AS "備註"
-  ,TA011 AS "資料來源"
+  ,CASE 
+   WHEN '1' THEN N'系統轉入'
+   WHEN '2' THEN N'自行輸入'
+   WHEN '3' THEN N'轉入後修改'
+   ELSE ""
+   END AS "資料來源"
   ,CASE 
    WHEN '1' THEN N'保稅區內銷'
    WHEN '2' THEN N'補稅內銷'

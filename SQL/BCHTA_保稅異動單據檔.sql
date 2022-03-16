@@ -22,7 +22,12 @@ SELECT
   ,TA020 AS "參考單號"
   ,TA021 AS "保稅編號"
   ,TA022 AS "BOM編號"
-  ,TA023 AS "資料來源"
+  ,CASE 
+   WHEN '1' THEN N'系統轉入'
+   WHEN '2' THEN N'自行輸入'
+   WHEN '3' THEN N'轉入後修改'
+   ELSE ""
+   END AS "資料來源"
   ,TA024 AS "客戶代號"
   ,TA025 AS "生產國別"
   ,TA026 AS "稅則"

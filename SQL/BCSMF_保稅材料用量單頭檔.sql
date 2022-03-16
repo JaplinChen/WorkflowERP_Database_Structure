@@ -6,7 +6,12 @@ SELECT
   ,MF004 AS "使用日期"
   ,MF005 AS "核準文號"
   ,MF006 AS "備註"
-  ,MF007 AS "資料來源"
+  ,CASE 
+   WHEN '1' THEN N'系統轉入'
+   WHEN '2' THEN N'自行輸入'
+   WHEN '3' THEN N'轉入後修改'
+   ELSE ""
+   END AS "資料來源"
   ,MF008 AS "生效日期"
   ,MF014 AS "冊號"
   ,MF015 AS "流水號"

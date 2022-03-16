@@ -7,7 +7,13 @@ SELECT
   ,TA005 AS "到期日"
   ,TA006 AS "付款銀行"
   ,TA007 AS "票據種類"
-  ,TA008 AS "目前票況"
+  ,CASE 
+   WHEN '1' THEN N'開票,'
+   WHEN '5' THEN N'退票,'
+   WHEN '6' THEN N'兌現,'
+   WHEN '7' THEN N'註銷'
+   ELSE ""
+   END AS "目前票況"
   ,TA009 AS "廠商代號"
   ,TA010 AS "廠商簡稱"
   ,TA011 AS "付款單別"

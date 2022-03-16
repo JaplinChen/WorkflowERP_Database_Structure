@@ -17,7 +17,12 @@ SELECT
   ,TC009 AS "盤點數量"
   ,TC010 AS "帳面數量"
   ,TC011 AS "備註"
-  ,TC012 AS "資料來源"
+  ,CASE 
+   WHEN '1' THEN N'系統轉入'
+   WHEN '2' THEN N'自行輸入'
+   WHEN '3' THEN N'轉入後修改'
+   ELSE ""
+   END AS "資料來源"
   ,TC013 AS "在製品"
   ,TC014 AS "盤點總號"
   ,TC015 AS "BOM編號"
