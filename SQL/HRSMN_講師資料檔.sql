@@ -1,0 +1,26 @@
+--HRSMN_講師資料檔
+SELECT
+  ,MN001 AS "講師代號"
+  ,MN002 AS "講師姓名"
+  ,MN003 AS "英文全名"
+  ,MN004 AS "性別"
+  ,MN005 AS "身分證號"
+  ,MN006 AS "生日"
+  ,MN007 AS "聯絡住址"
+  ,MN008 AS "永久住址"
+  ,MN009 AS "聯絡電話一"
+  ,MN010 AS "聯絡電話二"
+  ,MN011 AS "傳真"
+  ,MN012 AS "E-MAIL"
+  ,MN013 AS "任職單位"
+  ,MN014 AS "職稱"
+  ,MN015 AS "擅長主題"
+  ,MN016 AS "學經歷"
+  ,MN017 AS "曾授課企業"
+  ,MN018 AS "受聘日期起"
+  ,MN019 AS "受聘日期迄"
+  ,MN020 AS "評核"
+  ,MN021 AS "收費方式"
+  ,MN022 AS "備註"
+
+FROM HRSMN

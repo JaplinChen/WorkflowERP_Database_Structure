@@ -1,0 +1,5 @@
+--ACTNT_IFRS與ROC會計科目對應單頭檔
+SELECT
+  ,NT001 AS "行業別"
+
+FROM ACTNT

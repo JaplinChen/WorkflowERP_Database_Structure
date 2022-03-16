@@ -1,0 +1,26 @@
+--COPTV_連絡人變更資料檔
+SELECT
+  ,TV001 AS "客戶代號"
+  ,TV002 AS "變更版次"
+  ,TV003 AS "原連絡人代號"
+  ,TV004 AS "新連絡人代號"
+  ,TV005 AS "新連絡人姓名"
+  ,TV006 AS "新部門"
+  ,TV007 AS "新職務"
+  ,TV008 AS "新生日"
+  ,TV009 AS "新TEL_NO(一)"
+  ,TV010 AS "新TEL_NO(二)"
+  ,TV011 AS "新FAX_NO"
+  ,TV012 AS "新E-Mail"
+  ,TV013 AS "新備註"
+  ,TV014 AS "原連絡人姓名"
+  ,TV015 AS "原部門"
+  ,TV016 AS "原職務"
+  ,TV017 AS "原生日"
+  ,TV018 AS "原TEL_NO(一)"
+  ,TV019 AS "原TEL_NO(二)"
+  ,TV020 AS "原FAX_NO"
+  ,TV021 AS "原E-Mail"
+  ,TV022 AS "原備註"
+
+FROM COPTV

@@ -1,0 +1,26 @@
+--BTSLS_PDA轉入暫存出通單單身檔
+SELECT
+  ,LS001 AS "工作ID"
+  ,LS002 AS "作業種類"
+  ,LS003 AS "處理序號"
+  ,LS004 AS "出通單單別"
+  ,LS005 AS "出通單單號"
+  ,LS006 AS "序號"
+  ,LS007 AS "品號"
+  ,LS008 AS "出貨庫別"
+  ,LS009 AS "批號"
+  ,LS010 AS "單箱包裝數量"
+  ,LS011 AS "起始箱號"
+  ,LS012 AS "截止箱號"
+  ,LS013 AS "單箱淨重"
+  ,LS014 AS "單箱毛重"
+  ,LS015 AS "長(CM)"
+  ,LS016 AS "寬(CM)"
+  ,LS017 AS "高(CM)"
+  ,LS018 AS "單箱材積"
+  ,LS019 AS "訂單單別"
+  ,LS020 AS "訂單單號"
+  ,LS021 AS "訂單序號"
+  ,LS022 AS "客戶品號"
+
+FROM BTSLS

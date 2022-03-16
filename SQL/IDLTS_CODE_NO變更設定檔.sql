@@ -1,0 +1,26 @@
+--IDLTS_CODE_NO變更設定檔
+SELECT
+  ,TS001 AS "BODY代號"
+  ,TS002 AS "變更版次"
+  ,TS003 AS "新序號"
+  ,TS004 AS "新Code固定碼"
+  ,TS005 AS "新Code流水號碼數"
+  ,TS006 AS "新Code編碼原則"
+  ,TS007 AS "新Code起始號碼"
+  ,TS008 AS "新Code截止號碼"
+  ,TS009 AS "新有效碼"
+  ,TS010 AS "新MultiCode"
+  ,TS011 AS "新MultiCode起始編號"
+  ,TS012 AS "新MultiCode截止編號"
+  ,TS013 AS "原序號"
+  ,TS014 AS "原Code固定碼"
+  ,TS015 AS "原Code流水號碼數"
+  ,TS016 AS "原Code編碼原則"
+  ,TS017 AS "原Code起始號碼"
+  ,TS018 AS "原Code截止號碼"
+  ,TS019 AS "原有效碼"
+  ,TS020 AS "原MultiCode"
+  ,TS021 AS "原MultiCode起始編號"
+  ,TS022 AS "原MultiCode截止編號"
+
+FROM IDLTS

@@ -1,0 +1,65 @@
+--COPTX_合約訂單單身資料檔
+SELECT
+  ,TX001 AS "單別"
+  ,TX002 AS "單號"
+  ,TX003 AS "序號"
+  ,TX004 AS "品號"
+  ,TX005 AS "品名"
+  ,TX006 AS "規格"
+  ,TX007 AS "庫別"
+  ,TX008 AS "合約數量"
+  ,TX009 AS "已受訂量"
+  ,TX010 AS "單位"
+  ,TX011 AS "贈品量"
+  ,TX012 AS "贈品已訂量"
+  ,TX013 AS "折扣率"
+  ,TX014 AS "單價"
+  ,TX015 AS "金額"
+  ,TX016 AS "預交日"
+  ,TX017 AS "報價單據-單別"
+  ,TX018 AS "報價單據-單號"
+  ,TX019 AS "報價單據-序號"
+  ,TX020 AS "客戶品號"
+  ,CASE 
+   WHEN 'Y' THEN N'自動結案'
+   WHEN 'y' THEN N'指定結案'
+   WHEN 'N' THEN N'未結案'
+   ELSE ""
+   END AS "結案碼"
+  ,TX022 AS "備註"
+  ,TX023 AS "確認碼"
+  ,TX024 AS "已訂金額"
+  ,TX026 AS "小單位"
+  ,TX027 AS "專案代號"
+  ,TX028 AS "包裝方式"
+  ,TX029 AS "毛重(Kg)"
+  ,TX030 AS "材積"
+  ,TX031 AS "合約包裝數量"
+  ,TX032 AS "已訂包裝數量"
+  ,TX033 AS "贈品包裝量"
+  ,TX034 AS "贈品已訂包裝量"
+  ,TX035 AS "包裝單位"
+  ,TX036 AS "圖號"
+  ,TX037 AS "圖號版次"
+  ,TX043 AS "贈/備品率"
+  ,TX044 AS "產品系列"
+  ,TX045 AS "NewCode"
+  ,CASE 
+   WHEN 'H' THEN N'Handling'
+   WHEN 'M' THEN N'Masking'
+   WHEN 'X' THEN N''
+   ELSE ""
+   END AS "收費方式"
+  ,TX047 AS "RFQ"
+  ,TX048 AS "光罩費用"
+  ,TX049 AS "光罩費結帳單別"
+  ,TX050 AS "光罩費結帳單號"
+  ,TX051 AS "光罩費結帳序號"
+  ,TX052 AS "光罩費折讓結帳單別"
+  ,TX053 AS "光罩費折讓結帳單號"
+  ,TX054 AS "光罩費折讓結帳序號"
+  ,TX055 AS "最終客戶代號"
+  ,TX056 AS "訂購量達RFQ日"
+  ,TX057 AS "營業稅率"
+
+FROM COPTX

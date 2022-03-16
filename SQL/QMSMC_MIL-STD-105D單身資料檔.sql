@@ -1,0 +1,59 @@
+--QMSMC_MIL-STD-105D單身資料檔
+SELECT
+  ,CASE 
+   WHEN '1' THEN N'一般(I)'
+   WHEN '2' THEN N'一般(II)'
+   WHEN '3' THEN N'一般(III)S'
+   WHEN '1' THEN N'特殊(S-1)S'
+   WHEN '2' THEN N'特殊(S-2)S'
+   WHEN '3' THEN N'特殊(S-3)S'
+   WHEN '4' THEN N'特殊(S-4)U'
+   WHEN '1' THEN N'自訂1U'
+   WHEN '2' THEN N'自訂2U'
+   WHEN '3' THEN N'自訂3U'
+   WHEN '4' THEN N'自訂4U'
+   WHEN '5' THEN N'自訂5U'
+   WHEN '6' THEN N'自訂6U'
+   WHEN '7' THEN N'自訂7U'
+   WHEN '8' THEN N'自訂8U'
+   WHEN '9' THEN N'自訂9'
+   ELSE ""
+   END AS "檢驗水準"
+  ,CASE 
+   WHEN '1' THEN N'減量'
+   WHEN '2' THEN N'正常'
+   WHEN '3' THEN N'加嚴'
+   ELSE ""
+   END AS "寬嚴程度"
+  ,MC003 AS "起始批量"
+  ,MC004 AS "截止批量"
+  ,MC005 AS "抽樣數量"
+  ,MC006 AS "AQL=0.010"
+  ,MC007 AS "AQL=0.015"
+  ,MC008 AS "AQL=0.025"
+  ,MC009 AS "AQL=0.040"
+  ,MC010 AS "AQL=0.065"
+  ,MC011 AS "AQL=0.10"
+  ,MC012 AS "AQL=0.15"
+  ,MC013 AS "AQL=0.25"
+  ,MC014 AS "AQL=0.40"
+  ,MC015 AS "AQL=0.65"
+  ,MC016 AS "AQL=1.0"
+  ,MC017 AS "AQL=1.5"
+  ,MC018 AS "AQL=2.5"
+  ,MC019 AS "AQL=4.0"
+  ,MC020 AS "AQL=6.5"
+  ,MC021 AS "AQL=10"
+  ,MC022 AS "AQL=15"
+  ,MC023 AS "AQL=25"
+  ,MC024 AS "AQL=40"
+  ,MC025 AS "AQL=65"
+  ,MC026 AS "AQL=100"
+  ,MC027 AS "AQL=150"
+  ,MC028 AS "AQL=250"
+  ,MC029 AS "AQL=400"
+  ,MC030 AS "AQL=650"
+  ,MC031 AS "AQL=1000"
+  ,MC032 AS "備註"
+
+FROM QMSMC

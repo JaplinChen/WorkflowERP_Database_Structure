@@ -1,0 +1,26 @@
+--PURUJ_連絡人變更資料檔
+SELECT
+  ,UJ001 AS "廠商代號"
+  ,UJ002 AS "變更版次"
+  ,UJ003 AS "原連絡人代號"
+  ,UJ004 AS "新連絡人代號"
+  ,UJ005 AS "新連絡人姓名"
+  ,UJ006 AS "新部門"
+  ,UJ007 AS "新職務"
+  ,UJ008 AS "新生日"
+  ,UJ009 AS "新TEL_NO(一)"
+  ,UJ010 AS "新TEL_NO(二)"
+  ,UJ011 AS "新FAX_NO"
+  ,UJ012 AS "新E-Mail"
+  ,UJ013 AS "新備註"
+  ,UJ014 AS "原連絡人姓名"
+  ,UJ015 AS "原部門"
+  ,UJ016 AS "原職務"
+  ,UJ017 AS "原生日"
+  ,UJ018 AS "原TEL_NO(一)"
+  ,UJ019 AS "原TEL_NO(二)"
+  ,UJ020 AS "原FAX_NO"
+  ,UJ021 AS "原E-Mail"
+  ,UJ022 AS "原備註"
+
+FROM PURUJ

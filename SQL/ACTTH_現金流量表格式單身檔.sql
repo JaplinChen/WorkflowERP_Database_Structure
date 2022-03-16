@@ -1,0 +1,25 @@
+--ACTTH_現金流量表格式單身檔
+SELECT
+  ,TH001 AS "報表編號"
+  ,TH002 AS "序號"
+  ,TH003 AS "資料來源"
+  ,TH004 AS "現金流量表項目"
+  ,TH005 AS "科目編號"
+  ,TH006 AS "項目名稱"
+  ,TH007 AS "空格"
+  ,TH008 AS "來源碼"
+  ,TH009 AS "合計階1"
+  ,TH010 AS "合計階2"
+  ,TH011 AS "合計階3"
+  ,TH012 AS "合計階4"
+  ,TH013 AS "合計階5"
+  ,TH014 AS "合計階6"
+  ,TH015 AS "合計階7"
+  ,TH016 AS "合計階8"
+  ,TH017 AS "合計階9"
+  ,TH018 AS "列印"
+  ,TH024 AS "Code"
+  ,TH025 AS "Notes"
+  ,TH026 AS "項目名稱別名"
+
+FROM ACTTH
