@@ -62,8 +62,22 @@ _TableName_df = jsonToDataFrame(_TableName)
 _TableStructure_df = jsonToDataFrame(_TableStructure)
 # --------------------------------------------------------------------
 # -- Table Structure : Ready to build one html file for each class
-
+last_Module_ID = ''
+Table_ModuleID = ''
 for x in _TableName_df.index:
+
+    if (last_Module_ID) == '':
+            # -- 設定 Table_ModuleID & last_Module_ID
+            Table_ModuleID = str(_TableName_df.loc[x]['ModuleID']).strip()
+            last_Module_ID = Table_ModuleID
+
+    if _TableName_df.loc[x]['ModuleID'].strip() != last_Module_ID:
+        if not os.path.isdir('SQL'):       # -- 檢查資料夾是否存在
+            os.makedirs('SQL', mode=0o777)     # -- 如果不存在，就建立資料夾
+        if not os.path.isdir('SQL\\'+Table_ModuleID):       # -- 檢查資料夾是否存在
+            os.makedirs('SQL\\'+Table_ModuleID, mode=0o777)     # -- 如果不存在，就建立資料夾
+        Table_ModuleID = _TableName_df.loc[x]['ModuleID'].strip()
+        last_Module_ID = Table_ModuleID
 
     _TableID =  str(_TableName_df.loc[x]['TableID']).strip()
     TableName = _TableID +'_'+ str(_TableName_df.loc[x]['TableName']).strip().replace('/','')
@@ -90,11 +104,12 @@ for x in _TableName_df.index:
                         FieldString = FieldString + '  ,' + _FieldID + ' AS "' + _FieldName + '"\n'
 
     if not os.path.isdir('SQL'):       # -- 檢查資料夾是否存在
-        # -- 如果不存在，就建立資料夾
-        os.makedirs('SQL', mode=0o777)
+        os.makedirs('SQL', mode=0o777)      # -- 如果不存在，就建立資料夾
+    if not os.path.isdir('SQL\\'+Table_ModuleID):       # -- 檢查資料夾是否存在
+        os.makedirs('SQL\\'+Table_ModuleID, mode=0o777)     # -- 如果不存在，就建立資料夾
 
     # OUTPUT AN HTML FILE
-    with open('SQL\\'+TableName+'.sql', 'w',encoding="utf-8") as f:
+    with open('SQL\\'+Table_ModuleID+'\\'+TableName+'.sql', 'w',encoding="utf-8") as f:
         SQLString = TableSQL.format(
             FieldString=FieldString,
             TableName=TableName,
