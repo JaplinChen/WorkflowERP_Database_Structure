@@ -41,15 +41,18 @@ def IndexKey_samp(s):
     else:
         return s
 
-def Description_Convert(Description):
+def Description_Convert_to_HTML_String(Description):
     s = str(Description)
     #s = s.split('//')[0]        # -- 去除 // 後面的資料
     #s = s.split('&&')[0]     # -- 去除 && 後面的資料
-    s = s.replace('[', '<samp>[')
-    s = s.replace(']', ']</samp>')
-    s = s.replace('(', '<small>(')
-    s = s.replace(')', ')</small>')
-    #regex = '\w\..|\w\:.'    # -- 判斷 1.~9. 1:~9:, A.~Z. A:~Z:
+    s = s.replace('[', '<samp>[').replace(']', ']</samp>')
+    s = s.replace('(', '<small>(').replace(')', ')</small>')
+    # -- 使用 RegEx 語法，簡化大量的 replace
+    regex = re.compile(r'([+-]?\w)\.|([+-]?\w):')
+    replaceString = r"<samp>\1\2</samp>:"
+    if re.match(regex,s):
+        s = regex.sub(replaceString,s)
+    """
     s = s.replace('0.', '<samp>0</samp>.').replace('-1.', '<samp>-1</samp>.')
     s = s.replace('1.', '<samp>1</samp>.').replace('2.', '<samp>2</samp>.').replace('3.', '<samp>3</samp>.').replace('4.', '<samp>4</samp>.').replace('5.', '<samp>5</samp>.')
     s = s.replace('6.', '<samp>6</samp>.').replace('7.', '<samp>7</samp>.').replace('8.', '<samp>8</samp>.').replace('9.', '<samp>9</samp>.')
@@ -74,6 +77,8 @@ def Description_Convert(Description):
     s = s.replace('T:', '<samp>T</samp>:').replace('U:', '<samp>U</samp>:').replace('V:', '<samp>V</samp>:')
     s = s.replace('W:', '<samp>W</samp>:').replace('X:', '<samp>X</samp>:').replace('Y:', '<samp>Y</samp>:')
     s = s.replace('Z:', '<samp>Z</samp>:').replace('y:', '<samp>y</samp>:').replace('u:', '<samp>u</samp>:')
+    """
+
     return s
 
 # -- Begin of Main
@@ -106,7 +111,6 @@ with open('TableStructure.json', 'r', encoding="utf-8") as f:
 _TableIndex_df = jsonToDataFrame(_Index_Json)     # -- 避免每次讀取，該放置到 程序開頭
 _TableName_df = jsonToDataFrame(_TableName)
 _TableStructure_df = jsonToDataFrame(_TableStructure)
-_i_TableID = 'ADMXA,CMSXA,INVXA,PURXA,PURXB,PURXC,MTMXA,MTMXB,MTMXC,MTMXD,MOCXA,MOCXB,MOCXC,VPAXA,VPAXB,VPAXC,VPAXD'
 # --------------------------------------------------------------------
 # -- Table Structure : Ready to build one html file for each class
 
@@ -126,7 +130,7 @@ for x in _TableName_df.index:
     if _TableName_df.loc[x]['ModuleID'].strip() != last_Module_ID:
         if not os.path.isdir('HTML'):       # -- 檢查資料夾是否存在
             os.makedirs('HTML', mode=0o777)     # -- 如果不存在，就建立資料夾
-        # -- OUTPUT AN HTML FILE
+        # -- output to HTML file
         with open('HTML\\'+ModuleName+'.html', 'w',encoding="utf-8") as f:
             html_data = html_string.format(HtmlTitle=TitleString, MoudleTitle=HeaderString, tablename=TableName, table=AllTableHtml)
             f.write(html_data)
@@ -152,8 +156,9 @@ for x in _TableName_df.index:
 
     _TableID =  str(_TableName_df.loc[x]['TableID']).strip()
     TableName = '<samp>'+_TableID +'</samp> : ' +_TableName_df.loc[x]['TableName'].strip().replace('/','')
-    if _TableName_df.loc[x]['TableNameViet'].strip() != '':
-        TableName = TableName+'    <small>('+_TableName_df.loc[x]['TableNameViet'].strip()+')</small>'
+    _TableNameViet = str(_TableName_df.loc[x]['TableNameViet']).strip()
+    if  _TableNameViet != '':
+        TableName = TableName+'    <small>('+_TableNameViet+')</small>'
 
     # ----------------------------------------------------------------------------------------------------------------------
     # -- 只需要 TableName_df.loc[x]['TableID'] 的資料
@@ -189,7 +194,7 @@ for x in _TableName_df.index:
         TableHtml = _TableStructure_df1.to_html(
             border=0,                                                                   # -- 設定 TABLE BORDER=0
             index=False,                                                                # -- 設定不顯示索引
-            formatters={'Description': lambda x: Description_Convert(x)
+            formatters={'Description': lambda x: Description_Convert_to_HTML_String(x)
                                 #'FieldName': lambda x: Name_Tooltip(x)
                         })
         TableHtml = re.sub('&lt;', '<', TableHtml)   # -- 將 &lt; 替換成 <
