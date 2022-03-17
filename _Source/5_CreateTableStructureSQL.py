@@ -19,7 +19,7 @@ SELECT
 FROM {TableID}
 '''
 
-def Description_Convert(Description):
+def Description_Convert_to_SQL_CASE(Description):
     s = str(Description).split('[')[0]
     if s == '':
         return ''
@@ -89,20 +89,23 @@ for x in _TableName_df.index:
     # -- ['TableID', 'TableName', 'ModuleID', 'sID', 'ID', 'FieldName', 'NameVietnam', 'Type', 'Length', 'Description']
     FieldString = ''
     if len(_TableStructure_df1) != 0:
+        y = 0
         for y in _TableStructure_df1.index:
             _FieldID        = str(_TableStructure_df1.loc[y]['ID'])
             _FieldName  = str(_TableStructure_df1.loc[y]['FieldName'])
             _Description = str(_TableStructure_df1.loc[y]['Description'])
-            _DescriptionConvert = Description_Convert(_Description)
-            if y == 0:
-                FieldString = FieldString + ' ' + _FieldID + ' AS ' + _FieldName
-            else:
-                if  _DescriptionConvert != '':
-                    FieldString = FieldString + '  ,CASE \n' + _DescriptionConvert + '   ELSE ""\n   END AS "' + _FieldName + '"\n'
+            _DescriptionConvert = Description_Convert_to_SQL_CASE(_Description)
+            if _FieldName != '預留欄位' and _FieldName != '預留':
+                if y == 0:
+                    FieldString = '   ' + _FieldID + ' AS "' + _FieldName  + '"\n'
                 else:
-                    if _FieldName != '預留欄位' and _FieldName != '預留':
+                    if  _DescriptionConvert != '':
+                        FieldString = FieldString + '  ,CASE \n' + _DescriptionConvert + '   ELSE ""\n   END AS "' + _FieldName + '"\n'
+                    else:
                         FieldString = FieldString + '  ,' + _FieldID + ' AS "' + _FieldName + '"\n'
-
+        if FieldString.strip()[0:1] == ',':
+            FieldString = '   ' + FieldString[3:]
+            
     if not os.path.isdir('SQL'):       # -- 檢查資料夾是否存在
         os.makedirs('SQL', mode=0o777)      # -- 如果不存在，就建立資料夾
     if not os.path.isdir('SQL\\'+Table_ModuleID):       # -- 檢查資料夾是否存在
