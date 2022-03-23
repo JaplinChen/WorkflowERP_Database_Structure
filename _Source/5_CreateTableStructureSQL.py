@@ -9,8 +9,8 @@ from pandas.io.json import json_normalize
 def jsonToDataFrame(jsonStr):    
      return pd.json_normalize(jsonStr)
 
-#TableName_Columns = ['TableID', 'TableName', 'TableNameViet', 'ModuleID', 'ModuleName', 'ModuleType']
-#TableStructure_Columns=['TableID', 'TableName', 'ModuleID', 'sID', 'ID', 'field_name', 'NameVietnam', 'Type', 'Length', 'Description']
+#TableName_Columns = ['DB','TableID', 'TableName', 'TableNameViet', 'ModuleID', 'ModuleName', 'ModuleType']
+#TableStructure_Columns=['DB','TableID', 'TableName', 'ModuleID', 'sID', 'ID', 'field_name', 'NameVietnam', 'Type', 'Length', 'Description']
 
 # -- SQL Strings for Table Structure
 table_sql = '''-- {TableName}
@@ -65,6 +65,7 @@ _TableStructure_df = jsonToDataFrame(_TableStructure)
 # -- Table Structure : Ready to build one html file for each class
 last_module_id = ''
 table_module_id = ''
+db_dbo = ''
 for x in _TableName_df.index:
     # -- 判斷是否 剛開始
     if (last_module_id) == '':
@@ -82,6 +83,7 @@ for x in _TableName_df.index:
         table_module_id = str(_TableName_df.loc[x]['ModuleID']).strip()
         last_module_id = table_module_id
 
+    db_dbo =  str(_TableName_df.loc[x]['DB']).strip()
     table_id =  str(_TableName_df.loc[x]['TableID']).strip()
     table_name = table_id +'_'+ str(_TableName_df.loc[x]['TableName']).strip().replace('/','')
 
@@ -128,7 +130,7 @@ for x in _TableName_df.index:
             FieldColumn = str(field_name_column),
             FieldString = field_string,
             TableName = table_name,
-            TableID = table_id
+            TableID = db_dbo+'.'+table_id
             )
         f.write(SQL_String)
         f.close()
