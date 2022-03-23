@@ -130,7 +130,7 @@ for x in _TableName_df.index:
             FieldColumn = str(field_name_column),
             FieldString = field_string,
             TableName = table_name,
-            TableID = db_dbo+'.'+table_id
+            TableID = db_dbo+table_id
             )
         f.write(SQL_String)
         f.close()
