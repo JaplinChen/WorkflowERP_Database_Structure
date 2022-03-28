@@ -1,7 +1,0 @@
---ADMMS_OLAP設定檔
-SELECT
-  ,MS001 AS "分析資料HTML所在HTTP目錄"
-  ,MS002 AS "分析資料HTML所在UNC目錄"
-  ,MS003 AS "OLAP_Server_Name"
-
-FROM ADMMS

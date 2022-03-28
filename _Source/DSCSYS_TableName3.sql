@@ -1,11 +1,13 @@
 select TableDB.DB+'.dbo.' as DB,
-    rtrim(ltrim(MC.MC001)) as TableID, rtrim(ltrim(MC.MC002)) as TableName, 
+    rtrim(ltrim(MC.MC001)) as TableID, 
+    rtrim(ltrim(MC.MC002)) as TableName, 
     case when LANG1.VIET is NULL then '' else rtrim(ltrim(LANG1.VIET)) end as TableNameViet, 
-    rtrim(ltrim(MC.MC004)) as ModuleID, rtrim(ltrim(MA.MA002)) as ModuleName, 
+    rtrim(ltrim(MC.MC004)) as ModuleID, 
+    rtrim(ltrim(MA.MA002)) as ModuleName, 
     case MC.MC004 
-    when 'VTA' then 'Hệ thống quản lý thuế giá trị gia tăng' 
-    else case when LANG2.VIET is NULL then '' else rtrim(ltrim(LANG2.VIET)) end 
-    end as ModuleNameViet, 
+      when 'VTA' then 'Hệ thống quản lý thuế giá trị gia tăng' 
+      else case when LANG2.VIET is NULL then '' else rtrim(ltrim(LANG2.VIET)) end 
+      end as ModuleNameViet, 
     MA.MA004 as ModuleType 
 from DSCSYS.dbo.ADMMC MC
     left join DSCSYS.dbo.ADMMA MA on MA.MA001=MC.MC004 

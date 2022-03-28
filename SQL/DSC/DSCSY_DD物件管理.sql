@@ -1,4 +1,0 @@
---DSCSY_DD物件管理
-SELECT
-
-FROM DSCSY

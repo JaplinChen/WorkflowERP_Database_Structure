@@ -108,7 +108,7 @@ for x in _TableName_df.index:
                     field_string = '   ' + field_id + ' AS "' + field_name  + '"\n'
                 else:
                     if  description_convert != '':
-                        field_string = field_string + '  ,CASE ' + field_id + '\n' + description_convert + '   ELSE ""\n   END AS "' + field_name + '"\n'
+                        field_string = field_string + '  ,CASE ' + field_id + '\n' + description_convert + "   ELSE ''\n   END AS '" + field_name + "'\n"
                     else:
                         field_string = field_string + '  ,' + field_id + ' AS "' + field_name + '"\n'
                 

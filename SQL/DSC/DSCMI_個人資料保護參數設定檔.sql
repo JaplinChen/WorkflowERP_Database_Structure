@@ -1,4 +1,0 @@
---DSCMI_個人資料保護參數設定檔
-SELECT
-
-FROM DSCMI

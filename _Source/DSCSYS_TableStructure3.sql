@@ -12,9 +12,11 @@ select TableDB.DB+'.dbo.' as DB,
   case
   -- 去掉不需要的註解： // 和 && 之後的字串
   when charindex('//',MD.MD007)>0 then 
-    case when rtrim(ltrim( substring(MD.MD007,1,charindex('//',MD.MD007)-1) )) = rtrim(ltrim(MD.MD004)) then '' else rtrim(ltrim( substring(MD.MD007,1,charindex('//',MD.MD007)-1) )) end
+    case when rtrim(ltrim( substring(MD.MD007,1,charindex('//',MD.MD007)-1) )) = rtrim(ltrim(MD.MD004)) then '' 
+    else rtrim(ltrim( substring(MD.MD007,1,charindex('//',MD.MD007)-1) )) end
   when charindex('&&',MD.MD007)>0 then 
-    case when rtrim(ltrim( substring(MD.MD007,1,charindex('&&',MD.MD007)-1) )) = rtrim(ltrim(MD.MD004)) then '' else rtrim(ltrim( substring(MD.MD007,1,charindex('&&',MD.MD007)-1) )) end
+    case when rtrim(ltrim( substring(MD.MD007,1,charindex('&&',MD.MD007)-1) )) = rtrim(ltrim(MD.MD004)) then '' 
+    else rtrim(ltrim( substring(MD.MD007,1,charindex('&&',MD.MD007)-1) )) end
   -- 去掉 註解內容和 FieldName 欄位中文名稱一樣的 字串
   when rtrim(ltrim(MD.MD007)) = rtrim(ltrim(MD.MD004)) then ''
   else rtrim(ltrim(MD.MD007))
